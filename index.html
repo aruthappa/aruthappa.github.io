@@ -6,24 +6,316 @@
 
     <title>Dr. A. R. Uthappa | Senior Scientist – Agroforestry</title>
 
-    <meta name="description" content="Dr. A. R. Uthappa is a Senior Scientist in Agroforestry at ICAR–CCARI, Goa, working on climate-resilient agroforestry, carbon, bamboo, soil restoration and geospatial science.">
+    <meta name="description" content="Dr. A. R. Uthappa, Senior Scientist in Agroforestry at ICAR–CCARI, Goa. Research in climate-resilient agroforestry, carbon sequestration, bamboo, soil restoration and nature-based solutions.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #18352a;
+            background: #f7f8f3;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 28px 6%;
+            color: white;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.65;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(7, 34, 24, 0.92) 0%,
+                    rgba(7, 34, 24, 0.78) 38%,
+                    rgba(7, 34, 24, 0.20) 72%,
+                    rgba(7, 34, 24, 0.08) 100%
+                ),
+                url("uthappa-field-research.JPG");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            width: 55%;
+            max-width: 760px;
+            padding-left: 7%;
+            padding-top: 50px;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .eyebrow {
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+            opacity: 0.9;
+        }
+
+        .hero h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(48px, 6vw, 86px);
+            line-height: 0.98;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .designation {
+            font-size: 22px;
+            line-height: 1.5;
+            margin-bottom: 22px;
+            font-weight: 400;
+        }
+
+        .tagline {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(22px, 2.3vw, 31px);
+            line-height: 1.35;
+            max-width: 680px;
+            margin-bottom: 28px;
+        }
+
+        .affiliation {
+            font-size: 15px;
+            line-height: 1.7;
+            max-width: 600px;
+            margin-bottom: 35px;
+            opacity: 0.92;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border: 1px solid rgba(255,255,255,0.8);
+            border-radius: 3px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #18352a;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* SMALL RESEARCH LABEL */
+        .research-label {
+            position: absolute;
+            right: 6%;
+            bottom: 45px;
+            z-index: 2;
+
+            color: white;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            writing-mode: vertical-rl;
+            opacity: 0.8;
+        }
+
+        /* MOBILE */
+        @media (max-width: 900px) {
+
+            nav {
+                padding: 22px 6%;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                background-position: 62% center;
+            }
+
+            .hero-content {
+                width: 100%;
+                padding: 150px 8% 80px;
+            }
+
+            .hero h1 {
+                font-size: clamp(45px, 12vw, 70px);
+            }
+
+            .designation {
+                font-size: 19px;
+            }
+
+            .tagline {
+                font-size: 23px;
+            }
+
+            .research-label {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .hero {
+                min-height: 100svh;
+                background-position: 65% center;
+            }
+
+            .hero-content {
+                padding: 130px 7% 60px;
+            }
+
+            .eyebrow {
+                font-size: 11px;
+                letter-spacing: 2px;
+            }
+
+            .hero h1 {
+                font-size: 46px;
+            }
+
+            .designation {
+                font-size: 18px;
+            }
+
+            .tagline {
+                font-size: 21px;
+            }
+
+            .affiliation {
+                font-size: 14px;
+            }
+
+            .buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Dr. A. R. Uthappa</h1>
+    <nav>
+        <div class="logo">UTHAPPA</div>
 
-    <h2>Senior Scientist | Agroforestry</h2>
+        <ul class="nav-links">
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">RESEARCH</a></li>
+            <li><a href="#">PROJECTS</a></li>
+            <li><a href="#">PUBLICATIONS</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
 
-    <p>
-        Advancing climate-resilient agroforestry through science,
-        innovation and nature-based solutions.
-    </p>
 
-    <p>
-        ICAR–Central Coastal Agricultural Research Institute,
-        Goa, India
-    </p>
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                Scientist • Agroforestry • Climate & Nature
+            </div>
+
+            <h1>
+                Dr. A. R.<br>
+                Uthappa
+            </h1>
+
+            <div class="designation">
+                Senior Scientist · Agroforestry
+            </div>
+
+            <div class="tagline">
+                Advancing climate-resilient agroforestry through science, innovation and nature-based solutions.
+            </div>
+
+            <div class="affiliation">
+                ICAR–Central Coastal Agricultural Research Institute (ICAR–CCARI)
+                <br>
+                Old Goa, Goa, India
+            </div>
+
+            <div class="buttons">
+                <a href="#" class="btn btn-primary">
+                    EXPLORE MY RESEARCH
+                </a>
+
+                <a href="#" class="btn">
+                    VIEW PUBLICATIONS
+                </a>
+            </div>
+
+        </div>
+
+        <div class="research-label">
+            Agroforestry · Carbon · Biodiversity · Resilience
+        </div>
+
+    </section>
 
 </body>
 </html>
