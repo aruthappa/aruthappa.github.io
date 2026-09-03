@@ -408,43 +408,210 @@ section{
     font-size:14px;
 }
 
-/* =========================
-   PROJECTS
-========================= */
+<!-- =========================
+     PROJECTS
+     ========================= -->
 
-.projects{
-    background:white;
-}
+<section class="projects" id="projects">
 
-.project-list{
-    margin-top:45px;
-}
+    <div class="container">
 
-.project{
-    display:grid;
-    grid-template-columns:90px 1fr;
-    gap:25px;
-    padding:28px 0;
-    border-bottom:1px solid #dde5df;
-}
+        <div class="section-label">
+            CURRENT & RECENT PROJECTS
+        </div>
 
-.project-year{
-    color:#638c6b;
-    font-weight:700;
-    font-size:14px;
-}
+        <h2 class="section-title">
+            Research in action
+        </h2>
 
-.project h3{
-    font-family:Georgia, serif;
-    font-size:22px;
-    margin-bottom:7px;
-}
+        <p class="section-text">
+            Selected research initiatives demonstrating my work across
+            agroforestry, climate resilience, carbon management,
+            restoration and sustainable natural resource management.
+        </p>
 
-.project p{
-    color:#68776e;
-    font-size:14px;
-}
 
+        <div class="project-list">
+
+
+            <!-- PROJECT 01 -->
+            <div class="project-item">
+
+                <div class="project-year">
+                    2024–2026
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-status">
+                        ONGOING RESEARCH
+                    </div>
+
+                    <h3>
+                        Carbon & Climate-Smart Agroforestry
+                    </h3>
+
+                    <p>
+                        Research on tree-based production systems, carbon
+                        management and climate-smart approaches for
+                        strengthening the sustainability and resilience
+                        of agricultural landscapes.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Carbon</span>
+                        <span>Biochar</span>
+                        <span>Climate resilience</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 02 -->
+            <div class="project-item">
+
+                <div class="project-year">
+                    2025–2026
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-status">
+                        ONGOING RESEARCH
+                    </div>
+
+                    <h3>
+                        Bamboo-Based Agroforestry & Value Chains
+                    </h3>
+
+                    <p>
+                        Research focused on bamboo-based production systems,
+                        resource development, value addition and opportunities
+                        for strengthening sustainable rural and regional
+                        economies.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Bamboo</span>
+                        <span>Agroforestry</span>
+                        <span>Value addition</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 03 -->
+            <div class="project-item">
+
+                <div class="project-year">
+                    2024–2029
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-status">
+                        ONGOING RESEARCH
+                    </div>
+
+                    <h3>
+                        Cashew-Based Agroforestry Systems
+                    </h3>
+
+                    <p>
+                        Development and evaluation of tree-based production
+                        systems designed to improve land productivity,
+                        resource-use efficiency and climate resilience
+                        in the west coast region.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Cashew</span>
+                        <span>Agroforestry</span>
+                        <span>Climate resilience</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 04 -->
+            <div class="project-item">
+
+                <div class="project-year">
+                    2024–2028
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-status">
+                        ONGOING RESEARCH
+                    </div>
+
+                    <h3>
+                        Tree-Based Systems for Sustainable Biomass Production
+                    </h3>
+
+                    <p>
+                        Research on suitable tree-based systems for enhancing
+                        biomass production, land productivity and sustainable
+                        resource use in lateritic landscapes.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Tree resources</span>
+                        <span>Biomass</span>
+                        <span>Lateritic soils</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 05 -->
+            <div class="project-item">
+
+                <div class="project-year">
+                    2022–2026
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-status">
+                        COLLABORATIVE RESEARCH
+                    </div>
+
+                    <h3>
+                        Integrated Watershed & Natural Resource Management
+                    </h3>
+
+                    <p>
+                        Research integrating natural resource conservation,
+                        watershed approaches and livelihood-oriented
+                        interventions for sustainable landscape management.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Watershed management</span>
+                        <span>Natural resources</span>
+                        <span>Livelihoods</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
 /* =========================
    PUBLICATIONS
 ========================= */
@@ -1037,7 +1204,167 @@ footer{
     .intro-grid p {
         font-size: 16px;
     }
-}   
+} 
+  /* =========================================
+   HIGH-END RESEARCH PROJECTS
+   ========================================= */
+
+.projects-section {
+    position: relative;
+}
+
+.projects-section .section-title {
+    max-width: 850px;
+}
+
+.projects-section .section-text {
+    max-width: 760px;
+    color: #53656a;
+}
+
+/* Project list */
+.project-list {
+    margin-top: 55px;
+    border-top: 1px solid rgba(47, 92, 78, 0.18);
+}
+
+/* Individual project */
+.project-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 35px;
+    padding: 34px 25px;
+    border-bottom: 1px solid rgba(47, 92, 78, 0.16);
+    transition: all 0.35s ease;
+}
+
+/* Year */
+.project-year {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #6b9873;
+    padding-top: 5px;
+}
+
+/* Project content */
+.project-content {
+    position: relative;
+    padding-right: 35px;
+}
+
+/* Project title */
+.project-content h3 {
+    margin: 0 0 10px;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    line-height: 1.35;
+    color: #123b32;
+    transition: color 0.3s ease;
+}
+
+/* Project description */
+.project-content p {
+    margin: 0;
+    max-width: 850px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #53656a;
+}
+
+/* Funding / role */
+.project-meta {
+    margin-top: 12px;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    color: #718084;
+}
+
+/* Small accent line */
+.project-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 0;
+    background: #6b9873;
+    transition: height 0.35s ease;
+}
+
+/* Hover effect */
+.project-item:hover {
+    background: rgba(107, 152, 115, 0.045);
+    padding-left: 32px;
+}
+
+.project-item:hover::before {
+    height: 100%;
+}
+
+.project-item:hover .project-content h3 {
+    color: #477b61;
+}
+
+/* Project tags */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.project-tags span {
+    display: inline-block;
+    padding: 5px 11px;
+    border: 1px solid rgba(107, 152, 115, 0.35);
+    border-radius: 30px;
+    font-size: 10px;
+    letter-spacing: 0.4px;
+    color: #477b61;
+    background: #ffffff;
+}
+
+/* Featured project */
+.project-item:first-child {
+    background: linear-gradient(
+        90deg,
+        rgba(107, 152, 115, 0.07),
+        rgba(107, 152, 115, 0.015)
+    );
+}
+
+.project-item:first-child .project-content h3 {
+    font-size: 24px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .project-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 28px 18px;
+    }
+
+    .project-year {
+        padding-top: 0;
+    }
+
+    .project-content {
+        padding-right: 0;
+    }
+
+    .project-content h3 {
+        font-size: 20px;
+    }
+
+    .project-item:first-child .project-content h3 {
+        font-size: 21px;
+    }
+}  
 </style>
 
 </head>
