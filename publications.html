@@ -1445,6 +1445,257 @@ Senior Scientist – Agroforestry · ICAR–Central Coastal Agricultural Researc
 </div>
 
 </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+    /*
+     * PUBLICATION LINKS
+     * -----------------
+     * DOI links are used where verified.
+     * ResearchGate search is used where a DOI/full-text publisher
+     * link is not available.
+     */
+
+    const publicationLinks = {
+
+        /* =========================
+           INTERNATIONAL JOURNALS
+           ========================= */
+
+        "comparison of machine learning models for mapping arecanut":
+            "https://doi.org/10.1038/s41598-025-27845-6",
+
+        "forest fire susceptibility mapping using multi-criteria decision making":
+            "https://doi.org/10.1016/j.jenvman.2025.124777",
+
+        "comparative analysis of soil quality indexing techniques":
+            "https://doi.org/10.3389/ffgc.2023.1322660",
+
+        "optimizing tree shade gradients in emblica officinalis":
+            "https://doi.org/10.1007/s10457-024-01123-2",
+
+        "do different plant host species influence the response of santalum album":
+            "https://doi.org/10.1007/s10457-025-01279-5",
+
+        "sustainable alternatives in particleboard production":
+            "https://doi.org/10.1016/j.rineng.2025.106020",
+
+        "tree shade mitigates stress and enhances chickpea productivity":
+            "https://www.sciencedirect.com/search?qs=Tree%20shade%20mitigates%20stress%20and%20enhances%20chickpea%20productivity",
+
+        "structural and functional assessment of traditional betel vine":
+            "https://doi.org/10.1007/s10457-025-01289-3",
+
+        "integrating ecosystem services through sustainable land use":
+            "https://doi.org/10.1016/j.indic.2025.100998",
+
+        "different genotypes of dalbergia sissoo":
+            "https://doi.org/10.1016/j.agrformet.2017.11.031",
+
+        "nature-based solutions for enhancing co2 sequestration":
+            "https://doi.org/10.1016/j.jenvman.2025.124904",
+
+        "estimating carbon sequestration in orchards of semi-arid tropics":
+            "https://www.sciencedirect.com/search?qs=Estimating%20carbon%20sequestration%20in%20orchards%20of%20semi-arid%20tropics",
+
+        "biomass estimation of mahogany":
+            "https://doi.org/10.1016/j.atech.2025.101616",
+
+        "pollen diversity in urban honey":
+            "https://doi.org/10.1007/s11252-024-01607-0",
+
+        "optimizing planting geometries in eucalyptus-based food production":
+            "https://doi.org/10.3389/fsufs.2024.1386035",
+
+        "assessment of climate change vulnerability of agriculture":
+            "https://doi.org/10.1007/s00704-025-05623-8",
+
+        "root architecture and carbon sequestration potential":
+            "https://doi.org/10.3389/fagro.2025.1597122",
+
+        "floral biology of grewia flavescens":
+            "https://link.springer.com/article/10.1007/s10722-016-0486-7",
+
+        "sandalwood based agroforestry systems in bundelkhand":
+            "https://doi.org/10.14719/pst.9637",
+
+        "wild bee pollination in grewia flavescens":
+            "https://link.springer.com/article/10.1007/s11829-020-09778-5",
+
+        "genetic diversity and population structure of leucaena leucocephala":
+            "https://link.springer.com/article/10.1007/s10722-021-01203-7",
+
+        "pollination biology of pongamia pinnata":
+            "https://link.springer.com/article/10.1007/s10722-020-01010-6",
+
+        "mulberry based agroforestry system":
+            "https://doi.org/10.1016/j.indic.2024.100467",
+
+        "past, present and future of indian sandalwood":
+            "https://doi.org/10.1007/s42452-024-06337-8",
+
+        "scientific techniques for melia dubia-based agroforestry":
+            "https://doi.org/10.18520/cs/v122/i12/1451-1454",
+
+        "trees for life: creating sustainable livelihood":
+            "https://doi.org/10.18520/cs/v111/i6/994-1002",
+
+        "degraded land restoration through aromatic plants":
+            "https://doi.org/10.1002/ldr.70261",
+
+        "carbon sequestration potential of commercial agroforestry systems":
+            "https://doi.org/10.3390/f14030559",
+
+        "agroforestry systems for soil health improvement":
+            "https://doi.org/10.3390/su142214877",
+
+        "degraded land rehabilitation through agroforestry":
+            "https://doi.org/10.3389/fevo.2023.1088796",
+
+        "global assessment of production benefits and risk reduction":
+            "https://doi.org/10.3389/ffgc.2024.1379741",
+
+        "host-dependent variation in free amino acid profiles":
+            "https://doi.org/10.1038/s41598-026-56713-0",
+
+
+        /* =========================
+           NATIONAL JOURNALS
+           ========================= */
+
+        "soil physico-biochemical properties as influenced by varying tree densities":
+            "https://www.researchgate.net/search/publication?q=Soil%20physico-biochemical%20properties%20as%20influenced%20by%20varying%20tree%20densities",
+
+        "tree diversity in ravines and their rehabilitation":
+            "https://www.researchgate.net/search/publication?q=Tree%20diversity%20in%20ravines%20and%20their%20rehabilitation%20through%20agroforestry",
+
+        "litter dynamics in fruit orchards and natural forests":
+            "https://doi.org/10.36808/if/2024/v150i8/170192",
+
+        "stalwarts who globally shaped the concept":
+            "https://www.researchgate.net/search/publication?q=Stalwarts%20who%20globally%20shaped%20the%20concept%20and%20science%20called%20agroforestry",
+
+        "impact of pollination on pomegranate":
+            "https://www.researchgate.net/search/publication?q=Impact%20of%20Pollination%20on%20Pomegranate",
+
+        "incidence pattern of wood borer":
+            "https://www.researchgate.net/search/publication?q=Incidence%20pattern%20of%20wood%20borer%20Sinoxylon%20anale",
+
+        "influence of prosopis cineraria":
+            "https://www.researchgate.net/search/publication?q=Influence%20of%20Prosopis%20cineraria%20on%20microclimate%20conditions",
+
+        "paradigm shift in coastal agricultural research":
+            "https://www.researchgate.net/search/publication?q=Paradigm%20shift%20in%20coastal%20agricultural%20research",
+
+        "clonal propagation through improved stem cutting":
+            "https://www.researchgate.net/search/publication?q=Clonal%20propagation%20through%20improved%20stem%20cutting%20technique%20in%20Pongamia%20pinnata",
+
+        "consensus of traditional knowledge on provisioning services":
+            "https://www.researchgate.net/search/publication?q=Consensus%20of%20traditional%20knowledge%20on%20provisioning%20services%20of%20trees",
+
+        "traditional knowledge of broom making":
+            "https://www.researchgate.net/search/publication?q=Traditional%20Knowledge%20of%20Broom%20Making%20from%20Date%20Palm",
+
+        "fuelwood characteristics of selected tree species":
+            "https://www.researchgate.net/search/publication?q=Fuelwood%20characteristics%20of%20selected%20tree%20species%20from%20Bundelkhand",
+
+        "effect of tillage and residue management practices":
+            "https://www.researchgate.net/search/publication?q=Effect%20of%20tillage%20and%20residue%20management%20practices%20on%20blackgram%20and%20greengram",
+
+        "biomass production and carbon sequestration through agroforestry":
+            "https://www.researchgate.net/search/publication?q=Biomass%20production%20and%20carbon%20sequestration%20through%20agroforestry",
+
+        "doubling farmers income through agroforestry":
+            "https://www.researchgate.net/search/publication?q=Doubling%20farmers%20income%20through%20agroforestry%20in%20north-western%20India",
+
+        "incidence of gall weevil":
+            "https://www.researchgate.net/search/publication?q=Incidence%20of%20Gall%20Weevil%20Pachyonyx%20quadridens%20on%20Butea%20monosperma",
+
+        "a simple and effective method for high quality pcr":
+            "https://www.researchgate.net/search/publication?q=A%20simple%20and%20effective%20method%20for%20high%20quality%20PCR%20usable%20DNA%20extraction"
+
+
+    };
+
+
+    /* =========================
+       NORMALIZE TITLES
+       ========================= */
+
+    function normalize(text) {
+        return text
+            .toLowerCase()
+            .replace(/<[^>]*>/g, "")
+            .replace(/[^\w\s-]/g, "")
+            .replace(/\s+/g, " ")
+            .trim();
+    }
+
+
+    /* =========================
+       ADD VIEW PAPER BUTTON
+       ========================= */
+
+    document.querySelectorAll(".publication").forEach(function (publication) {
+
+        const titleElement = publication.querySelector(".pub-title");
+
+        if (!titleElement) return;
+
+        const title = normalize(titleElement.textContent);
+
+        let link = null;
+
+        for (const key in publicationLinks) {
+
+            if (title.includes(normalize(key))) {
+                link = publicationLinks[key];
+                break;
+            }
+
+        }
+
+        if (!link) return;
+
+        /*
+         * Prevent duplicate buttons
+         */
+
+        if (publication.querySelector(".view-paper")) return;
+
+
+        /*
+         * Create button
+         */
+
+        const button = document.createElement("a");
+
+        button.href = link;
+        button.target = "_blank";
+        button.rel = "noopener noreferrer";
+        button.className = "view-paper";
+        button.innerHTML = "VIEW PAPER ↗";
+
+
+        /*
+         * Put button after publication metadata
+         */
+
+        const meta = publication.querySelector(".pub-meta");
+
+        if (meta) {
+
+            meta.insertAdjacentElement("afterend", button);
+
+        } else {
+
+            publication.appendChild(button);
+
+        }
+
+    });
+
+});
+</script>
 </body>
 </html>
