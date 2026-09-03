@@ -503,6 +503,219 @@ section{
     }
 
 }
+   .research-card p {
+    color:#64736b;
+    font-size:14px;
+}
+
+
+/* =========================================================
+   HOMEPAGE — SELECTED PUBLICATIONS
+   ========================================================= */
+
+.selected-publications {
+    margin-top: 42px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.selected-publication {
+    position: relative;
+    display: grid;
+    grid-template-columns: 86px 1fr;
+    gap: 26px;
+    padding: 30px 34px;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(8, 62, 73, 0.12);
+    transition: transform 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+    overflow: hidden;
+}
+
+.selected-publication::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #2aa889;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.25s ease;
+}
+
+.selected-publication:hover {
+    transform: translateY(-3px);
+    border-color: rgba(42, 168, 137, 0.35);
+    box-shadow: 0 12px 30px rgba(8, 62, 73, 0.08);
+}
+
+.selected-publication:hover::before {
+    transform: scaleY(1);
+}
+
+.publication-index {
+    padding-top: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.publication-index span {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    line-height: 1;
+    font-weight: 700;
+    color: #087f6f;
+}
+
+.publication-index small {
+    margin-top: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #6b817d;
+}
+
+.publication-content {
+    min-width: 0;
+}
+
+.publication-kicker {
+    margin-bottom: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: #087f6f;
+}
+
+.selected-publication h3 {
+    margin: 0;
+    max-width: 900px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    line-height: 1.34;
+    font-weight: 700;
+    color: #073b46;
+}
+
+.selected-publication .publication-journal {
+    margin: 11px 0 14px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #5c6f72;
+}
+
+.selected-publication .publication-journal span {
+    padding: 0 5px;
+    color: #2aa889;
+}
+
+.publication-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.publication-tags span {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 9px;
+    background: #edf5f1;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #17675d;
+}
+
+.publications-more {
+    margin-top: 28px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.publications-more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    padding: 12px 18px;
+    border: 1px solid #0a806e;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #087f6f;
+    transition: background 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.publications-more-link:hover {
+    background: #073b46;
+    color: #ffffff;
+    transform: translateX(3px);
+}
+
+.publications-arrow {
+    font-size: 18px;
+    line-height: 1;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .selected-publications {
+        margin-top: 28px;
+        gap: 10px;
+    }
+
+    .selected-publication {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 23px 22px;
+    }
+
+    .publication-index {
+        flex-direction: row;
+        align-items: baseline;
+        gap: 10px;
+    }
+
+    .publication-index span {
+        font-size: 22px;
+    }
+
+    .publication-index small {
+        margin-top: 0;
+    }
+
+    .selected-publication h3 {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .publications-more {
+        justify-content: flex-start;
+    }
+}
+
+
+/* =========================
+   PROJECTS
+========================= */ 
 <!-- =========================
      PROJECTS
      ========================= -->
@@ -2348,168 +2561,163 @@ Co-Principal Investigator · PMKSY / Department of Land Resources
 
         </div>
 
+<!-- SELECTED FIVE PUBLICATIONS -->
 
-        <!-- SELECTED FIVE PUBLICATIONS -->
+<div class="selected-publications">
 
-        <div class="selected-publications">
-
-
-            <!-- Publication 1 -->
-
-            <article class="selected-publication">
-
-                <div class="publication-year">
-                    2026
-                </div>
-
-                <div class="publication-content">
-
-                    <h3>
-                        Tree shade mitigates stress and enhances chickpea
-                        productivity: Insights from an Emblica officinalis-based
-                        agroforestry system in semi-arid shallow Basaltic
-                        Deccan Plateau, India
-                    </h3>
-
-                    <p class="publication-journal">
-                        Trees, Forests and People · 2026
-                    </p>
-
-                    <div class="publication-tags">
-                        <span>Agroforestry</span>
-                        <span>Climate resilience</span>
-                        <span>Productivity</span>
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- Publication 2 -->
-
-            <article class="selected-publication">
-
-                <div class="publication-year">
-                    2026
-                </div>
-
-                <div class="publication-content">
-
-                    <h3>
-                        Estimating carbon sequestration in orchards of
-                        semi-arid tropics: A modeling approach
-                    </h3>
-
-                    <p class="publication-journal">
-                        Biomass and Bioenergy · 2026
-                    </p>
-
-                    <div class="publication-tags">
-                        <span>Carbon</span>
-                        <span>Modelling</span>
-                        <span>Agroforestry</span>
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- Publication 3 -->
-
-            <article class="selected-publication">
-
-                <div class="publication-year">
-                    2025
-                </div>
-
-                <div class="publication-content">
-
-                    <h3>
-                        Comparison of machine learning models for mapping
-                        Arecanut based agroforestry system in Goa by
-                        enhancing precision and efficiency
-                    </h3>
-
-                    <p class="publication-journal">
-                        Scientific Reports · 2025
-                    </p>
-
-                    <div class="publication-tags">
-                        <span>Machine learning</span>
-                        <span>Remote sensing</span>
-                        <span>Agroforestry</span>
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- Publication 4 -->
-
-            <article class="selected-publication">
-
-                <div class="publication-year">
-                    2025
-                </div>
-
-                <div class="publication-content">
-
-                    <h3>
-                        Forest fire susceptibility mapping using
-                        multi-criteria decision making and machine learning
-                        models in the Western Ghats of India
-                    </h3>
-
-                    <p class="publication-journal">
-                        Journal of Environmental Management · 2025
-                    </p>
-
-                    <div class="publication-tags">
-                        <span>AI</span>
-                        <span>Forest fire</span>
-                        <span>Western Ghats</span>
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- Publication 5 -->
-
-            <article class="selected-publication">
-
-                <div class="publication-year">
-                    2024
-                </div>
-
-                <div class="publication-content">
-
-                    <h3>
-                        Comparative analysis of soil quality indexing
-                        techniques for various tree based land use systems
-                        in semi-arid India
-                    </h3>
-
-                    <p class="publication-journal">
-                        Frontiers in Forests and Global Change · 2024
-                    </p>
-
-                    <div class="publication-tags">
-                        <span>Soil health</span>
-                        <span>Agroforestry</span>
-                        <span>Land restoration</span>
-                    </div>
-
-                </div>
-
-            </article>
-
-
+    <!-- Publication 1 -->
+    <article class="selected-publication">
+        <div class="publication-index">
+            <span>01</span>
+            <small>2026</small>
         </div>
+
+        <div class="publication-content">
+            <div class="publication-kicker">RESEARCH ARTICLE</div>
+
+            <h3>
+                Tree shade mitigates stress and enhances chickpea productivity:
+                Insights from an Emblica officinalis-based agroforestry system
+                in semi-arid shallow Basaltic Deccan Plateau, India
+            </h3>
+
+            <p class="publication-journal">
+                Trees, Forests and People <span>·</span> 2026
+            </p>
+
+            <div class="publication-tags">
+                <span>Agroforestry</span>
+                <span>Climate resilience</span>
+                <span>Productivity</span>
+            </div>
+        </div>
+    </article>
+
+
+    <!-- Publication 2 -->
+    <article class="selected-publication">
+        <div class="publication-index">
+            <span>02</span>
+            <small>2026</small>
+        </div>
+
+        <div class="publication-content">
+            <div class="publication-kicker">RESEARCH ARTICLE</div>
+
+            <h3>
+                Estimating carbon sequestration in orchards of semi-arid
+                tropics: A modeling approach
+            </h3>
+
+            <p class="publication-journal">
+                Biomass and Bioenergy <span>·</span> 2026
+            </p>
+
+            <div class="publication-tags">
+                <span>Carbon</span>
+                <span>Modelling</span>
+                <span>Agroforestry</span>
+            </div>
+        </div>
+    </article>
+
+
+    <!-- Publication 3 -->
+    <article class="selected-publication">
+        <div class="publication-index">
+            <span>03</span>
+            <small>2025</small>
+        </div>
+
+        <div class="publication-content">
+            <div class="publication-kicker">RESEARCH ARTICLE</div>
+
+            <h3>
+                Comparison of machine learning models for mapping Arecanut
+                based agroforestry system in Goa by enhancing precision
+                and efficiency
+            </h3>
+
+            <p class="publication-journal">
+                Scientific Reports <span>·</span> 2025
+            </p>
+
+            <div class="publication-tags">
+                <span>Machine learning</span>
+                <span>Remote sensing</span>
+                <span>Agroforestry</span>
+            </div>
+        </div>
+    </article>
+
+
+    <!-- Publication 4 -->
+    <article class="selected-publication">
+        <div class="publication-index">
+            <span>04</span>
+            <small>2025</small>
+        </div>
+
+        <div class="publication-content">
+            <div class="publication-kicker">RESEARCH ARTICLE</div>
+
+            <h3>
+                Forest fire susceptibility mapping using multi-criteria
+                decision making and machine learning models in the
+                Western Ghats of India
+            </h3>
+
+            <p class="publication-journal">
+                Journal of Environmental Management <span>·</span> 2025
+            </p>
+
+            <div class="publication-tags">
+                <span>AI</span>
+                <span>Forest fire</span>
+                <span>Western Ghats</span>
+            </div>
+        </div>
+    </article>
+
+
+    <!-- Publication 5 -->
+    <article class="selected-publication">
+        <div class="publication-index">
+            <span>05</span>
+            <small>2024</small>
+        </div>
+
+        <div class="publication-content">
+            <div class="publication-kicker">RESEARCH ARTICLE</div>
+
+            <h3>
+                Comparative analysis of soil quality indexing techniques
+                for various tree based land use systems in semi-arid India
+            </h3>
+
+            <p class="publication-journal">
+                Frontiers in Forests and Global Change <span>·</span> 2024
+            </p>
+
+            <div class="publication-tags">
+                <span>Soil health</span>
+                <span>Agroforestry</span>
+                <span>Land restoration</span>
+            </div>
+        </div>
+    </article>
+
+</div>
+
+
+<!-- VIEW ALL PUBLICATIONS -->
+
+<div class="publications-more">
+    <a href="publications.html" class="publications-more-link">
+        <span>Explore the complete publication record</span>
+        <span class="publications-arrow">→</span>
+    </a>
+</div>
 
 
         <!-- LINK TO COMPLETE PUBLICATION PAGE -->
