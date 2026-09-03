@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Publications | Dr. A. R. Uthappa</title>
+
+<style>
+
+:root{
+    --deep:#073b4c;
+    --green:#0b8f78;
+    --accent:#2aa889;
+    --light:#f4f7f5;
+    --soft:#eaf2ee;
+    --line:#d8e2dd;
+    --text:#173b46;
+    --muted:#64777b;
+    --white:#ffffff;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    background:var(--light);
+    color:var(--text);
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.6;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+/* HEADER */
+
+.publication-header{
+    padding:75px 0 35px;
+}
+
+.eyebrow{
+    color:var(--green);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:14px;
+}
+
+h1{
+    margin:0;
+    font-family:Georgia,serif;
+    font-size:clamp(42px,5vw,64px);
+    line-height:1.05;
+    color:var(--deep);
+}
+
+.intro{
+    max-width:760px;
+    margin-top:22px;
+    color:#49656c;
+    font-size:16px;
+}
+
+/* METRICS */
+
+.metrics{
+    margin:35px 0 42px;
+    background:var(--deep);
+    border-radius:4px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    overflow:hidden;
+}
+
+.metric{
+    padding:27px 25px;
+    border-right:1px solid rgba(255,255,255,.16);
+}
+
+.metric:last-child{
+    border-right:none;
+}
+
+.metric-number{
+    color:#27b38f;
+    font-family:Georgia,serif;
+    font-size:36px;
+    font-weight:bold;
+    line-height:1;
+}
+
+.metric-label{
+    margin-top:8px;
+    color:#dce9e7;
+    font-size:11px;
+    font-weight:bold;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+/* FILTERS */
+
+.filters{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+    margin:35px 0 55px;
+}
+
+.filter{
+    border:1px solid #cbdad5;
+    background:white;
+    color:#31555c;
+    border-radius:30px;
+    padding:8px 16px;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.6px;
+    cursor:pointer;
+    transition:.2s ease;
+}
+
+.filter:hover,
+.filter.active{
+    background:var(--green);
+    color:white;
+    border-color:var(--green);
+}
+
+/* YEAR */
+
+.year-section{
+    margin-bottom:48px;
+}
+
+.year-heading{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    margin-bottom:18px;
+}
+
+.year-heading h2{
+    margin:0;
+    font-family:Georgia,serif;
+    font-size:30px;
+    color:var(--deep);
+    font-weight:normal;
+}
+
+.year-line{
+    height:1px;
+    background:#cddbd6;
+    flex:1;
+}
+
+/* PUBLICATION CARD */
+
+.publication{
+    background:white;
+    border:1px solid var(--line);
+    margin-bottom:12px;
+    padding:25px 28px;
+    display:grid;
+    grid-template-columns:75px 1fr;
+    gap:20px;
+    transition:.25s ease;
+}
+
+.publication:hover{
+    transform:translateY(-2px);
+    border-color:#9fc8b8;
+    box-shadow:0 10px 25px rgba(10,60,55,.07);
+}
+
+.pub-number{
+    color:var(--green);
+    font-family:Georgia,serif;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.pub-type{
+    display:block;
+    margin-top:4px;
+    color:#94a3a4;
+    font-size:9px;
+    letter-spacing:2px;
+    font-weight:bold;
+}
+
+.pub-title{
+    margin:0;
+    color:#123b48;
+    font-family:Georgia,serif;
+    font-size:20px;
+    line-height:1.35;
+}
+
+.pub-meta{
+    margin-top:9px;
+    color:#60767b;
+    font-size:13px;
+}
+
+.pub-meta strong{
+    color:#294e57;
+}
+
+.pub-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-top:12px;
+}
+
+.pub-tag{
+    background:#edf5f1;
+    color:#166856;
+    padding:4px 9px;
+    font-size:9px;
+    letter-spacing:.7px;
+    text-transform:uppercase;
+}
+
+/* CATEGORY LABEL */
+
+.category{
+    display:inline-block;
+    margin-left:10px;
+    padding:4px 8px;
+    border-radius:12px;
+    background:#e9f3ef;
+    color:var(--green);
+    font-size:9px;
+    font-weight:bold;
+    letter-spacing:.7px;
+}
+
+/* BOOKS */
+
+.books-section{
+    margin:75px 0;
+}
+
+.section-title{
+    font-family:Georgia,serif;
+    font-size:38px;
+    color:var(--deep);
+    margin:0 0 25px;
+}
+
+.book-card{
+    background:white;
+    border-left:4px solid var(--green);
+    padding:22px 25px;
+    margin-bottom:12px;
+    border-top:1px solid var(--line);
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+}
+
+.book-title{
+    font-family:Georgia,serif;
+    font-size:19px;
+    font-weight:bold;
+}
+
+.book-meta{
+    color:#65787c;
+    font-size:13px;
+    margin-top:7px;
+}
+
+/* FOOTER */
+
+.publication-footer{
+    margin-top:90px;
+    padding:45px 0;
+    background:var(--deep);
+    color:white;
+}
+
+.footer-title{
+    font-family:Georgia,serif;
+    font-size:25px;
+}
+
+.footer-text{
+    color:#cbdad9;
+    font-size:13px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:800px){
+
+    .metrics{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .metric:nth-child(2){
+        border-right:none;
+    }
+
+    .publication{
+        grid-template-columns:1fr;
+        gap:5px;
+    }
+
+    .pub-number{
+        margin-bottom:5px;
+    }
+
+}
+
+@media(max-width:520px){
+
+    .publication-header{
+        padding-top:45px;
+    }
+
+    .metrics{
+        grid-template-columns:1fr;
+    }
+
+    .metric{
+        border-right:none;
+        border-bottom:1px solid rgba(255,255,255,.15);
+    }
+
+    .publication{
+        padding:20px;
+    }
+
+    .pub-title{
+        font-size:18px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<main>
+
+<section class="publication-header">
+<div class="container">
+
+<div class="eyebrow">Publications & Research Output</div>
+
+<h1>Complete publication record</h1>
+
+<p class="intro">
+A record of peer-reviewed research spanning agroforestry, soil health,
+climate resilience, carbon sequestration, biodiversity, restoration
+and geospatial science.
+</p>
+
+<div class="metrics">
+
+<div class="metric">
+<div class="metric-number">49</div>
+<div class="metric-label">Journal Articles</div>
+</div>
+
+<div class="metric">
+<div class="metric-number">32</div>
+<div class="metric-label">International Journals</div>
+</div>
+
+<div class="metric">
+<div class="metric-number">17</div>
+<div class="metric-label">National Journals</div>
+</div>
+
+<div class="metric">
+<div class="metric-number">2015–2026</div>
+<div class="metric-label">Publication Span</div>
+</div>
+
+</div>
+
+<div class="filters">
+
+<button class="filter active">ALL</button>
+<button class="filter">2026</button>
+<button class="filter">2025</button>
+<button class="filter">2024</button>
+<button class="filter">2023</button>
+<button class="filter">2022</button>
+<button class="filter">2021</button>
+<button class="filter">2018</button>
+<button class="filter">2017</button>
+<button class="filter">2016</button>
+<button class="filter">2015</button>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================
+     2026
+========================= -->
+
+<section class="year-section">
+<div class="container">
+
+<div class="year-heading">
+<h2>2026</h2>
+<div class="year-line"></div>
+</div>
+
+<div class="publication">
+<div>
+<div class="pub-number">01</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Tree shade mitigates stress and enhances chickpea productivity:
+Insights from an Emblica officinalis-based agroforestry system
+in semi-arid shallow Basaltic Deccan Plateau, India
+</h3>
+<div class="pub-meta">
+Chichaghare, A.R. et al. · <strong>Trees, Forests and People</strong> · 2026
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Agroforestry</span>
+<span class="pub-tag">Climate resilience</span>
+<span class="pub-tag">Productivity</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">02</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Estimating carbon sequestration in orchards of semi-arid tropics:
+A modeling approach
+</h3>
+<div class="pub-meta">
+Siddesh, R. et al. · <strong>Biomass and Bioenergy</strong> · 2026
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Carbon</span>
+<span class="pub-tag">Modeling</span>
+<span class="pub-tag">Agroforestry</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">03</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Sandalwood based agroforestry systems in Bundelkhand region
+of central India
+</h3>
+<div class="pub-meta">
+Sridhar, K.B. et al. · <strong>Plant Science Today</strong> · 2026
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Sandalwood</span>
+<span class="pub-tag">Agroforestry</span>
+<span class="pub-tag">Bundelkhand</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">04</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Degraded Land Restoration Through Aromatic Plants in India:
+A Nature-Based Solution
+</h3>
+<div class="pub-meta">
+Tomar, J.M.S. et al. · <strong>Land Degradation & Development</strong> · 2026
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Land restoration</span>
+<span class="pub-tag">Nature-based solutions</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">05</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Host-dependent variation in free amino acid profiles and physiological
+responses enhancing drought tolerance in Santalum album
+</h3>
+<div class="pub-meta">
+Yadav, D.K. et al. · <strong>Scientific Reports</strong> · 2026
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Sandalwood</span>
+<span class="pub-tag">Drought tolerance</span>
+<span class="pub-tag">Physiology</span>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================
+     2025
+========================= -->
+
+<section class="year-section">
+<div class="container">
+
+<div class="year-heading">
+<h2>2025</h2>
+<div class="year-line"></div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">01</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Comparison of machine learning models for mapping Arecanut based
+agroforestry system in Goa by enhancing precision and efficiency
+</h3>
+<div class="pub-meta">
+Uthappa, A.R. et al. · <strong>Scientific Reports</strong> · 2025
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Machine learning</span>
+<span class="pub-tag">Remote sensing</span>
+<span class="pub-tag">Agroforestry</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">02</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Forest fire susceptibility mapping using multi-criteria decision making
+and machine learning models in the Western Ghats of India
+</h3>
+<div class="pub-meta">
+Uthappa, A.R. et al. · <strong>Journal of Environmental Management</strong> · 2025
+</div>
+<div class="pub-tags">
+<span class="pub-tag">AI</span>
+<span class="pub-tag">Forest fire</span>
+<span class="pub-tag">Western Ghats</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">03</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Optimizing tree shade gradients in Emblica officinalis-based agroforestry
+systems: impacts on soybean physio-biochemical traits and yield under degraded soils
+</h3>
+<div class="pub-meta">
+Chavan, S.B. et al. · <strong>Agroforestry Systems</strong> · 2025
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Agroforestry</span>
+<span class="pub-tag">Soil health</span>
+<span class="pub-tag">Productivity</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">04</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Do different plant host species influence the response of Santalum album
+under moisture deficit stress?
+</h3>
+<div class="pub-meta">
+Chavan, S.B. et al. · <strong>Agroforestry Systems</strong> · 2025
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Sandalwood</span>
+<span class="pub-tag">Stress physiology</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">05</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Sustainable alternatives in particleboard production:
+The role of leveraging recycled and renewable materials
+</h3>
+<div class="pub-meta">
+Ranjan, M. et al. · <strong>Results in Engineering</strong> · 2025
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Renewable materials</span>
+<span class="pub-tag">Wood products</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">06</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Structural and functional assessment of traditional Betel Vine-based
+agroforestry practices in Maharashtra, India
+</h3>
+<div class="pub-meta">
+Pathan, S.J. et al. · <strong>Agroforestry Systems</strong> · 2025
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Agroforestry</span>
+<span class="pub-tag">Traditional systems</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">07</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Integrating ecosystem services through sustainable land use approach
+in multifunctional agroforestry: The case of Tamil Nadu, Southern India
+</h3>
+<div class="pub-meta">
+Keerthika, A. et al. · <strong>Environmental and Sustainability Indicators</strong> · 2025
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Ecosystem services</span>
+<span class="pub-tag">Agroforestry</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">08</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Nature-based solutions for enhancing CO₂ sequestration and rehabilitating
+degraded lands through silvo-aromatic system and soil moisture conservation techniques
+</h3>
+<div class="pub-meta">
+Jinger, D. et al. · <strong>Journal of Environmental Management</strong> · 2025
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Carbon</span>
+<span class="pub-tag">Nature-based solutions</span>
+<span class="pub-tag">Land restoration</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">09</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Biomass Estimation of Mahogany (Swietenia macrophylla):
+An Optimized Weighted Ensemble-based Machine Learning Approach
+</h3>
+<div class="pub-meta">
+Paul, N.C. et al. · <strong>Smart Agricultural Technology</strong> · 2025
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Machine learning</span>
+<span class="pub-tag">Biomass</span>
+<span class="pub-tag">Carbon</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">10</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Assessment of climate change vulnerability of agriculture in coastal districts
+of India using principal component analysis and entropy-based methods
+</h3>
+<div class="pub-meta">
+Das, B. et al. · <strong>Theoretical and Applied Climatology</strong> · 2025
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Climate change</span>
+<span class="pub-tag">Coastal agriculture</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">11</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Root architecture and carbon sequestration potential of fast-growing
+agroforestry tree species in semi-arid Central India
+</h3>
+<div class="pub-meta">
+Gautam, K. et al. · <strong>Frontiers in Agronomy</strong> · 2025
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Root architecture</span>
+<span class="pub-tag">Carbon</span>
+<span class="pub-tag">Agroforestry</span>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================
+     2024
+========================= -->
+
+<section class="year-section">
+<div class="container">
+
+<div class="year-heading">
+<h2>2024</h2>
+<div class="year-line"></div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">01</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Comparative analysis of soil quality indexing techniques for various
+tree based land use systems in semi-arid India
+</h3>
+<div class="pub-meta">
+Uthappa, A.R. et al. · <strong>Frontiers in Forests and Global Change</strong> · 2024
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Soil health</span>
+<span class="pub-tag">Agroforestry</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">02</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Pollen diversity in urban honey: implications for bee foraging behaviour
+and urban green space planning
+</h3>
+<div class="pub-meta">
+Shishira, D. et al. · <strong>Urban Ecosystems</strong> · 2024
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Pollination</span>
+<span class="pub-tag">Biodiversity</span>
+<span class="pub-tag">Urban ecology</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">03</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Optimizing planting geometries in eucalyptus-based food production
+systems for enhanced yield and carbon sequestration
+</h3>
+<div class="pub-meta">
+Chavan, S.B. et al. · <strong>Frontiers in Sustainable Food Systems</strong> · 2024
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Carbon</span>
+<span class="pub-tag">Productivity</span>
+<span class="pub-tag">Agroforestry</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">04</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Mulberry based agroforestry system and canopy management practices
+to combat soil erosion and enhancing carbon sequestration in degraded lands
+of Himalayan foothills
+</h3>
+<div class="pub-meta">
+Kaushal, R. et al. · <strong>Environmental and Sustainability Indicators</strong> · 2024
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Land restoration</span>
+<span class="pub-tag">Soil erosion</span>
+<span class="pub-tag">Carbon</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">05</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Past, present and future of Indian sandalwood
+(Santalum album) cultivation and commercial prospects
+</h3>
+<div class="pub-meta">
+Chavan, S.B. et al. · <strong>Discover Applied Sciences</strong> · 2024
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Sandalwood</span>
+<span class="pub-tag">Agroforestry</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">06</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Global assessment of production benefits and risk reduction in agroforestry
+during extreme weather events under climate change scenarios
+</h3>
+<div class="pub-meta">
+Dobhal, S. et al. · <strong>Frontiers in Forests and Global Change</strong> · 2024
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Climate resilience</span>
+<span class="pub-tag">Risk reduction</span>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================
+     2023
+========================= -->
+
+<section class="year-section">
+<div class="container">
+
+<div class="year-heading">
+<h2>2023</h2>
+<div class="year-line"></div>
+</div>
+
+<div class="publication">
+<div>
+<div class="pub-number">01</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Carbon Sequestration Potential of Commercial Agroforestry Systems
+in Indo-Gangetic Plains of India: Poplar and Eucalyptus-Based Agroforestry Systems
+</h3>
+<div class="pub-meta">
+Chavan, S.B. et al. · <strong>Forests</strong> · 2023
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Carbon sequestration</span>
+<span class="pub-tag">Agroforestry</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">02</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Agroforestry systems for soil health improvement and maintenance
+</h3>
+<div class="pub-meta">
+Fahad, S. et al. · <strong>Sustainability</strong> · 2022/2023
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Soil health</span>
+<span class="pub-tag">Agroforestry</span>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================
+     2022
+========================= -->
+
+<section class="year-section">
+<div class="container">
+
+<div class="year-heading">
+<h2>2022</h2>
+<div class="year-line"></div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">01</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Genetic diversity and population structure of Leucaena leucocephala
+(Lam.) de Wit genotypes using molecular and morphological attributes
+</h3>
+<div class="pub-meta">
+Rajarajan, K. et al. · <strong>Genetic Resources and Crop Evolution</strong> · 2022
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Genetic diversity</span>
+<span class="pub-tag">Leucaena</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">02</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Pollination biology of Pongamia pinnata (L.) Pierre:
+a potential biodiesel plant
+</h3>
+<div class="pub-meta">
+Veereshkumar et al. · <strong>Genetic Resources and Crop Evolution</strong> · 2021/2022
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Pollination</span>
+<span class="pub-tag">Biodiversity</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">03</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Scientific techniques for Melia dubia-based agroforestry systems:
+an emerging indigenous tree species for wood-based industries in India
+</h3>
+<div class="pub-meta">
+Chavan, S.B. et al. · <strong>Current Science</strong> · 2022
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Melia dubia</span>
+<span class="pub-tag">Agroforestry</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">04</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Agroforestry systems for soil health improvement and maintenance
+</h3>
+<div class="pub-meta">
+Fahad, S. et al. · <strong>Sustainability</strong> · 2022
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Soil health</span>
+<span class="pub-tag">Agroforestry</span>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================
+     2021
+========================= -->
+
+<section class="year-section">
+<div class="container">
+
+<div class="year-heading">
+<h2>2021</h2>
+<div class="year-line"></div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">01</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Wild bee pollination in Grewia flavescens Juss.
+</h3>
+<div class="pub-meta">
+Veereshkumar et al. · <strong>International Journal of Tropical Insect Science</strong> · 2021
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Pollination</span>
+<span class="pub-tag">Bees</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">02</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Pollination biology of Pongamia pinnata (L.) Pierre:
+a potential biodiesel plant
+</h3>
+<div class="pub-meta">
+Veereshkumar et al. · <strong>Genetic Resources and Crop Evolution</strong> · 2021
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Pollination</span>
+<span class="pub-tag">Biodiversity</span>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================
+     2018
+========================= -->
+
+<section class="year-section">
+<div class="container">
+
+<div class="year-heading">
+<h2>2018</h2>
+<div class="year-line"></div>
+</div>
+
+<div class="publication">
+<div>
+<div class="pub-number">01</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Different genotypes of Dalbergia sissoo trees modified microclimate
+dynamics differently on understory crop cowpea as assessed through
+ecophysiological and spectral traits in agroforestry system
+</h3>
+<div class="pub-meta">
+Alam, B. et al. · <strong>Agricultural and Forest Meteorology</strong> · 2018
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Microclimate</span>
+<span class="pub-tag">Agroforestry</span>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================
+     2017
+========================= -->
+
+<section class="year-section">
+<div class="container">
+
+<div class="year-heading">
+<h2>2017</h2>
+<div class="year-line"></div>
+</div>
+
+<div class="publication">
+<div>
+<div class="pub-number">01</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Floral biology of Grewia flavescens Juss.: an underutilized crop
+</h3>
+<div class="pub-meta">
+Kumar, V. et al. · <strong>Genetic Resources and Crop Evolution</strong> · 2017
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Floral biology</span>
+<span class="pub-tag">Agroforestry</span>
+</div>
+</div>
+</div>
+
+
+<div class="publication">
+<div>
+<div class="pub-number">02</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Trees for life: Creating sustainable livelihood in Bundelkhand region
+of central India
+</h3>
+<div class="pub-meta">
+Chavan, S.B. et al. · <strong>Current Science</strong> · 2016/2017
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Livelihoods</span>
+<span class="pub-tag">Agroforestry</span>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================
+     2016
+========================= -->
+
+<section class="year-section">
+<div class="container">
+
+<div class="year-heading">
+<h2>2016</h2>
+<div class="year-line"></div>
+</div>
+
+<div class="publication">
+<div>
+<div class="pub-number">01</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Trees for life: Creating sustainable livelihood in Bundelkhand region
+of central India
+</h3>
+<div class="pub-meta">
+Chavan, S.B. et al. · <strong>Current Science</strong> · 2016
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Livelihoods</span>
+<span class="pub-tag">Agroforestry</span>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================
+     2015
+========================= -->
+
+<section class="year-section">
+<div class="container">
+
+<div class="year-heading">
+<h2>2015</h2>
+<div class="year-line"></div>
+</div>
+
+<div class="publication">
+<div>
+<div class="pub-number">01</div>
+<span class="pub-type">JOURNAL</span>
+</div>
+<div>
+<h3 class="pub-title">
+Soil physico-biochemical properties as influenced by varying tree densities
+in poplar based agroforestry system
+</h3>
+<div class="pub-meta">
+Uthappa, A.R. et al. · <strong>Indian Journal of Agroforestry</strong> · 2015
+</div>
+<div class="pub-tags">
+<span class="pub-tag">Soil health</span>
+<span class="pub-tag">Poplar</span>
+<span class="pub-tag">Agroforestry</span>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- BOOKS -->
+
+<section class="books-section">
+<div class="container">
+
+<div class="eyebrow">Additional Research Output</div>
+
+<h2 class="section-title">Books, reports & research contributions</h2>
+
+
+<div class="book-card">
+<div class="book-title">
+Ecosystem Service Analysis in Multistorey Cropping Systems
+</div>
+<div class="book-meta">
+Kumar, P., Arunachalam, V., Paramesha, V. & Uthappa, A.R. · 2024
+</div>
+</div>
+
+
+<div class="book-card">
+<div class="book-title">
+Promising Agroforestry Tree Species in India
+</div>
+<div class="book-meta">
+Chaturvedi, O.P., Handa, A.K., Uthappa, A.R. et al. · 2017
+</div>
+</div>
+
+
+<div class="book-card">
+<div class="book-title">
+Agroforestry for Climate Resilience and Rural Livelihood
+</div>
+<div class="book-meta">
+Inder Dev, Ram, A., Kumar, N. et al. · 2019
+</div>
+</div>
+
+
+<div class="book-card">
+<div class="book-title">
+Building Climate Resilience and Sustainability through Agro-ecotourism
+</div>
+<div class="book-meta">
+Paramesha, V. et al. · 2025
+</div>
+</div>
+
+
+<div class="book-card">
+<div class="book-title">
+Competitive Forestry
+</div>
+<div class="book-meta">
+Uthappa, A.R. & Sangram, C.B. · 2015
+</div>
+</div>
+
+
+<div class="book-card">
+<div class="book-title">
+Competitive Forestry — 2nd Edition
+</div>
+<div class="book-meta">
+Sangram, C.B. & Uthappa, A.R. · 2018
+</div>
+</div>
+
+</div>
+</section>
+
+
+</main>
+
+
+<footer class="publication-footer">
+
+<div class="container">
+
+<div class="footer-title">
+Dr. A. R. Uthappa
+</div>
+
+<div class="footer-text">
+Senior Scientist – Agroforestry · ICAR–Central Coastal Agricultural Research Institute, Goa
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
