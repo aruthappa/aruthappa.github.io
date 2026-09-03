@@ -616,7 +616,229 @@ footer{
     }
 
 }
+/* =========================================================
+   ABOUT SECTION
+   ========================================================= */
 
+.about-section {
+    background: #f7f8f3;
+    padding: 110px 0;
+    color: #18352a;
+}
+
+.about-container {
+    width: min(1180px, 90%);
+    margin: auto;
+}
+
+.about-label {
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    color: #587461;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+
+.about-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.05;
+    font-weight: 400;
+    margin: 0 0 55px;
+    color: #18352a;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 75px;
+    align-items: start;
+}
+
+.about-text h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    font-weight: 400;
+    margin: 0 0 22px;
+    color: #18352a;
+}
+
+.about-text p {
+    font-size: 17px;
+    line-height: 1.85;
+    color: #40554a;
+    margin-bottom: 22px;
+}
+
+.about-highlight {
+    border-left: 3px solid #18352a;
+    padding: 20px 25px;
+    margin: 35px 0;
+    background: #ffffff;
+}
+
+.about-highlight p {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    line-height: 1.55;
+    color: #18352a;
+}
+
+.about-side {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.profile-card {
+    background: #18352a;
+    color: #ffffff;
+    padding: 34px;
+}
+
+.profile-card h4 {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+    color: #dfe9e1;
+}
+
+.profile-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0 0 10px;
+}
+
+.profile-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+    color: #e8eee9;
+}
+
+.education-card {
+    background: #ffffff;
+    border: 1px solid #dce3dd;
+    padding: 28px 30px;
+}
+
+.education-card .year {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #6b8173;
+    margin-bottom: 8px;
+}
+
+.education-card h4 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0 0 7px;
+    color: #18352a;
+}
+
+.education-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #607066;
+    margin: 0;
+}
+
+.about-focus {
+    margin-top: 85px;
+}
+
+.about-focus-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.focus-item {
+    background: #ffffff;
+    border: 1px solid #dce3dd;
+    padding: 28px;
+    min-height: 145px;
+}
+
+.focus-number {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #718779;
+    margin-bottom: 15px;
+}
+
+.focus-item h4 {
+    font-size: 19px;
+    margin: 0 0 9px;
+    color: #18352a;
+}
+
+.focus-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #607066;
+    margin: 0;
+}
+
+.about-bottom {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.about-button {
+    display: inline-block;
+    padding: 15px 25px;
+    border: 1px solid #18352a;
+    color: #18352a;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.about-button:hover {
+    background: #18352a;
+    color: #ffffff;
+}
+
+/* MOBILE */
+@media (max-width: 850px) {
+
+    .about-section {
+        padding: 80px 0;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .focus-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-title {
+        margin-bottom: 40px;
+    }
+
+}
 </style>
 
 </head>
@@ -712,96 +934,305 @@ Agroforestry × Climate × Carbon × Soil × Biodiversity × Geospatial Science
 
 </section>
 
-
-<!-- =========================
+<!-- =====================================================
      ABOUT
-========================= -->
+===================================================== -->
 
-<section class="about" id="about">
+<section class="about-section" id="about">
 
-<div class="container">
+    <div class="about-container">
 
-<div class="about-grid">
+        <div class="about-label">
+            ABOUT THE SCIENTIST
+        </div>
 
-<div>
-
-<div class="section-label">
-About
-</div>
-
-<h2 class="section-title">
-Science for resilient landscapes.
-</h2>
-
-<div class="about-text">
-
-<p>
-I am a Senior Scientist in Agroforestry at ICAR–Central Coastal Agricultural Research Institute, Goa, working at the interface of agroforestry, natural resource management, climate resilience and sustainable agriculture.
-</p>
-
-<p>
-My research focuses on developing scientifically robust and practical land-use systems that integrate trees, crops, soils and ecological processes to address climate change, land degradation, carbon management and livelihood security.
-</p>
-
-<p>
-My work increasingly integrates geospatial technologies, machine learning, ecosystem assessment and nature-based solutions with field-based agroforestry research.
-</p>
-
-<p>
-The overarching objective is to translate ecological science into scalable solutions for farmers, landscapes and climate-resilient agricultural systems.
-</p>
-
-</div>
-
-</div>
+        <h2 class="about-title">
+            Science for resilient<br>
+            landscapes and livelihoods.
+        </h2>
 
 
-<div class="credentials">
+        <div class="about-grid">
 
-<div class="credential">
+            <!-- LEFT COLUMN -->
 
-<strong>Ph.D.</strong>
-<span>
-Forestry & Environmental Science · University of Agricultural Sciences, Bangalore · 2021
-</span>
+            <div class="about-text">
 
-</div>
+                <h3>
+                    Advancing agroforestry through
+                    science, innovation and impact.
+                </h3>
 
-<div class="credential">
+                <p>
+                    Dr. A. R. Uthappa is a Senior Scientist in
+                    Agroforestry at the ICAR–Central Coastal
+                    Agricultural Research Institute (ICAR–CCARI),
+                    Old Goa, India.
+                </p>
 
-<strong>M.Sc.</strong>
-<span>
-Agroforestry · G.B. Pant University of Agriculture & Technology, Pantnagar · 2011
-</span>
+                <p>
+                    His research focuses on developing scientifically
+                    robust and practically relevant agroforestry
+                    systems that strengthen climate resilience,
+                    improve soil and ecosystem health, enhance
+                    carbon sequestration and support sustainable
+                    livelihoods.
+                </p>
 
-</div>
+                <p>
+                    His work integrates agroforestry, soil science,
+                    climate resilience, biodiversity, carbon
+                    management, natural-resource conservation and
+                    emerging geospatial and machine-learning
+                    approaches for sustainable land management.
+                </p>
 
-<div class="credential">
+                <div class="about-highlight">
 
-<strong>B.Sc.</strong>
-<span>
-Forestry · University of Agricultural Sciences, Bangalore · 2009
-</span>
+                    <p>
+                        “Building resilient agroecosystems requires
+                        connecting ecological science with farmers,
+                        landscapes, markets and climate solutions.”
+                    </p>
 
-</div>
+                </div>
 
-<div class="credential">
+                <p>
+                    With research experience across ICAR institutions
+                    and multidisciplinary projects, his work spans
+                    both semi-arid and coastal agroecosystems, with
+                    an emphasis on translating research into
+                    field-level technologies, evidence-based
+                    management strategies and scalable
+                    nature-based solutions.
+                </p>
 
-<strong>Current Position</strong>
-<span>
-Senior Scientist (Agroforestry) · ICAR–CCARI, Goa
-</span>
+            </div>
 
-</div>
 
-</div>
+            <!-- RIGHT COLUMN -->
 
-</div>
+            <div class="about-side">
 
-</div>
+                <div class="profile-card">
+
+                    <h4>
+                        Current Position
+                    </h4>
+
+                    <h3>
+                        Senior Scientist
+                    </h3>
+
+                    <p>
+                        Agroforestry<br>
+                        ICAR–Central Coastal Agricultural
+                        Research Institute<br>
+                        Old Goa, Goa, India
+                    </p>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <div class="year">
+                        2021
+                    </div>
+
+                    <h4>
+                        Ph.D. Forestry & Environmental Science
+                    </h4>
+
+                    <p>
+                        University of Agricultural Sciences,
+                        Bangalore
+                    </p>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <div class="year">
+                        2011
+                    </div>
+
+                    <h4>
+                        M.Sc. Agroforestry
+                    </h4>
+
+                    <p>
+                        G.B. Pant University of Agriculture
+                        and Technology, Pantnagar
+                    </p>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <div class="year">
+                        2009
+                    </div>
+
+                    <h4>
+                        B.Sc. Forestry
+                    </h4>
+
+                    <p>
+                        University of Agricultural Sciences,
+                        Bangalore
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RESEARCH FOCUS -->
+
+        <div class="about-focus">
+
+            <h3 class="about-focus-title">
+                Research at the intersection of
+                ecology, climate and agriculture
+            </h3>
+
+
+            <div class="focus-grid">
+
+                <div class="focus-item">
+
+                    <div class="focus-number">
+                        01
+                    </div>
+
+                    <h4>
+                        Agroforestry Systems
+                    </h4>
+
+                    <p>
+                        Designing productive, resilient and
+                        multifunctional tree-based farming systems.
+                    </p>
+
+                </div>
+
+
+                <div class="focus-item">
+
+                    <div class="focus-number">
+                        02
+                    </div>
+
+                    <h4>
+                        Climate Resilience
+                    </h4>
+
+                    <p>
+                        Developing adaptation strategies for
+                        climate-vulnerable agricultural landscapes.
+                    </p>
+
+                </div>
+
+
+                <div class="focus-item">
+
+                    <div class="focus-number">
+                        03
+                    </div>
+
+                    <h4>
+                        Carbon & Climate Solutions
+                    </h4>
+
+                    <p>
+                        Quantifying carbon sequestration and
+                        exploring nature-based climate solutions.
+                    </p>
+
+                </div>
+
+
+                <div class="focus-item">
+
+                    <div class="focus-number">
+                        04
+                    </div>
+
+                    <h4>
+                        Soil & Land Restoration
+                    </h4>
+
+                    <p>
+                        Improving soil health and restoring degraded
+                        and marginal landscapes through tree-based
+                        interventions.
+                    </p>
+
+                </div>
+
+
+                <div class="focus-item">
+
+                    <div class="focus-number">
+                        05
+                    </div>
+
+                    <h4>
+                        Biodiversity & Ecosystem Services
+                    </h4>
+
+                    <p>
+                        Understanding biodiversity, ecosystem
+                        functions and services in agroecosystems.
+                    </p>
+
+                </div>
+
+
+                <div class="focus-item">
+
+                    <div class="focus-number">
+                        06
+                    </div>
+
+                    <h4>
+                        Remote Sensing & AI
+                    </h4>
+
+                    <p>
+                        Applying geospatial technologies and
+                        machine learning to monitor and manage
+                        agroforestry landscapes.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-bottom">
+
+                <a href="#research" class="about-button">
+                    EXPLORE RESEARCH
+                </a>
+
+                <a href="#publications" class="about-button">
+                    VIEW PUBLICATIONS
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
-
 
 <!-- =========================
      RESEARCH
