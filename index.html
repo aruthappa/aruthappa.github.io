@@ -711,657 +711,9 @@ section{
         justify-content: flex-start;
     }
 }
-<!-- =========================================================
-POPULAR ARTICLES
-========================================================= -->
 
-<style>
-.popular-articles-section {
-    padding: 110px 0 120px;
-    background: #f7f8f5;
-    border-top: 1px solid #dfe5df;
-}
 
-.popular-articles-section .section-label {
-    letter-spacing: 2px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #5d7467;
-    margin-bottom: 18px;
-}
 
-.popular-articles-section .section-title {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(42px, 5vw, 68px);
-    line-height: 1.05;
-    font-weight: 400;
-    color: #20362d;
-    margin: 0 0 22px;
-}
-
-.popular-intro {
-    max-width: 760px;
-    font-size: 18px;
-    line-height: 1.75;
-    color: #66736d;
-    margin-bottom: 60px;
-}
-
-/* FEATURED ARTICLE */
-
-.popular-feature {
-    display: grid;
-    grid-template-columns: 0.82fr 1.18fr;
-    min-height: 500px;
-    background: #20362d;
-    overflow: hidden;
-    margin-bottom: 70px;
-}
-
-.popular-feature-label {
-    font-size: 11px;
-    letter-spacing: 2.5px;
-    font-weight: 700;
-    color: #b9cdbf;
-    margin-bottom: 24px;
-}
-
-.popular-feature-visual {
-    position: relative;
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-    background: #29483a;
-    overflow: hidden;
-}
-
-.popular-feature-visual::before {
-    content: "S";
-    position: absolute;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 430px;
-    line-height: 1;
-    color: rgba(255,255,255,0.035);
-    left: 20px;
-    bottom: -75px;
-}
-
-.popular-feature-mark {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-}
-
-.popular-feature-mark .publication {
-    font-size: 13px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: #d7e3db;
-    margin-bottom: 20px;
-}
-
-.popular-feature-mark .tree-word {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(52px, 6vw, 88px);
-    line-height: 0.95;
-    color: #ffffff;
-    font-style: italic;
-}
-
-.popular-feature-mark .issue {
-    margin-top: 26px;
-    font-size: 11px;
-    letter-spacing: 2px;
-    color: #b9cdbf;
-    text-transform: uppercase;
-}
-
-.popular-feature-content {
-    padding: 64px 68px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.popular-feature-content h3 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(34px, 4vw, 56px);
-    line-height: 1.08;
-    font-weight: 400;
-    color: #ffffff;
-    margin: 0 0 24px;
-}
-
-.popular-feature-content .article-date {
-    font-size: 12px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: #b9cdbf;
-    margin-bottom: 28px;
-}
-
-.popular-feature-content .article-description {
-    font-size: 17px;
-    line-height: 1.75;
-    color: #d9e2dc;
-    max-width: 620px;
-    margin-bottom: 28px;
-}
-
-.popular-authors {
-    font-size: 13px;
-    line-height: 1.6;
-    color: #b9cdbf;
-    margin-bottom: 32px;
-}
-
-.popular-read-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    width: fit-content;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #a9c0b1;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1.8px;
-    transition: gap 0.25s ease, border-color 0.25s ease;
-}
-
-.popular-read-link:hover {
-    gap: 18px;
-    border-color: #ffffff;
-}
-
-/* SELECTED ARTICLES */
-
-.popular-subheading {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 32px;
-    font-weight: 400;
-    color: #20362d;
-    margin: 0 0 32px;
-}
-
-.popular-article-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    background: #d9e1db;
-    border: 1px solid #d9e1db;
-    margin-bottom: 85px;
-}
-
-.popular-article-card {
-    background: #ffffff;
-    padding: 34px 38px 38px;
-    min-height: 210px;
-    transition: transform 0.25s ease, background 0.25s ease;
-}
-
-.popular-article-card:hover {
-    background: #fbfcfa;
-    transform: translateY(-2px);
-}
-
-.popular-card-meta {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin-bottom: 20px;
-    font-size: 10px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: #738078;
-}
-
-.popular-article-card h4 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 24px;
-    line-height: 1.25;
-    font-weight: 400;
-    color: #294238;
-    margin: 0 0 22px;
-}
-
-.popular-article-card a {
-    color: #536d60;
-    text-decoration: none;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-}
-
-.popular-article-card a:hover {
-    color: #20362d;
-}
-
-/* MEDIA CUTTINGS */
-
-.popular-media {
-    border-top: 1px solid #d9e1db;
-    padding-top: 55px;
-}
-
-.popular-media-intro {
-    max-width: 700px;
-    color: #68756e;
-    font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 30px;
-}
-
-.popular-media-placeholder {
-    border: 1px dashed #bcc9c1;
-    min-height: 170px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 35px;
-    background: #fbfcfa;
-}
-
-.popular-media-placeholder strong {
-    display: block;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 23px;
-    font-weight: 400;
-    color: #40594d;
-    margin-bottom: 8px;
-}
-
-.popular-media-placeholder span {
-    font-size: 13px;
-    color: #7a857f;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 850px) {
-
-    .popular-feature {
-        grid-template-columns: 1fr;
-    }
-
-    .popular-feature-visual {
-        min-height: 330px;
-    }
-
-    .popular-feature-content {
-        padding: 48px 35px;
-    }
-
-    .popular-article-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 600px) {
-
-    .popular-articles-section {
-        padding: 80px 0;
-    }
-
-    .popular-feature-visual {
-        min-height: 280px;
-        padding: 35px;
-    }
-
-    .popular-feature-mark .tree-word {
-        font-size: 58px;
-    }
-
-    .popular-feature-content {
-        padding: 40px 25px;
-    }
-
-    .popular-article-card {
-        padding: 28px;
-    }
-}
-</style>
-
-
-<section class="popular-articles-section" id="popular-articles">
-
-    <div class="container">
-
-        <div class="section-label">
-            06 · POPULAR ARTICLES
-        </div>
-
-        <h2 class="section-title">
-            Science Beyond the Laboratory
-        </h2>
-
-        <p class="popular-intro">
-            Ideas, insights and stories reaching society through popular
-            science, environmental journalism and public engagement.
-        </p>
-
-
-        <!-- FEATURED ARTICLE -->
-
-        <div class="popular-feature">
-
-            <div class="popular-feature-visual">
-
-                <div class="popular-feature-mark">
-
-                    <div class="publication">
-                        Down To Earth
-                    </div>
-
-                    <div class="tree-word">
-                        Sandalwood,<br>reborn
-                    </div>
-
-                    <div class="issue">
-                        01 September 2026
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="popular-feature-content">
-
-                <div class="popular-feature-label">
-                    FEATURED ARTICLE
-                </div>
-
-                <h3>
-                    Sandalwood, reborn
-                </h3>
-
-                <div class="article-date">
-                    Down To Earth · 01 September 2026
-                </div>
-
-                <p class="article-description">
-                    India is reviving sandalwood cultivation, but its
-                    long-term success will depend on scientific management
-                    of trees alongside reforms in regulatory policies.
-                </p>
-
-                <div class="popular-authors">
-                    Sangram B. Chavan · A. R. Uthappa · A. Keerthika
-                </div>
-
-                <a
-                    class="popular-read-link"
-                    href="https://www.downtoearth.org.in/amp/story/forests/sandalwood-reborn"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    READ ORIGINAL ARTICLE →
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- SELECTED ARTICLES -->
-
-        <h3 class="popular-subheading">
-            Selected Articles
-        </h3>
-
-        <div class="popular-article-grid">
-
-
-            <article class="popular-article-card">
-
-                <div class="popular-card-meta">
-                    <span>Down To Earth</span>
-                    <span>2026</span>
-                </div>
-
-                <h4>
-                    Liberating the king of timbers:
-                    Why Maharashtra’s teak reform matters
-                </h4>
-
-                <a
-                    href="https://www.downtoearth.org.in/forests/liberating-the-king-of-timbers-why-maharashtras-teak-reform-matters"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    READ ARTICLE →
-                </a>
-
-            </article>
-
-
-            <article class="popular-article-card">
-
-                <div class="popular-card-meta">
-                    <span>Down To Earth</span>
-                    <span>2026</span>
-                </div>
-
-                <h4>
-                    Beyond numbers: Mass tree plantation for a greener
-                    Maharashtra needs a rethink
-                </h4>
-
-                <a
-                    href="https://www.downtoearth.org.in/wildlife-biodiversity/beyond-numbers-mass-tree-plantation-for-a-greener-maharashtra-needs-a-rethink"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    READ ARTICLE →
-                </a>
-
-            </article>
-
-
-            <article class="popular-article-card">
-
-                <div class="popular-card-meta">
-                    <span>Down To Earth</span>
-                    <span>2026</span>
-                </div>
-
-                <h4>
-                    World Bee Day 2026: When we conserve stingless bees,
-                    we safeguard our own future
-                </h4>
-
-                <a
-                    href="https://www.downtoearth.org.in/amp/story/wildlife-biodiversity/world-bee-day-2026-when-we-conserve-stingless-bees-we-safeguard-our-own-future"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    READ ARTICLE →
-                </a>
-
-            </article>
-
-
-            <article class="popular-article-card">
-
-                <div class="popular-card-meta">
-                    <span>Down To Earth</span>
-                    <span>2025</span>
-                </div>
-
-                <h4>
-                    ‘Paar’ revival: conserving heritage trees and
-                    bringing back traditional wisdom
-                </h4>
-
-                <a
-                    href="https://www.downtoearth.org.in/amp/story/environment/paar-revival-not-just-about-conserving-heritage-trees-but-also-bringing-back-spaces-for-sharing-traditional-wisdom"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    READ ARTICLE →
-                </a>
-
-            </article>
-
-
-            <article class="popular-article-card">
-
-                <div class="popular-card-meta">
-                    <span>Down To Earth</span>
-                    <span>2025</span>
-                </div>
-
-                <h4>
-                    Buzzing in the background: Pollinators must be part
-                    of climate conversations
-                </h4>
-
-                <a
-                    href="https://www.downtoearth.org.in/climate-change/buzzing-in-the-background-pollinators-must-be-part-of-climate-conversations"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    READ ARTICLE →
-                </a>
-
-            </article>
-
-
-            <article class="popular-article-card">
-
-                <div class="popular-card-meta">
-                    <span>Down To Earth</span>
-                    <span>2025</span>
-                </div>
-
-                <h4>
-                    Taming the teak
-                </h4>
-
-                <a
-                    href="https://www.downtoearth.org.in/forests/taming-the-teak"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    READ ARTICLE →
-                </a>
-
-            </article>
-
-
-            <article class="popular-article-card">
-
-                <div class="popular-card-meta">
-                    <span>Down To Earth</span>
-                    <span>2025</span>
-                </div>
-
-                <h4>
-                    Sthala vrikshas: Worship of sacred trees symbolises
-                    humans’ deep and ancient connection with nature
-                </h4>
-
-                <a
-                    href="https://www.downtoearth.org.in/wildlife-biodiversity/sthala-vrikshas-worship-of-sacred-trees-symbolises-humans-deep-ancient-connection-with-nature"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    READ ARTICLE →
-                </a>
-
-            </article>
-
-
-            <article class="popular-article-card">
-
-                <div class="popular-card-meta">
-                    <span>Down To Earth</span>
-                    <span>2025</span>
-                </div>
-
-                <h4>
-                    Upside-down wonders: Exploring India’s majestic
-                    baobab trees
-                </h4>
-
-                <a
-                    href="https://www.downtoearth.org.in/wildlife-biodiversity/upside-down-wonders-exploring-indias-majestic-baobab-trees"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    READ ARTICLE →
-                </a>
-
-            </article>
-
-
-            <article class="popular-article-card">
-
-                <div class="popular-card-meta">
-                    <span>Down To Earth</span>
-                    <span>2024</span>
-                </div>
-
-                <h4>
-                    Timing matters: Why planting trees in April is unwise
-                    and thumb rules for successful plantation drives
-                </h4>
-
-                <a
-                    href="https://www.downtoearth.org.in/forests/timing-matters-why-planting-trees-in-april-is-unwise-thumb-rules-for-successful-plantation-drives-95424"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    READ ARTICLE →
-                </a>
-
-            </article>
-
-        </div>
-
-
-        <!-- MEDIA CUTTINGS -->
-
-        <div class="popular-media">
-
-            <h3 class="popular-subheading">
-                As Featured in the Media
-            </h3>
-
-            <p class="popular-media-intro">
-                Newspaper and magazine features documenting the reach of
-                scientific work beyond academic publications and into
-                public conversations.
-            </p>
-
-            <div class="popular-media-placeholder">
-
-                <div>
-
-                    <strong>
-                        Media Features &amp; Newspaper Cuttings
-                    </strong>
-
-                    <span>
-                        Selected print features and newspaper references
-                        will be added here.
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =========================================================
-END POPULAR ARTICLES
-========================================================= -->
-
-/* =========================
-   PROJECTS
-========================= */ 
-<!-- =========================
-     PROJECTS
-     ========================= -->
 
 <section class="projects" id="projects">
 
@@ -4539,6 +3891,8 @@ processes can be designed into productive, resilient and sustainable landscapes.
     </div>
 
 </div>
+
+</div>
 </section>
 <!-- =========================
      RESEARCH IN ACTION
@@ -5349,6 +4703,651 @@ processes can be designed into productive, resilient and sustainable landscapes.
     </div>
 
 </section>
+<!-- =========================================================
+POPULAR ARTICLES
+========================================================= -->
+
+<style>
+.popular-articles-section {
+    padding: 110px 0 120px;
+    background: #f7f8f5;
+    border-top: 1px solid #dfe5df;
+}
+
+.popular-articles-section .section-label {
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #5d7467;
+    margin-bottom: 18px;
+}
+
+.popular-articles-section .section-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.05;
+    font-weight: 400;
+    color: #20362d;
+    margin: 0 0 22px;
+}
+
+.popular-intro {
+    max-width: 760px;
+    font-size: 18px;
+    line-height: 1.75;
+    color: #66736d;
+    margin-bottom: 60px;
+}
+
+/* FEATURED ARTICLE */
+
+.popular-feature {
+    display: grid;
+    grid-template-columns: 0.82fr 1.18fr;
+    min-height: 500px;
+    background: #20362d;
+    overflow: hidden;
+    margin-bottom: 70px;
+}
+
+.popular-feature-label {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    color: #b9cdbf;
+    margin-bottom: 24px;
+}
+
+.popular-feature-visual {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background: #29483a;
+    overflow: hidden;
+}
+
+.popular-feature-visual::before {
+    content: "S";
+    position: absolute;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 430px;
+    line-height: 1;
+    color: rgba(255,255,255,0.035);
+    left: 20px;
+    bottom: -75px;
+}
+
+.popular-feature-mark {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.popular-feature-mark .publication {
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #d7e3db;
+    margin-bottom: 20px;
+}
+
+.popular-feature-mark .tree-word {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(52px, 6vw, 88px);
+    line-height: 0.95;
+    color: #ffffff;
+    font-style: italic;
+}
+
+.popular-feature-mark .issue {
+    margin-top: 26px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #b9cdbf;
+    text-transform: uppercase;
+}
+
+.popular-feature-content {
+    padding: 64px 68px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.popular-feature-content h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 4vw, 56px);
+    line-height: 1.08;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0 0 24px;
+}
+
+.popular-feature-content .article-date {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #b9cdbf;
+    margin-bottom: 28px;
+}
+
+.popular-feature-content .article-description {
+    font-size: 17px;
+    line-height: 1.75;
+    color: #d9e2dc;
+    max-width: 620px;
+    margin-bottom: 28px;
+}
+
+.popular-authors {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #b9cdbf;
+    margin-bottom: 32px;
+}
+
+.popular-read-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    width: fit-content;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #a9c0b1;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    transition: gap 0.25s ease, border-color 0.25s ease;
+}
+
+.popular-read-link:hover {
+    gap: 18px;
+    border-color: #ffffff;
+}
+
+/* SELECTED ARTICLES */
+
+.popular-subheading {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #20362d;
+    margin: 0 0 32px;
+}
+
+.popular-article-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: #d9e1db;
+    border: 1px solid #d9e1db;
+    margin-bottom: 85px;
+}
+
+.popular-article-card {
+    background: #ffffff;
+    padding: 34px 38px 38px;
+    min-height: 210px;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.popular-article-card:hover {
+    background: #fbfcfa;
+    transform: translateY(-2px);
+}
+
+.popular-card-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #738078;
+}
+
+.popular-article-card h4 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 400;
+    color: #294238;
+    margin: 0 0 22px;
+}
+
+.popular-article-card a {
+    color: #536d60;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.popular-article-card a:hover {
+    color: #20362d;
+}
+
+/* MEDIA CUTTINGS */
+
+.popular-media {
+    border-top: 1px solid #d9e1db;
+    padding-top: 55px;
+}
+
+.popular-media-intro {
+    max-width: 700px;
+    color: #68756e;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.popular-media-placeholder {
+    border: 1px dashed #bcc9c1;
+    min-height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 35px;
+    background: #fbfcfa;
+}
+
+.popular-media-placeholder strong {
+    display: block;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    font-weight: 400;
+    color: #40594d;
+    margin-bottom: 8px;
+}
+
+.popular-media-placeholder span {
+    font-size: 13px;
+    color: #7a857f;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .popular-feature {
+        grid-template-columns: 1fr;
+    }
+
+    .popular-feature-visual {
+        min-height: 330px;
+    }
+
+    .popular-feature-content {
+        padding: 48px 35px;
+    }
+
+    .popular-article-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .popular-articles-section {
+        padding: 80px 0;
+    }
+
+    .popular-feature-visual {
+        min-height: 280px;
+        padding: 35px;
+    }
+
+    .popular-feature-mark .tree-word {
+        font-size: 58px;
+    }
+
+    .popular-feature-content {
+        padding: 40px 25px;
+    }
+
+    .popular-article-card {
+        padding: 28px;
+    }
+}
+</style>
+
+
+<section class="popular-articles-section" id="popular-articles">
+
+    <div class="container">
+
+        <div class="section-label">
+            06 · POPULAR ARTICLES
+        </div>
+
+        <h2 class="section-title">
+            Science Beyond the Laboratory
+        </h2>
+
+        <p class="popular-intro">
+            Ideas, insights and stories reaching society through popular
+            science, environmental journalism and public engagement.
+        </p>
+
+
+        <!-- FEATURED ARTICLE -->
+
+        <div class="popular-feature">
+
+            <div class="popular-feature-visual">
+
+                <div class="popular-feature-mark">
+
+                    <div class="publication">
+                        Down To Earth
+                    </div>
+
+                    <div class="tree-word">
+                        Sandalwood,<br>reborn
+                    </div>
+
+                    <div class="issue">
+                        01 September 2026
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="popular-feature-content">
+
+                <div class="popular-feature-label">
+                    FEATURED ARTICLE
+                </div>
+
+                <h3>
+                    Sandalwood, reborn
+                </h3>
+
+                <div class="article-date">
+                    Down To Earth · 01 September 2026
+                </div>
+
+                <p class="article-description">
+                    India is reviving sandalwood cultivation, but its
+                    long-term success will depend on scientific management
+                    of trees alongside reforms in regulatory policies.
+                </p>
+
+                <div class="popular-authors">
+                    Sangram B. Chavan · A. R. Uthappa · A. Keerthika
+                </div>
+
+                <a
+                    class="popular-read-link"
+                    href="https://www.downtoearth.org.in/amp/story/forests/sandalwood-reborn"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    READ ORIGINAL ARTICLE →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- SELECTED ARTICLES -->
+
+        <h3 class="popular-subheading">
+            Selected Articles
+        </h3>
+
+        <div class="popular-article-grid">
+
+
+            <article class="popular-article-card">
+
+                <div class="popular-card-meta">
+                    <span>Down To Earth</span>
+                    <span>2026</span>
+                </div>
+
+                <h4>
+                    Liberating the king of timbers:
+                    Why Maharashtra’s teak reform matters
+                </h4>
+
+                <a
+                    href="https://www.downtoearth.org.in/forests/liberating-the-king-of-timbers-why-maharashtras-teak-reform-matters"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    READ ARTICLE →
+                </a>
+
+            </article>
+
+
+            <article class="popular-article-card">
+
+                <div class="popular-card-meta">
+                    <span>Down To Earth</span>
+                    <span>2026</span>
+                </div>
+
+                <h4>
+                    Beyond numbers: Mass tree plantation for a greener
+                    Maharashtra needs a rethink
+                </h4>
+
+                <a
+                    href="https://www.downtoearth.org.in/wildlife-biodiversity/beyond-numbers-mass-tree-plantation-for-a-greener-maharashtra-needs-a-rethink"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    READ ARTICLE →
+                </a>
+
+            </article>
+
+
+            <article class="popular-article-card">
+
+                <div class="popular-card-meta">
+                    <span>Down To Earth</span>
+                    <span>2026</span>
+                </div>
+
+                <h4>
+                    World Bee Day 2026: When we conserve stingless bees,
+                    we safeguard our own future
+                </h4>
+
+                <a
+                    href="https://www.downtoearth.org.in/amp/story/wildlife-biodiversity/world-bee-day-2026-when-we-conserve-stingless-bees-we-safeguard-our-own-future"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    READ ARTICLE →
+                </a>
+
+            </article>
+
+
+            <article class="popular-article-card">
+
+                <div class="popular-card-meta">
+                    <span>Down To Earth</span>
+                    <span>2025</span>
+                </div>
+
+                <h4>
+                    ‘Paar’ revival: conserving heritage trees and
+                    bringing back traditional wisdom
+                </h4>
+
+                <a
+                    href="https://www.downtoearth.org.in/amp/story/environment/paar-revival-not-just-about-conserving-heritage-trees-but-also-bringing-back-spaces-for-sharing-traditional-wisdom"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    READ ARTICLE →
+                </a>
+
+            </article>
+
+
+            <article class="popular-article-card">
+
+                <div class="popular-card-meta">
+                    <span>Down To Earth</span>
+                    <span>2025</span>
+                </div>
+
+                <h4>
+                    Buzzing in the background: Pollinators must be part
+                    of climate conversations
+                </h4>
+
+                <a
+                    href="https://www.downtoearth.org.in/climate-change/buzzing-in-the-background-pollinators-must-be-part-of-climate-conversations"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    READ ARTICLE →
+                </a>
+
+            </article>
+
+
+            <article class="popular-article-card">
+
+                <div class="popular-card-meta">
+                    <span>Down To Earth</span>
+                    <span>2025</span>
+                </div>
+
+                <h4>
+                    Taming the teak
+                </h4>
+
+                <a
+                    href="https://www.downtoearth.org.in/forests/taming-the-teak"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    READ ARTICLE →
+                </a>
+
+            </article>
+
+
+            <article class="popular-article-card">
+
+                <div class="popular-card-meta">
+                    <span>Down To Earth</span>
+                    <span>2025</span>
+                </div>
+
+                <h4>
+                    Sthala vrikshas: Worship of sacred trees symbolises
+                    humans’ deep and ancient connection with nature
+                </h4>
+
+                <a
+                    href="https://www.downtoearth.org.in/wildlife-biodiversity/sthala-vrikshas-worship-of-sacred-trees-symbolises-humans-deep-ancient-connection-with-nature"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    READ ARTICLE →
+                </a>
+
+            </article>
+
+
+            <article class="popular-article-card">
+
+                <div class="popular-card-meta">
+                    <span>Down To Earth</span>
+                    <span>2025</span>
+                </div>
+
+                <h4>
+                    Upside-down wonders: Exploring India’s majestic
+                    baobab trees
+                </h4>
+
+                <a
+                    href="https://www.downtoearth.org.in/wildlife-biodiversity/upside-down-wonders-exploring-indias-majestic-baobab-trees"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    READ ARTICLE →
+                </a>
+
+            </article>
+
+
+            <article class="popular-article-card">
+
+                <div class="popular-card-meta">
+                    <span>Down To Earth</span>
+                    <span>2024</span>
+                </div>
+
+                <h4>
+                    Timing matters: Why planting trees in April is unwise
+                    and thumb rules for successful plantation drives
+                </h4>
+
+                <a
+                    href="https://www.downtoearth.org.in/forests/timing-matters-why-planting-trees-in-april-is-unwise-thumb-rules-for-successful-plantation-drives-95424"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    READ ARTICLE →
+                </a>
+
+            </article>
+
+        </div>
+
+
+        <!-- MEDIA CUTTINGS -->
+
+        <div class="popular-media">
+
+            <h3 class="popular-subheading">
+                As Featured in the Media
+            </h3>
+
+            <p class="popular-media-intro">
+                Newspaper and magazine features documenting the reach of
+                scientific work beyond academic publications and into
+                public conversations.
+            </p>
+
+            <div class="popular-media-placeholder">
+
+                <div>
+
+                    <strong>
+                        Media Features &amp; Newspaper Cuttings
+                    </strong>
+
+                    <span>
+                        Selected print features and newspaper references
+                        will be added here.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+END POPULAR ARTICLES
+========================================================= -->
+
 <!-- =========================
      PROJECTS
 ========================= -->
