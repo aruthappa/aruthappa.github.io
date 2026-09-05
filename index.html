@@ -2060,6 +2060,249 @@ footer{
     display: block;
     transition: transform 0.8s ease;
 }
+ /* =========================================================
+   RESEARCH PHOTOGRAPH INTERACTION
+========================================================= */
+
+.research-image-button {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: zoom-in;
+    overflow: hidden;
+    text-align: left;
+}
+
+.research-image-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.7s ease;
+}
+
+.research-image-button:hover img {
+    transform: scale(1.025);
+}
+
+
+/* Copyright */
+
+.research-image-copyright {
+    position: absolute;
+    left: 18px;
+    bottom: 16px;
+    z-index: 3;
+
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+
+    text-shadow:
+        0 1px 3px rgba(0,0,0,0.8),
+        0 1px 8px rgba(0,0,0,0.5);
+
+    pointer-events: none;
+}
+
+
+/* Fullscreen icon */
+
+.research-image-view {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.92);
+    color: #006f68;
+
+    font-size: 22px;
+    line-height: 1;
+
+    opacity: 0;
+    transform: translateY(5px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+
+    pointer-events: none;
+}
+
+.research-image-button:hover .research-image-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   FULLSCREEN RESEARCH IMAGE LIGHTBOX
+========================================================= */
+
+.research-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    background: rgba(7, 18, 16, 0.96);
+    backdrop-filter: blur(8px);
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.research-lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+
+/* Large photograph */
+
+.research-lightbox-image {
+    max-width: 92vw;
+    max-height: 88vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.45);
+
+    animation: researchImageAppear 0.35s ease;
+}
+
+@keyframes researchImageAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* Close button */
+
+.research-lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 30px;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid rgba(255,255,255,0.45);
+    border-radius: 50%;
+
+    background: rgba(0,0,0,0.25);
+    color: #ffffff;
+
+    font-size: 30px;
+    font-weight: 300;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.research-lightbox-close:hover {
+    background: rgba(255,255,255,0.15);
+    transform: rotate(90deg);
+}
+
+
+/* Copyright in fullscreen */
+
+.research-lightbox-copyright {
+    position: absolute;
+
+    left: 30px;
+    bottom: 24px;
+
+    color: rgba(255,255,255,0.85);
+
+    font-size: 13px;
+    letter-spacing: 0.06em;
+
+    text-shadow: 0 1px 5px rgba(0,0,0,0.8);
+}
+
+
+/* Photograph title */
+
+.research-lightbox-title {
+    position: absolute;
+
+    left: 30px;
+    top: 25px;
+
+    color: rgba(255,255,255,0.85);
+
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .research-lightbox {
+        padding: 20px;
+    }
+
+    .research-lightbox-image {
+        max-width: 96vw;
+        max-height: 82vh;
+    }
+
+    .research-lightbox-close {
+        top: 15px;
+        right: 15px;
+    }
+
+    .research-lightbox-copyright {
+        left: 18px;
+        bottom: 15px;
+    }
+
+}   
 .research-action-reverse .research-action-image img {
     object-position: center center;
 }
@@ -2682,10 +2925,29 @@ processes can be designed into productive, resilient and sustainable landscapes.
 
             <div class="research-action-image">
 
-                <img src="coconut-fodder.jpeg"
-                     alt="Coconut-based fodder production system at ICAR-CCARI">
+    <button
+        class="research-image-button"
+        type="button"
+        onclick="openResearchLightbox('coconut-fodder.jpeg', 'Coconut–Fodder Agroforestry')"
+        aria-label="View Coconut–Fodder Agroforestry photograph in full screen"
+    >
 
-            </div>
+        <img
+            src="coconut-fodder.jpeg"
+            alt="Coconut-based fodder production system at ICAR-CCARI"
+        >
+
+        <span class="research-image-copyright">
+            © Uthappa A R
+        </span>
+
+        <span class="research-image-view">
+            ⤢
+        </span>
+
+    </button>
+
+</div>
 
 
             <div class="research-action-content">
@@ -2789,7 +3051,14 @@ processes can be designed into productive, resilient and sustainable landscapes.
 
     <!-- Photograph -->
 
-    <div class="research-action-image">
+   <div class="research-action-image">
+
+    <button
+        class="research-image-button"
+        type="button"
+        onclick="openResearchLightbox('cashew-fodder.jpeg', 'Cashew–Fodder Agroforestry')"
+        aria-label="View Cashew–Fodder Agroforestry photograph in full screen"
+    >
 
         <img
             src="cashew-fodder.jpeg"
@@ -2797,7 +3066,17 @@ processes can be designed into productive, resilient and sustainable landscapes.
             loading="lazy"
         >
 
-    </div>
+        <span class="research-image-copyright">
+            © Uthappa A R
+        </span>
+
+        <span class="research-image-view">
+            ⤢
+        </span>
+
+    </button>
+
+</div> 
 
 </div>
     </div>
@@ -3534,7 +3813,113 @@ ICAR–Central Coastal Agricultural Research Institute · Goa
 
 </footer>
 
+<!-- =========================================================
+     RESEARCH IMAGE LIGHTBOX
+========================================================= -->
 
+<div
+    class="research-lightbox"
+    id="researchLightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Research photograph viewer"
+>
+
+    <button
+        class="research-lightbox-close"
+        type="button"
+        onclick="closeResearchLightbox()"
+        aria-label="Close photograph"
+    >
+        ×
+    </button>
+
+    <div class="research-lightbox-title" id="researchLightboxTitle">
+        Research photograph
+    </div>
+
+    <img
+        class="research-lightbox-image"
+        id="researchLightboxImage"
+        src=""
+        alt=""
+    >
+
+    <div class="research-lightbox-copyright">
+        © Uthappa A R
+    </div>
+<script>
+/* =========================================================
+   RESEARCH IMAGE LIGHTBOX
+========================================================= */
+
+function openResearchLightbox(imageSrc, imageTitle) {
+
+    const lightbox = document.getElementById('researchLightbox');
+    const image = document.getElementById('researchLightboxImage');
+    const title = document.getElementById('researchLightboxTitle');
+
+    image.src = imageSrc;
+    image.alt = imageTitle;
+    title.textContent = imageTitle;
+
+    lightbox.classList.add('active');
+
+    document.body.style.overflow = 'hidden';
+}
+
+
+function closeResearchLightbox() {
+
+    const lightbox = document.getElementById('researchLightbox');
+
+    lightbox.classList.remove('active');
+
+    document.body.style.overflow = '';
+
+    setTimeout(function() {
+
+        document.getElementById('researchLightboxImage').src = '';
+
+    }, 300);
+}
+
+
+/* Close when clicking outside the photograph */
+
+document.addEventListener('click', function(event) {
+
+    const lightbox = document.getElementById('researchLightbox');
+
+    if (
+        lightbox.classList.contains('active') &&
+        event.target === lightbox
+    ) {
+
+        closeResearchLightbox();
+
+    }
+
+});
+
+
+/* Close with Escape key */
+
+document.addEventListener('keydown', function(event) {
+
+    if (
+        event.key === 'Escape' &&
+        document
+            .getElementById('researchLightbox')
+            .classList.contains('active')
+    ) {
+
+        closeResearchLightbox();
+
+    }
+
+});
+</script>
 </body>
 
 </html>
