@@ -4703,276 +4703,617 @@ processes can be designed into productive, resilient and sustainable landscapes.
     </div>
 
 </section>
-<!-- =========================================================
-POPULAR ARTICLES
-========================================================= -->
-
 <style>
+
+/* =========================================================
+   SECTION 06 — SCIENCE BEYOND THE LABORATORY
+   Editorial / Nature Theme
+   ========================================================= */
+
 .popular-articles-section {
     padding: 110px 0 120px;
-    background: #f7f8f5;
-    border-top: 1px solid #dfe5df;
+    background: #f5f1e8;
+    border-top: 1px solid #ddd6c9;
+    position: relative;
+    overflow: hidden;
 }
+
+
+/* subtle editorial atmosphere */
+
+.popular-articles-section::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: -190px;
+    top: -160px;
+    border: 1px solid rgba(45, 78, 64, 0.08);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.popular-articles-section::after {
+    content: "";
+    position: absolute;
+    width: 210px;
+    height: 330px;
+    right: 45px;
+    top: 20px;
+    border-right: 1px solid rgba(154, 89, 53, 0.10);
+    border-radius: 50%;
+    transform: rotate(25deg);
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
 
 .popular-articles-section .section-label {
-    letter-spacing: 2px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #5d7467;
-    margin-bottom: 18px;
+    position: relative;
+    z-index: 2;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+
+    margin-bottom: 20px;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+
+    color: #3d6857;
 }
+
+.popular-articles-section .section-label::before {
+    content: "";
+
+    width: 42px;
+    height: 2px;
+
+    background: #9a5935;
+}
+
 
 .popular-articles-section .section-title {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(42px, 5vw, 68px);
-    line-height: 1.05;
-    font-weight: 400;
-    color: #20362d;
+    position: relative;
+    z-index: 2;
+
+    max-width: 1050px;
+
     margin: 0 0 22px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(45px, 6vw, 76px);
+    line-height: 1.03;
+    font-weight: 400;
+    letter-spacing: -1.8px;
+
+    color: #173b30;
 }
+
+
+/* Brown emphasis */
+
+.popular-articles-section .section-title em {
+    color: #9a5935;
+    font-style: normal;
+}
+
 
 .popular-intro {
+    position: relative;
+    z-index: 2;
+
     max-width: 760px;
-    font-size: 18px;
+
+    margin-bottom: 62px;
+
+    font-family: Arial, sans-serif;
+    font-size: 17px;
     line-height: 1.75;
-    color: #66736d;
-    margin-bottom: 60px;
+
+    color: #667068;
 }
 
-/* FEATURED ARTICLE */
+
+/* =========================================================
+   FEATURED ARTICLE
+   ========================================================= */
 
 .popular-feature {
+    position: relative;
+    z-index: 2;
+
     display: grid;
-    grid-template-columns: 0.82fr 1.18fr;
-    min-height: 500px;
-    background: #20362d;
+    grid-template-columns: 48% 52%;
+
+    min-height: 455px;
+
+    margin-bottom: 76px;
+
+    background: #fffdf8;
+
+    border: 1px solid #ded8cd;
+
     overflow: hidden;
-    margin-bottom: 70px;
+
+    box-shadow:
+        0 18px 45px rgba(35, 54, 44, 0.08);
 }
 
-.popular-feature-label {
-    font-size: 11px;
-    letter-spacing: 2.5px;
-    font-weight: 700;
-    color: #b9cdbf;
-    margin-bottom: 24px;
-}
+
+/* =========================================================
+   FEATURED ARTICLE — LEFT PANEL
+   ========================================================= */
 
 .popular-feature-visual {
     position: relative;
-    min-height: 500px;
+
+    min-height: 455px;
+
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-    background: #29483a;
+    align-items: flex-end;
+
+    padding: 44px;
+
+    background:
+        radial-gradient(
+            circle at 70% 25%,
+            rgba(213, 170, 102, 0.18),
+            transparent 28%
+        ),
+        linear-gradient(
+            145deg,
+            #21483a 0%,
+            #2d5a46 48%,
+            #173a30 100%
+        );
+
     overflow: hidden;
 }
 
+
+/* Large S silhouette */
+
 .popular-feature-visual::before {
     content: "S";
+
     position: absolute;
+
+    left: -20px;
+    bottom: -90px;
+
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 430px;
+    font-size: 340px;
     line-height: 1;
+
     color: rgba(255,255,255,0.035);
-    left: 20px;
-    bottom: -75px;
+
+    pointer-events: none;
 }
+
+
+/* Decorative circle */
+
+.popular-feature-visual::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    right: -120px;
+    top: -120px;
+
+    border: 1px solid rgba(239,221,187,0.14);
+
+    border-radius: 50%;
+}
+
+
+/* Editorial text on left */
 
 .popular-feature-mark {
     position: relative;
     z-index: 2;
-    text-align: center;
 }
+
 
 .popular-feature-mark .publication {
-    font-size: 13px;
-    letter-spacing: 4px;
+    margin-bottom: 32px;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    color: #d7e3db;
-    margin-bottom: 20px;
+
+    color: #e3d8c5;
 }
+
 
 .popular-feature-mark .tree-word {
+    max-width: 430px;
+
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(52px, 6vw, 88px);
-    line-height: 0.95;
-    color: #ffffff;
+    font-size: clamp(58px, 6vw, 86px);
+    line-height: 0.92;
+    font-weight: 400;
     font-style: italic;
+    letter-spacing: -2px;
+
+    color: #fffaf0;
 }
+
 
 .popular-feature-mark .issue {
-    margin-top: 26px;
-    font-size: 11px;
+    margin-top: 34px;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
     letter-spacing: 2px;
-    color: #b9cdbf;
     text-transform: uppercase;
+
+    color: #d8cdb9;
 }
 
+
+/* =========================================================
+   FEATURED ARTICLE — RIGHT PANEL
+   ========================================================= */
+
 .popular-feature-content {
-    padding: 64px 68px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    padding: 60px 65px;
 }
+
+
+.popular-feature-label {
+    margin-bottom: 20px;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #9a5935;
+}
+
 
 .popular-feature-content h3 {
+    margin: 0 0 23px;
+
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(34px, 4vw, 56px);
-    line-height: 1.08;
+    font-size: clamp(38px, 4vw, 56px);
+    line-height: 1.05;
     font-weight: 400;
-    color: #ffffff;
-    margin: 0 0 24px;
+    letter-spacing: -1px;
+
+    color: #173b30;
 }
 
-.popular-feature-content .article-date {
-    font-size: 12px;
+
+.popular-feature-content h3::after {
+    content: "";
+
+    display: block;
+
+    width: 46px;
+    height: 2px;
+
+    margin-top: 22px;
+
+    background: #9a5935;
+}
+
+
+.article-date {
+    margin-bottom: 24px;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: #b9cdbf;
-    margin-bottom: 28px;
+
+    color: #7b847e;
 }
 
-.popular-feature-content .article-description {
-    font-size: 17px;
-    line-height: 1.75;
-    color: #d9e2dc;
-    max-width: 620px;
-    margin-bottom: 28px;
+
+.article-description {
+    max-width: 600px;
+
+    margin: 0 0 25px;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+
+    color: #56625d;
 }
+
 
 .popular-authors {
-    font-size: 13px;
+    margin-bottom: 30px;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
     line-height: 1.6;
-    color: #b9cdbf;
-    margin-bottom: 32px;
+
+    color: #77817b;
 }
+
+
+/* =========================================================
+   FEATURED ARTICLE — BUTTON
+   ========================================================= */
 
 .popular-read-link {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    width: fit-content;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #a9c0b1;
+    justify-content: center;
+
+    align-self: flex-start;
+
+    padding: 14px 22px;
+
+    background: #1d5744;
+
+    border: 1px solid #1d5744;
+
     color: #ffffff;
-    text-decoration: none;
-    font-size: 12px;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
     font-weight: 700;
-    letter-spacing: 1.8px;
-    transition: gap 0.25s ease, border-color 0.25s ease;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
 }
+
 
 .popular-read-link:hover {
-    gap: 18px;
-    border-color: #ffffff;
-}
+    background: #9a5935;
+    border-color: #9a5935;
 
-/* SELECTED ARTICLES */
-
-.popular-subheading {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 32px;
-    font-weight: 400;
-    color: #20362d;
-    margin: 0 0 32px;
-}
-
-.popular-article-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    background: #d9e1db;
-    border: 1px solid #d9e1db;
-    margin-bottom: 85px;
-}
-
-.popular-article-card {
-    background: #ffffff;
-    padding: 34px 38px 38px;
-    min-height: 210px;
-    transition: transform 0.25s ease, background 0.25s ease;
-}
-
-.popular-article-card:hover {
-    background: #fbfcfa;
     transform: translateY(-2px);
 }
+
+
+/* =========================================================
+   SELECTED ARTICLES
+   ========================================================= */
+
+.popular-subheading {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 0 30px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 400;
+
+    color: #173b30;
+}
+
+
+.popular-subheading::after {
+    content: "";
+
+    display: block;
+
+    width: 44px;
+    height: 2px;
+
+    margin-top: 13px;
+
+    background: #9a5935;
+}
+
+
+/* =========================================================
+   ARTICLE GRID
+   ========================================================= */
+
+.popular-article-grid {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    border-top: 1px solid #d9d4ca;
+    border-left: 1px solid #d9d4ca;
+}
+
+
+.popular-article-card {
+    min-height: 205px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 31px 32px 28px;
+
+    background: rgba(255,253,248,0.75);
+
+    border-right: 1px solid #d9d4ca;
+    border-bottom: 1px solid #d9d4ca;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.popular-article-card:hover {
+    background: #fffdf8;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(38,57,48,0.07);
+}
+
 
 .popular-card-meta {
     display: flex;
     justify-content: space-between;
+
     gap: 15px;
-    margin-bottom: 20px;
-    font-size: 10px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: #738078;
-}
 
-.popular-article-card h4 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 24px;
-    line-height: 1.25;
-    font-weight: 400;
-    color: #294238;
-    margin: 0 0 22px;
-}
+    margin-bottom: 24px;
 
-.popular-article-card a {
-    color: #536d60;
-    text-decoration: none;
-    font-size: 11px;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
     font-weight: 700;
     letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    color: #78837c;
 }
+
+
+.popular-article-card h4 {
+    max-width: 570px;
+
+    margin: 0 0 24px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    line-height: 1.32;
+    font-weight: 400;
+
+    color: #203f34;
+}
+
+
+.popular-article-card a {
+    margin-top: auto;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    align-self: flex-start;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+
+    color: #28705a;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        gap 0.2s ease;
+}
+
 
 .popular-article-card a:hover {
-    color: #20362d;
+    color: #9a5935;
+    gap: 12px;
 }
 
-/* MEDIA CUTTINGS */
+
+/* =========================================================
+   MEDIA FEATURES
+   ========================================================= */
 
 .popular-media {
-    border-top: 1px solid #d9e1db;
-    padding-top: 55px;
+    position: relative;
+    z-index: 2;
+
+    margin-top: 82px;
+
+    padding-top: 58px;
+
+    border-top: 1px solid #d5d0c6;
 }
+
 
 .popular-media-intro {
     max-width: 700px;
-    color: #68756e;
-    font-size: 16px;
-    line-height: 1.7;
+
     margin-bottom: 30px;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+
+    color: #68736d;
 }
 
+
 .popular-media-placeholder {
-    border: 1px dashed #bcc9c1;
     min-height: 170px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+
     padding: 35px;
-    background: #fbfcfa;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(29,87,68,0.04),
+            rgba(154,89,53,0.04)
+        );
+
+    border: 1px dashed #bfc6bf;
 }
+
 
 .popular-media-placeholder strong {
     display: block;
+
+    margin-bottom: 8px;
+
     font-family: Georgia, "Times New Roman", serif;
     font-size: 23px;
     font-weight: 400;
-    color: #40594d;
-    margin-bottom: 8px;
+
+    color: #315646;
 }
+
 
 .popular-media-placeholder span {
-    font-size: 13px;
-    color: #7a857f;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+
+    color: #7b847e;
 }
 
-/* RESPONSIVE */
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
 @media (max-width: 850px) {
 
@@ -4991,12 +5332,24 @@ POPULAR ARTICLES
     .popular-article-grid {
         grid-template-columns: 1fr;
     }
+
 }
+
 
 @media (max-width: 600px) {
 
     .popular-articles-section {
         padding: 80px 0;
+    }
+
+    .popular-articles-section .section-title {
+        font-size: 43px;
+        letter-spacing: -1px;
+    }
+
+    .popular-intro {
+        font-size: 16px;
+        margin-bottom: 45px;
     }
 
     .popular-feature-visual {
@@ -5012,10 +5365,16 @@ POPULAR ARTICLES
         padding: 40px 25px;
     }
 
+    .popular-feature-content h3 {
+        font-size: 38px;
+    }
+
     .popular-article-card {
         padding: 28px;
     }
+
 }
+
 </style>
 
 
@@ -5028,7 +5387,7 @@ POPULAR ARTICLES
         </div>
 
         <h2 class="section-title">
-            Science Beyond the Laboratory
+            Science Beyond the <em>Laboratory</em>
         </h2>
 
         <p class="popular-intro">
