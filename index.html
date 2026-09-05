@@ -3222,6 +3222,263 @@ footer{
     }
 
 }
+    /* =========================================================
+   TREE_SPEAKS
+   ========================================================= */
+
+.tree-speaks {
+    padding: 120px 0;
+    background: #f3f6f2;
+}
+
+.tree-speaks-header {
+    max-width: 820px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.tree-speaks-header .section-label {
+    margin-bottom: 18px;
+}
+
+.tree-speaks-header h2 {
+    margin: 0 0 12px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+
+.tree-speaks-tagline {
+    margin: 0 auto 22px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-style: italic;
+    line-height: 1.5;
+    color: #496258;
+}
+
+.tree-speaks-intro {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #5c6962;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* FEATURE */
+
+.tree-speaks-feature {
+    max-width: 1120px;
+    min-height: 470px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    background: #ffffff;
+    border: 1px solid #d8e2dc;
+    overflow: hidden;
+}
+
+
+/* IMAGE AREA */
+
+.tree-speaks-image {
+    min-height: 470px;
+    background:
+        linear-gradient(
+            135deg,
+            #dce8df,
+            #eef3ee
+        );
+}
+
+.tree-speaks-image-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 470px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 40px;
+}
+
+.tree-speaks-image-placeholder span {
+    margin-bottom: 18px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #567062;
+}
+
+.tree-speaks-image-placeholder strong {
+    max-width: 280px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    line-height: 1.25;
+    font-weight: 500;
+    color: #294438;
+}
+
+
+/* STORY AREA */
+
+.tree-speaks-story {
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tree-speaks-story-label {
+    margin-bottom: 18px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #668074;
+}
+
+.tree-speaks-story h3 {
+    margin: 0 0 22px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    line-height: 1.25;
+    font-weight: 500;
+    color: #243d32;
+}
+
+.tree-speaks-story p {
+    margin: 0 0 28px;
+    color: #5d6b64;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.tree-speaks-note {
+    padding-left: 16px;
+    border-left: 2px solid #4f8a6d;
+    margin-bottom: 30px;
+}
+
+.tree-speaks-note span {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #496258;
+}
+
+.tree-speaks-coming {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #789084;
+}
+
+
+/* FOOTER STATEMENT */
+
+.tree-speaks-footer {
+    max-width: 900px;
+    margin: 55px auto 0;
+    padding: 22px 0;
+
+    border-top: 1px solid #d5dfd9;
+    border-bottom: 1px solid #d5dfd9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+}
+
+.tree-speaks-footer p {
+    margin: 0;
+    max-width: 520px;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.6;
+    color: #4c6257;
+}
+
+.tree-speaks-footer-mark {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #789084;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .tree-speaks-feature {
+        grid-template-columns: 1fr;
+    }
+
+    .tree-speaks-image {
+        min-height: 380px;
+    }
+
+    .tree-speaks-image-placeholder {
+        min-height: 380px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .tree-speaks {
+        padding: 80px 0;
+    }
+
+    .tree-speaks-header h2 {
+        font-size: 40px;
+    }
+
+    .tree-speaks-tagline {
+        font-size: 18px;
+    }
+
+    .tree-speaks-image {
+        min-height: 280px;
+    }
+
+    .tree-speaks-image-placeholder {
+        min-height: 280px;
+    }
+
+    .tree-speaks-image-placeholder strong {
+        font-size: 27px;
+    }
+
+    .tree-speaks-story {
+        padding: 38px 25px;
+    }
+
+    .tree-speaks-story h3 {
+        font-size: 28px;
+    }
+
+    .tree-speaks-footer {
+        gap: 10px;
+    }
+
+    .tree-speaks-footer-mark {
+        display: none;
+    }
+
+}
 </style>
 
 </head>
@@ -4337,6 +4594,114 @@ processes can be designed into productive, resilient and sustainable landscapes.
             cultivation in coconut interspaces for awareness and
             knowledge dissemination.
         </p>
+
+    </div>
+
+</section>
+    <!-- =========================================================
+     TREE_SPEAKS
+     ========================================================= -->
+
+<section class="tree-speaks" id="tree-speaks">
+
+    <div class="container">
+
+        <div class="tree-speaks-header">
+
+            <div class="section-label">
+                05 · TREE_SPEAKS
+            </div>
+
+            <h2>
+                Tree_Speaks
+            </h2>
+
+            <p class="tree-speaks-tagline">
+                When a child listens, the forest begins to speak.
+            </p>
+
+            <p class="tree-speaks-intro">
+                A storytelling series that explores trees, forests
+                and nature through the curious questions of a
+                seven-year-old boy—bringing ecological knowledge
+                closer to everyday life.
+            </p>
+
+        </div>
+
+
+        <!-- FEATURED STORY -->
+
+        <div class="tree-speaks-feature">
+
+            <div class="tree-speaks-image">
+
+                <div class="tree-speaks-image-placeholder">
+
+                    <span>
+                        TREE_SPEAKS
+                    </span>
+
+                    <strong>
+                        Stories coming soon
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="tree-speaks-story">
+
+                <div class="tree-speaks-story-label">
+                    THE FIRST STORY
+                </div>
+
+                <h3>
+                    A child's questions.
+                    A tree's answers.
+                </h3>
+
+                <p>
+                    Through the eyes of a seven-year-old boy,
+                    Tree_Speaks will explore why trees matter,
+                    how forests support life, and what happens
+                    when we stop listening to nature.
+                </p>
+
+                <div class="tree-speaks-note">
+                    <span>
+                        SCIENCE · NATURE · STORIES
+                    </span>
+                </div>
+
+                <div class="tree-speaks-coming">
+                    FIRST STORY · COMING SOON
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SERIES STATEMENT -->
+
+        <div class="tree-speaks-footer">
+
+            <span class="tree-speaks-footer-mark">
+                TREE
+            </span>
+
+            <p>
+                Simple questions can open the door to profound
+                ecological understanding.
+            </p>
+
+            <span class="tree-speaks-footer-mark">
+                SPEAKS
+            </span>
+
+        </div>
 
     </div>
 
