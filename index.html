@@ -2479,6 +2479,279 @@ footer{
     }
 
 }
+    /* =========================================================
+   FARMERS' SUCCESS STORY
+   ========================================================= */
+
+.farmer-success {
+    padding: 110px 0;
+    background: #f4f7f4;
+}
+
+.farmer-success-header {
+    max-width: 850px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.farmer-success-header .section-label {
+    margin-bottom: 16px;
+}
+
+.farmer-success-header h2 {
+    margin-bottom: 18px;
+}
+
+.farmer-success-intro {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #53635b;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* Impact statement */
+
+.farmer-impact {
+    max-width: 1050px;
+    margin: 0 auto 60px;
+    padding: 30px 38px;
+    background: #ffffff;
+    border: 1px solid #dce6e1;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.farmer-impact-number {
+    font-size: 58px;
+    line-height: 1;
+    font-weight: 700;
+    color: #315c48;
+    letter-spacing: -2px;
+}
+
+.farmer-impact-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #315c48;
+    margin-bottom: 8px;
+}
+
+.farmer-impact-text {
+    margin: 0 0 8px;
+    color: #4d5c55;
+    line-height: 1.7;
+}
+
+.farmer-impact-source {
+    display: block;
+    font-size: 11px;
+    color: #7a8781;
+    line-height: 1.5;
+}
+
+/* Three farmer story cards */
+
+.farmer-story-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.farmer-story-card {
+    background: #ffffff;
+    border: 1px solid #dce6e1;
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.farmer-story-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(32, 61, 48, 0.12);
+}
+
+/* Clickable image */
+
+.farmer-story-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #e8eee9;
+}
+
+.farmer-story-image button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: zoom-in;
+    position: relative;
+}
+
+.farmer-story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.7s ease;
+}
+
+.farmer-story-card:hover .farmer-story-image img {
+    transform: scale(1.045);
+}
+
+/* Copyright */
+
+.farmer-story-copyright {
+    position: absolute;
+    left: 14px;
+    bottom: 12px;
+    padding: 5px 9px;
+    background: rgba(0, 0, 0, 0.55);
+    color: #ffffff;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    z-index: 2;
+}
+
+/* Zoom symbol */
+
+.farmer-story-view {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    color: #315c48;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    z-index: 2;
+}
+
+/* Card content */
+
+.farmer-story-content {
+    padding: 25px 25px 28px;
+}
+
+.farmer-story-number {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #789084;
+    margin-bottom: 8px;
+}
+
+.farmer-story-title {
+    margin: 0 0 12px;
+    font-size: 21px;
+    line-height: 1.3;
+    color: #243d32;
+}
+
+.farmer-story-caption {
+    margin: 0 0 20px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #596761;
+}
+
+.farmer-story-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.farmer-story-meta span {
+    display: inline-block;
+    padding: 6px 10px;
+    background: #eef4ef;
+    color: #315c48;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+/* Research → farmer pathway */
+
+.farmer-story-pathway {
+    max-width: 1050px;
+    margin: 55px auto 0;
+    padding: 20px 25px;
+    border-top: 1px solid #d5e0da;
+    border-bottom: 1px solid #d5e0da;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.farmer-story-pathway span {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    color: #496258;
+}
+
+.farmer-story-pathway .pathway-arrow {
+    font-size: 17px;
+    color: #89a193;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .farmer-story-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .farmer-impact {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .farmer-impact-number {
+        font-size: 50px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .farmer-success {
+        padding: 75px 0;
+    }
+
+    .farmer-impact {
+        padding: 25px;
+    }
+
+    .farmer-story-content {
+        padding: 22px;
+    }
+
+    .farmer-story-pathway {
+        gap: 10px;
+    }
+
+}
 </style>
 
 </head>
@@ -3082,7 +3355,308 @@ processes can be designed into productive, resilient and sustainable landscapes.
     </div>
 
 </section>
+<!-- =========================================================
+     FARMERS' SUCCESS STORY
+     ========================================================= -->
 
+<section class="farmer-success" id="farmer-success">
+
+    <div class="container">
+
+        <div class="farmer-success-header">
+
+            <div class="section-label">
+                RESEARCH IN ACTION
+            </div>
+
+            <h2>
+                Bridging Goa's Green Fodder Gap
+            </h2>
+
+            <p class="farmer-success-intro">
+                Translating improved green-fodder technologies into practical
+                solutions for farmers through field-level technical guidance,
+                technology dissemination and farmer adoption.
+            </p>
+
+        </div>
+
+
+        <!-- IMPACT STATEMENT -->
+
+        <div class="farmer-impact">
+
+            <div class="farmer-impact-number">
+                ~50%
+            </div>
+
+            <div>
+
+                <div class="farmer-impact-label">
+                    GREEN FODDER DEFICIT
+                </div>
+
+                <p class="farmer-impact-text">
+                    Goa faces a green-fodder shortage of up to 50%,
+                    highlighting the need for locally adapted fodder
+                    production systems.
+                </p>
+
+                <small class="farmer-impact-source">
+                    Source: ICAR–Indian Grassland and Fodder Research Institute
+                    (IGFRI), Fodder Plan 2020.
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- THREE FARMER STORIES -->
+
+        <div class="farmer-story-grid">
+
+
+            <!-- FARMER STORY 01 -->
+
+            <article class="farmer-story-card">
+
+                <div class="farmer-story-image">
+
+                    <button
+                        type="button"
+                        onclick="openResearchLightbox(
+                            'farmer-success-01-valpoi.jpg',
+                            'Green fodder cultivation (Super Napier) — Baruah Farm, Valpoi, Goa'
+                        )"
+                        aria-label="View larger image"
+                    >
+
+                        <img
+                            src="farmer-success-01-valpoi.jpg"
+                            alt="Green fodder cultivation (Super Napier) in a farmer's field at Baruah Farm, Valpoi, Goa"
+                            loading="lazy"
+                        >
+
+                        <span class="farmer-story-copyright">
+                            © Uthappa A R
+                        </span>
+
+                        <span class="farmer-story-view">
+                            ↗
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <div class="farmer-story-content">
+
+                    <div class="farmer-story-number">
+                        01 · FARMER FIELD
+                    </div>
+
+                    <h3 class="farmer-story-title">
+                        Super Napier — Baruah Farm
+                    </h3>
+
+                    <p class="farmer-story-caption">
+                        Green fodder cultivation (Super Napier) in a
+                        farmer’s field at Baruah Farm, Valpoi, Goa,
+                        with technical guidance from ICAR–CCARI, Goa.
+                    </p>
+
+                    <div class="farmer-story-meta">
+
+                        <span>
+                            Valpoi, Goa
+                        </span>
+
+                        <span>
+                            Super Napier
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- FARMER STORY 02 -->
+
+            <article class="farmer-story-card">
+
+                <div class="farmer-story-image">
+
+                    <button
+                        type="button"
+                        onclick="openResearchLightbox(
+                            'farmer-success-02-pernem.jpg',
+                            'Green fodder cultivation (CO-5) — Pernem, North Goa'
+                        )"
+                        aria-label="View larger image"
+                    >
+
+                        <img
+                            src="farmer-success-02-pernem.jpg"
+                            alt="Green fodder cultivation (CO-5) in a farmer's field at Pernem, North Goa"
+                            loading="lazy"
+                        >
+
+                        <span class="farmer-story-copyright">
+                            © Uthappa A R
+                        </span>
+
+                        <span class="farmer-story-view">
+                            ↗
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <div class="farmer-story-content">
+
+                    <div class="farmer-story-number">
+                        02 · FARMER FIELD
+                    </div>
+
+                    <h3 class="farmer-story-title">
+                        CO-5 — Pernem
+                    </h3>
+
+                    <p class="farmer-story-caption">
+                        Green fodder cultivation (CO-5) in a farmer’s
+                        field at Pernem, North Goa, with technical
+                        guidance from ICAR–CCARI, Goa.
+                    </p>
+
+                    <div class="farmer-story-meta">
+
+                        <span>
+                            Pernem, North Goa
+                        </span>
+
+                        <span>
+                            CO-5
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- FARMER STORY 03 -->
+
+            <article class="farmer-story-card">
+
+                <div class="farmer-story-image">
+
+                    <button
+                        type="button"
+                        onclick="openResearchLightbox(
+                            'farmer-success-03-netravali.jpg',
+                            'Green fodder cultivation (Super Napier) — Netravali, South Goa'
+                        )"
+                        aria-label="View larger image"
+                    >
+
+                        <img
+                            src="farmer-success-03-netravali.jpg"
+                            alt="Green fodder cultivation (Super Napier) in a farmer's field at Netravali, South Goa"
+                            loading="lazy"
+                        >
+
+                        <span class="farmer-story-copyright">
+                            © Uthappa A R
+                        </span>
+
+                        <span class="farmer-story-view">
+                            ↗
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <div class="farmer-story-content">
+
+                    <div class="farmer-story-number">
+                        03 · FARMER FIELD
+                    </div>
+
+                    <h3 class="farmer-story-title">
+                        Super Napier — Netravali
+                    </h3>
+
+                    <p class="farmer-story-caption">
+                        Green fodder cultivation (Super Napier) in a
+                        farmer’s field at Netravali, South Goa, with
+                        technical guidance from ICAR–CCARI, Goa.
+                    </p>
+
+                    <div class="farmer-story-meta">
+
+                        <span>
+                            Netravali, South Goa
+                        </span>
+
+                        <span>
+                            Super Napier
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- RESEARCH TO FARMER PATHWAY -->
+
+        <div class="farmer-story-pathway">
+
+            <span>
+                SCIENTIFIC TECHNOLOGY
+            </span>
+
+            <span class="pathway-arrow">
+                →
+            </span>
+
+            <span>
+                TECHNICAL GUIDANCE
+            </span>
+
+            <span class="pathway-arrow">
+                →
+            </span>
+
+            <span>
+                FARMER ADOPTION
+            </span>
+
+            <span class="pathway-arrow">
+                →
+            </span>
+
+            <span>
+                FIELD IMPACT
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
 <!-- =========================
      PROJECTS
 ========================= -->
