@@ -2129,7 +2129,58 @@ footer{
     letter-spacing: 1px;
     text-transform: uppercase;
 }
+/* Field focus */
 
+.research-action-focus {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 16px;
+    margin: 0 0 28px;
+    border-left: 2px solid #0b8f78;
+}
+
+.research-action-focus strong {
+    font-size: 10px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: #0b8f78;
+}
+
+.research-action-focus span {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #5b6964;
+}
+
+
+/* Explore link */
+
+.research-action-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 28px;
+    width: fit-content;
+    color: #0b8f78;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid #0b8f78;
+    padding-bottom: 6px;
+    transition: gap 0.25s ease;
+}
+
+.research-action-link span {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.research-action-link:hover {
+    gap: 15px;
+}
 
 /* =========================================================
    RESPONSIVE
@@ -2646,7 +2697,7 @@ processes can be designed into productive, resilient and sustainable landscapes.
                 </span>
 
                 <h3>
-                    Coconut–Fodder System
+                    Coconut–Fodder Agroforestry
                 </h3>
 
                 <p>
@@ -2656,6 +2707,14 @@ processes can be designed into productive, resilient and sustainable landscapes.
                     systems.
                 </p>
 
+                <div class="research-action-focus">
+    <strong>Field focus</strong>
+    <span>
+        Productive use of coconut interspaces for fodder production
+        and livestock integration.
+    </span>
+</div>
+
                 <div class="research-action-tags">
 
                     <span>Coconut</span>
@@ -2664,7 +2723,9 @@ processes can be designed into productive, resilient and sustainable landscapes.
                     <span>Agroforestry</span>
 
                 </div>
-
+<a href="#" class="research-action-link">
+    Explore the system <span>→</span>
+</a>
             </div>
 
         </div>
