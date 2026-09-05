@@ -2008,6 +2008,181 @@ footer{
 .paper-link span {
     font-size: 12px;
 }
+    /* =========================================================
+   RESEARCH IN ACTION
+   ========================================================= */
+
+.research-action {
+    background: #f7f9f7;
+    padding: 110px 0;
+}
+
+.research-action .section-label {
+    color: #0b8f78;
+    margin-bottom: 14px;
+}
+
+.research-action .section-title {
+    margin-bottom: 18px;
+}
+
+.research-action .section-text {
+    max-width: 720px;
+    margin-bottom: 55px;
+}
+
+
+/* =========================================================
+   FEATURED FIELD STORY
+   ========================================================= */
+
+.research-action-feature {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    min-height: 520px;
+    background: #ffffff;
+    border: 1px solid #dce6e1;
+    overflow: hidden;
+}
+
+
+/* Photograph */
+
+.research-action-image {
+    min-height: 520px;
+    overflow: hidden;
+}
+
+.research-action-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s ease;
+}
+
+.research-action-feature:hover
+.research-action-image img {
+    transform: scale(1.03);
+}
+
+
+/* Text */
+
+.research-action-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 65px;
+}
+
+.research-action-number {
+    display: block;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 42px;
+    line-height: 1;
+    color: #0b8f78;
+    margin-bottom: 12px;
+}
+
+.research-action-category {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #0b8f78;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.research-action-content h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 38px;
+    line-height: 1.15;
+    color: #073b4c;
+    margin: 0 0 22px;
+}
+
+.research-action-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #52645e;
+    margin: 0 0 28px;
+}
+
+
+/* Tags */
+
+.research-action-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.research-action-tags span {
+    display: inline-block;
+    padding: 7px 11px;
+    background: #edf4f0;
+    color: #176b5b;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .research-action {
+        padding: 80px 0;
+    }
+
+    .research-action-feature {
+        grid-template-columns: 1fr;
+    }
+
+    .research-action-image {
+        min-height: 400px;
+    }
+
+    .research-action-content {
+        padding: 45px 35px;
+    }
+
+    .research-action-content h3 {
+        font-size: 32px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .research-action {
+        padding: 65px 0;
+    }
+
+    .research-action-image {
+        min-height: 300px;
+    }
+
+    .research-action-content {
+        padding: 35px 25px;
+    }
+
+    .research-action-number {
+        font-size: 34px;
+    }
+
+    .research-action-content h3 {
+        font-size: 28px;
+    }
+
+}
 </style>
 
 </head>
