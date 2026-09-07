@@ -121,6 +121,89 @@ nav{
     background:#c47a4d;
 }
 
+.mobile-menu-toggle,
+.mobile-nav{
+    display:none;
+}
+
+@media (max-width:850px){
+    nav{
+        position:absolute;
+        padding:18px 20px;
+        background:linear-gradient(180deg, rgba(4,35,27,.88) 0%, rgba(4,35,27,.55) 72%, rgba(4,35,27,0) 100%);
+    }
+
+    .logo{
+        font-size:18px;
+        letter-spacing:2.5px;
+    }
+
+    .mobile-menu-toggle{
+        display:flex;
+        width:42px;
+        height:38px;
+        padding:9px 10px;
+        border:1px solid rgba(255,255,255,.55);
+        background:rgba(4,35,27,.38);
+        flex-direction:column;
+        justify-content:center;
+        gap:5px;
+        cursor:pointer;
+        position:relative;
+        z-index:22;
+    }
+
+    .mobile-menu-toggle span{
+        display:block;
+        width:100%;
+        height:1.5px;
+        background:#fff;
+        transition:.25s ease;
+    }
+
+    .mobile-menu-toggle.is-open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+    .mobile-menu-toggle.is-open span:nth-child(2){opacity:0;}
+    .mobile-menu-toggle.is-open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+
+    .mobile-nav{
+        position:absolute;
+        top:74px;
+        left:14px;
+        right:14px;
+        display:flex;
+        flex-direction:column;
+        padding:10px 0;
+        background:rgba(5,38,29,.97);
+        border:1px solid rgba(255,255,255,.16);
+        box-shadow:0 18px 40px rgba(0,0,0,.18);
+        opacity:0;
+        visibility:hidden;
+        transform:translateY(-8px);
+        transition:.25s ease;
+        pointer-events:none;
+        z-index:21;
+    }
+
+    .mobile-nav.is-open{
+        opacity:1;
+        visibility:visible;
+        transform:translateY(0);
+        pointer-events:auto;
+    }
+
+    .mobile-nav a{
+        padding:14px 20px;
+        color:#fff;
+        font-size:12px;
+        font-weight:700;
+        letter-spacing:1.5px;
+        border-bottom:1px solid rgba(255,255,255,.09);
+    }
+
+    .mobile-nav a:last-child{border-bottom:0;}
+    .mobile-nav a.nav-blog{color:#f1c6aa;}
+}
+
 
 /* =========================
    HERO
@@ -4410,6 +4493,80 @@ footer{
     .impact-grid{grid-template-columns:1fr;}
 }
 
+
+/* =========================================================
+   FINAL MOBILE POLISH
+   ========================================================= */
+@media (max-width:850px){
+    .hero{
+        min-height:780px;
+        background-position:61% center;
+    }
+
+    .hero-content{
+        width:calc(100% - 40px);
+        padding-top:92px;
+        padding-bottom:45px;
+    }
+
+    .hero-kicker{
+        font-size:10px;
+        line-height:1.65;
+        letter-spacing:3px;
+        max-width:250px;
+        margin-bottom:16px;
+    }
+
+    .hero h1{
+        font-size:50px;
+        line-height:.94;
+        margin-bottom:22px;
+    }
+
+    .hero-title{
+        font-size:21px;
+        line-height:1.45;
+        max-width:250px;
+        margin-bottom:24px;
+    }
+
+    .hero-description{
+        font-size:18px;
+        line-height:1.45;
+        margin-bottom:24px;
+    }
+
+    .hero-institute{
+        font-size:13px;
+        line-height:1.55;
+        margin-bottom:26px;
+    }
+
+    .hero-buttons{
+        gap:10px;
+    }
+
+    .btn{
+        padding:13px 18px;
+        font-size:11px;
+    }
+}
+
+@media (max-width:600px){
+    .hero{min-height:760px;}
+    .hero-content{width:calc(100% - 28px); padding-top:86px;}
+    .hero h1{font-size:47px;}
+    .hero-description{font-size:17px;}
+
+    .fodder-cafeteria-feature{
+        grid-template-rows:300px auto auto;
+    }
+
+    .fodder-cafeteria-photo-column{
+        grid-template-columns:1fr;
+        grid-template-rows:220px 220px;
+    }
+}
 </style>
 
 </head>
@@ -4436,6 +4593,20 @@ UTHAPPA
 <a href="#tree-speaks" class="nav-blog">BLOG</a>
 <a href="#contact">CONTACT</a>
 
+</div>
+
+<button class="mobile-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+</button>
+
+<div class="mobile-nav" aria-hidden="true">
+    <a href="#about">ABOUT</a>
+    <a href="#research">RESEARCH</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#publications">PUBLICATIONS</a>
+    <a href="#impact">IMPACT</a>
+    <a href="#tree-speaks" class="nav-blog">BLOG · TREE_SPEAKS</a>
+    <a href="#contact">CONTACT</a>
 </div>
 
 </nav>
@@ -6798,6 +6969,36 @@ document.addEventListener('keydown', function(event) {
     }
 
 });
+</script>
+
+
+<script>
+(function(){
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const menu = document.querySelector('.mobile-nav');
+    if(!toggle || !menu) return;
+
+    function closeMenu(){
+        toggle.classList.remove('is-open');
+        menu.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded','false');
+        toggle.setAttribute('aria-label','Open navigation');
+        menu.setAttribute('aria-hidden','true');
+    }
+
+    toggle.addEventListener('click', function(){
+        const open = !menu.classList.contains('is-open');
+        toggle.classList.toggle('is-open', open);
+        menu.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+        menu.setAttribute('aria-hidden', String(!open));
+    });
+
+    menu.querySelectorAll('a').forEach(function(link){
+        link.addEventListener('click', closeMenu);
+    });
+})();
 </script>
 
 </body>
