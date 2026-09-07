@@ -3,6 +3,7 @@
 
 <head>
 
+
 <meta charset="UTF-8">
 
 <meta name="viewport"
@@ -712,209 +713,10 @@ section{
     }
 }
 
+/* =========================================================
+   CONSOLIDATED WEBSITE STYLES
+========================================================= */
 
-
-
-<section class="projects" id="projects">
-
-    <div class="container">
-
-        <div class="section-label">
-            CURRENT & RECENT PROJECTS
-        </div>
-
-        <h2 class="section-title">
-            Research in action
-        </h2>
-
-        <p class="section-text">
-            Selected research initiatives demonstrating my work across
-            agroforestry, climate resilience, carbon management,
-            restoration and sustainable natural resource management.
-        </p>
-
-
-        <div class="project-list">
-
-
-            <!-- PROJECT 01 -->
-            <div class="project-item">
-
-                <div class="project-year">
-                    2024–2026
-                </div>
-
-                <div class="project-content">
-
-                    <div class="project-status">
-                        ONGOING RESEARCH
-                    </div>
-
-                    <h3>
-                        Carbon & Climate-Smart Agroforestry
-                    </h3>
-
-                    <p>
-                        Research on tree-based production systems, carbon
-                        management and climate-smart approaches for
-                        strengthening the sustainability and resilience
-                        of agricultural landscapes.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Carbon</span>
-                        <span>Biochar</span>
-                        <span>Climate resilience</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- PROJECT 02 -->
-            <div class="project-item">
-
-                <div class="project-year">
-                    2025–2026
-                </div>
-
-                <div class="project-content">
-
-                    <div class="project-status">
-                        ONGOING RESEARCH
-                    </div>
-
-                    <h3>
-                        Bamboo-Based Agroforestry & Value Chains
-                    </h3>
-
-                    <p>
-                        Research focused on bamboo-based production systems,
-                        resource development, value addition and opportunities
-                        for strengthening sustainable rural and regional
-                        economies.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Bamboo</span>
-                        <span>Agroforestry</span>
-                        <span>Value addition</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- PROJECT 03 -->
-            <div class="project-item">
-
-                <div class="project-year">
-                    2024–2029
-                </div>
-
-                <div class="project-content">
-
-                    <div class="project-status">
-                        ONGOING RESEARCH
-                    </div>
-
-                    <h3>
-                        Cashew-Based Agroforestry Systems
-                    </h3>
-
-                    <p>
-                        Development and evaluation of tree-based production
-                        systems designed to improve land productivity,
-                        resource-use efficiency and climate resilience
-                        in the west coast region.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Cashew</span>
-                        <span>Agroforestry</span>
-                        <span>Climate resilience</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- PROJECT 04 -->
-            <div class="project-item">
-
-                <div class="project-year">
-                    2024–2028
-                </div>
-
-                <div class="project-content">
-
-                    <div class="project-status">
-                        ONGOING RESEARCH
-                    </div>
-
-                    <h3>
-                        Tree-Based Systems for Sustainable Biomass Production
-                    </h3>
-
-                    <p>
-                        Research on suitable tree-based systems for enhancing
-                        biomass production, land productivity and sustainable
-                        resource use in lateritic landscapes.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Tree resources</span>
-                        <span>Biomass</span>
-                        <span>Lateritic soils</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- PROJECT 05 -->
-            <div class="project-item">
-
-                <div class="project-year">
-                    2022–2026
-                </div>
-
-                <div class="project-content">
-
-                    <div class="project-status">
-                        COLLABORATIVE RESEARCH
-                    </div>
-
-                    <h3>
-                        Integrated Watershed & Natural Resource Management
-                    </h3>
-
-                    <p>
-                        Research integrating natural resource conservation,
-                        watershed approaches and livelihood-oriented
-                        interventions for sustainable landscape management.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Watershed management</span>
-                        <span>Natural resources</span>
-                        <span>Livelihoods</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
 /* =========================
    PUBLICATIONS
 ========================= */
@@ -3474,13 +3276,893 @@ footer{
     }
 
 }
+
+/* =========================================================
+   SECTION 06 — SCIENCE BEYOND THE LABORATORY
+========================================================= */
+
+/* =========================================================
+   SECTION 06 — SCIENCE BEYOND THE LABORATORY
+   Editorial / Nature Theme
+   ========================================================= */
+
+.popular-articles-section {
+    padding: 145px 0 155px;
+    background: #f5f1e8;
+    border-top: 1px solid #ddd6c9;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* subtle editorial atmosphere */
+
+.popular-articles-section::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: -190px;
+    top: -160px;
+    border: 1px solid rgba(45, 78, 64, 0.08);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.popular-articles-section::after {
+    content: "";
+    position: absolute;
+    width: 210px;
+    height: 330px;
+    right: 45px;
+    top: 20px;
+    border-right: 1px solid rgba(154, 89, 53, 0.10);
+    border-radius: 50%;
+    transform: rotate(25deg);
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.popular-articles-section .section-label {
+    position: relative;
+    z-index: 2;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+
+    margin-bottom: 20px;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+
+    color: #3d6857;
+}
+
+.popular-articles-section .section-label::before {
+    content: "";
+
+    width: 42px;
+    height: 2px;
+
+    background: #9a5935;
+}
+
+
+.popular-articles-section .section-title {
+    position: relative;
+    z-index: 2;
+
+    max-width: 1050px;
+
+    margin: 0 0 22px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(45px, 6vw, 76px);
+    line-height: 1.03;
+    font-weight: 400;
+    letter-spacing: -1.8px;
+
+    color: #173b30;
+}
+
+
+/* Brown emphasis */
+
+.popular-articles-section .section-title em {
+    color: #9a5935;
+    font-style: normal;
+}
+
+
+.popular-intro {
+    position: relative;
+    z-index: 2;
+
+    max-width: 760px;
+
+    margin-bottom: 62px;
+
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+
+    color: #667068;
+}
+
+
+/* =========================================================
+   FEATURED ARTICLE
+   ========================================================= */
+
+.popular-feature {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 48% 52%;
+
+    min-height: 540px;
+
+    margin-bottom: 76px;
+
+    background: #fffdf8;
+
+    border: 1px solid #ded8cd;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 18px 45px rgba(35, 54, 44, 0.08);
+}
+
+
+/* =========================================================
+   FEATURED ARTICLE — LEFT PANEL
+   ========================================================= */
+
+.popular-feature-visual {
+    position: relative;
+
+    min-height: 540px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 44px;
+
+    background:
+        radial-gradient(
+            circle at 70% 25%,
+            rgba(213, 170, 102, 0.18),
+            transparent 28%
+        ),
+        linear-gradient(
+            145deg,
+            #21483a 0%,
+            #2d5a46 48%,
+            #173a30 100%
+        );
+
+    overflow: hidden;
+}
+
+
+/* Large S silhouette */
+
+.popular-feature-visual::before {
+    content: "S";
+
+    position: absolute;
+
+    left: -20px;
+    bottom: -90px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 340px;
+    line-height: 1;
+
+    color: rgba(255,255,255,0.035);
+
+    pointer-events: none;
+}
+
+
+/* Decorative circle */
+
+.popular-feature-visual::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    right: -120px;
+    top: -120px;
+
+    border: 1px solid rgba(239,221,187,0.14);
+
+    border-radius: 50%;
+}
+
+
+/* Editorial text on left */
+
+.popular-feature-mark {
+    position: relative;
+    z-index: 2;
+}
+
+
+.popular-feature-mark .publication {
+    margin-bottom: 32px;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #e3d8c5;
+}
+
+
+.popular-feature-mark .tree-word {
+    max-width: 430px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(58px, 6vw, 86px);
+    line-height: 0.92;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: -2px;
+
+    color: #fffaf0;
+}
+
+
+.popular-feature-mark .issue {
+    margin-top: 34px;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #d8cdb9;
+}
+
+
+/* =========================================================
+   FEATURED ARTICLE — RIGHT PANEL
+   ========================================================= */
+
+.popular-feature-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 60px 65px;
+}
+
+
+.popular-feature-label {
+    margin-bottom: 20px;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #9a5935;
+}
+
+
+.popular-feature-content h3 {
+    margin: 0 0 23px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(38px, 4vw, 56px);
+    line-height: 1.05;
+    font-weight: 400;
+    letter-spacing: -1px;
+
+    color: #173b30;
+}
+
+
+.popular-feature-content h3::after {
+    content: "";
+
+    display: block;
+
+    width: 46px;
+    height: 2px;
+
+    margin-top: 22px;
+
+    background: #9a5935;
+}
+
+
+.article-date {
+    margin-bottom: 24px;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    color: #7b847e;
+}
+
+
+.article-description {
+    max-width: 600px;
+
+    margin: 0 0 25px;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+
+    color: #56625d;
+}
+
+
+.popular-authors {
+    margin-bottom: 30px;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.6;
+
+    color: #77817b;
+}
+
+
+/* =========================================================
+   FEATURED ARTICLE — BUTTON
+   ========================================================= */
+
+.popular-read-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    align-self: flex-start;
+
+    padding: 14px 22px;
+
+    background: #1d5744;
+
+    border: 1px solid #1d5744;
+
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.popular-read-link:hover {
+    background: #9a5935;
+    border-color: #9a5935;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SELECTED ARTICLES
+   ========================================================= */
+
+.popular-subheading {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 0 30px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 400;
+
+    color: #173b30;
+}
+
+
+.popular-subheading::after {
+    content: "";
+
+    display: block;
+
+    width: 44px;
+    height: 2px;
+
+    margin-top: 13px;
+
+    background: #9a5935;
+}
+
+
+/* =========================================================
+   ARTICLE GRID
+   ========================================================= */
+
+.popular-article-grid {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    border-top: 1px solid #d9d4ca;
+    border-left: 1px solid #d9d4ca;
+}
+
+
+.popular-article-card {
+    min-height: 205px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 31px 32px 28px;
+
+    background: rgba(255,253,248,0.75);
+
+    border-right: 1px solid #d9d4ca;
+    border-bottom: 1px solid #d9d4ca;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.popular-article-card:hover {
+    background: #fffdf8;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(38,57,48,0.07);
+}
+
+
+.popular-card-meta {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 24px;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    color: #78837c;
+}
+
+
+.popular-article-card h4 {
+    max-width: 570px;
+
+    margin: 0 0 24px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    line-height: 1.32;
+    font-weight: 400;
+
+    color: #203f34;
+}
+
+
+.popular-article-card a {
+    margin-top: auto;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    align-self: flex-start;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+
+    color: #28705a;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        gap 0.2s ease;
+}
+
+
+.popular-article-card a:hover {
+    color: #9a5935;
+    gap: 12px;
+}
+
+
+/* =========================================================
+   MEDIA FEATURES
+   ========================================================= */
+
+.popular-media {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 82px;
+
+    padding-top: 58px;
+
+    border-top: 1px solid #d5d0c6;
+}
+
+
+.popular-media-intro {
+    max-width: 700px;
+
+    margin-bottom: 30px;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+
+    color: #68736d;
+}
+
+
+.popular-media-placeholder {
+    min-height: 170px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 35px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(29,87,68,0.04),
+            rgba(154,89,53,0.04)
+        );
+
+    border: 1px dashed #bfc6bf;
+}
+
+
+.popular-media-placeholder strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    font-weight: 400;
+
+    color: #315646;
+}
+
+
+.popular-media-placeholder span {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+
+    color: #7b847e;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .popular-feature {
+        grid-template-columns: 1fr;
+    }
+
+    .popular-feature-visual {
+        min-height: 330px;
+    }
+
+    .popular-feature-content {
+        padding: 48px 35px;
+    }
+
+    .popular-article-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .popular-articles-section {
+        padding: 80px 0;
+    }
+
+    .popular-articles-section .section-title {
+        font-size: 43px;
+        letter-spacing: -1px;
+    }
+
+    .popular-intro {
+        font-size: 16px;
+        margin-bottom: 45px;
+    }
+
+    .popular-feature-visual {
+        min-height: 280px;
+        padding: 35px;
+    }
+
+    .popular-feature-mark .tree-word {
+        font-size: 58px;
+    }
+
+    .popular-feature-content {
+        padding: 40px 25px;
+    }
+
+    .popular-feature-content h3 {
+        font-size: 38px;
+    }
+
+    .popular-article-card {
+        padding: 28px;
+    }
+
+}
+
+ /* =========================================
+   SANDALWOOD FEATURE PHOTOGRAPH
+   ========================================= */
+
+.popular-feature-visual {
+    position: relative;
+    min-height: 540px;
+    overflow: hidden;
+    background: #173b30;
+}
+
+.popular-feature-visual img {
+    width: 100%;
+    height: 100%;
+    min-height: 540px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.popular-photo-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 18px 22px 17px;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.78),
+        rgba(0, 0, 0, 0.38),
+        rgba(0, 0, 0, 0)
+    );
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1.45;
+    letter-spacing: 0.15px;
+}
+
+.popular-photo-caption span {
+    display: block;
+    margin-top: 5px;
+    font-size: 11px;
+    opacity: 0.88;
+    letter-spacing: 0.3px;
+}
+
+@media (max-width: 768px) {
+
+    .popular-feature-visual {
+        min-height: 360px;
+    }
+
+    .popular-feature-visual img {
+        min-height: 360px;
+    }
+
+    .popular-photo-caption {
+        padding: 15px 17px 14px;
+        font-size: 11px;
+    }
+
+    .popular-photo-caption span {
+        font-size: 10px;
+    }
+}  
+  /* =========================================
+   FIX FEATURED ARTICLE TEXT VISIBILITY
+   ========================================= */
+
+.popular-feature-content {
+    background: #fffdf8 !important;
+    color: #29443a !important;
+}
+
+.popular-feature-content .popular-feature-label {
+    color: #9a5935 !important;
+}
+
+.popular-feature-content h3 {
+    color: #173b30 !important;
+    opacity: 1 !important;
+}
+
+.popular-feature-content .article-date {
+    color: #6b756f !important;
+    opacity: 1 !important;
+}
+
+.popular-feature-content .article-description {
+    color: #40544c !important;
+    opacity: 1 !important;
+}
+
+.popular-feature-content .popular-authors {
+    color: #68736d !important;
+    opacity: 1 !important;
+}
+
+.popular-feature-content .popular-read-link {
+    color: #ffffff !important;
+    background: #176247 !important;
+    opacity: 1 !important;
+}  
+    /* =========================================
+   FINAL FIX — FEATURE ARTICLE CONTENT
+   ========================================= */
+
+.popular-feature-content {
+    position: relative !important;
+    z-index: 10 !important;
+    background: #fffdf8 !important;
+    color: #29443a !important;
+}
+
+.popular-feature-content .popular-feature-label {
+    color: #9a5935 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.popular-feature-content h3 {
+    color: #173b30 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    -webkit-text-fill-color: #173b30 !important;
+    text-shadow: none !important;
+}
+
+.popular-feature-content .article-date {
+    color: #66736c !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.popular-feature-content .article-description {
+    color: #40544c !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.popular-feature-content .popular-authors {
+    color: #59665f !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.popular-feature-content .popular-read-link {
+    color: #ffffff !important;
+    background: #176247 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+    /* =========================================
+   RESTORE FEATURE ARTICLE CONTENT
+   ========================================= */
+
+.popular-feature {
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+.popular-feature-content {
+    position: relative !important;
+    z-index: 50 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    background: #fffdf8 !important;
+}
+
+.popular-feature-content * {
+    opacity: 1 !important;
+    visibility: visible !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+}
+
+.popular-feature-content .popular-feature-label {
+    color: #9a5935 !important;
+}
+
+.popular-feature-content h3 {
+    color: #173b30 !important;
+    -webkit-text-fill-color: #173b30 !important;
+    font-weight: 400 !important;
+}
+
+.popular-feature-content .article-date {
+    color: #66736c !important;
+}
+
+.popular-feature-content .article-description {
+    color: #40544c !important;
+}
+
+.popular-feature-content .popular-authors {
+    color: #59665f !important;
+}
+
+.popular-feature-content .popular-read-link {
+    display: inline-block !important;
+    color: #ffffff !important;
+    background: #176247 !important;
+}
+</style>
+
 </style>
 
 </head>
 
-
 <body>
-
 
 <!-- =========================
      NAVIGATION
@@ -4703,884 +5385,7 @@ processes can be designed into productive, resilient and sustainable landscapes.
     </div>
 
 </section>
-<style>
 
-/* =========================================================
-   SECTION 06 — SCIENCE BEYOND THE LABORATORY
-   Editorial / Nature Theme
-   ========================================================= */
-
-.popular-articles-section {
-    padding: 145px 0 155px;
-    background: #f5f1e8;
-    border-top: 1px solid #ddd6c9;
-    position: relative;
-    overflow: hidden;
-}
-
-
-/* subtle editorial atmosphere */
-
-.popular-articles-section::before {
-    content: "";
-    position: absolute;
-    width: 420px;
-    height: 420px;
-    right: -190px;
-    top: -160px;
-    border: 1px solid rgba(45, 78, 64, 0.08);
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-.popular-articles-section::after {
-    content: "";
-    position: absolute;
-    width: 210px;
-    height: 330px;
-    right: 45px;
-    top: 20px;
-    border-right: 1px solid rgba(154, 89, 53, 0.10);
-    border-radius: 50%;
-    transform: rotate(25deg);
-    pointer-events: none;
-}
-
-
-/* =========================================================
-   SECTION HEADER
-   ========================================================= */
-
-.popular-articles-section .section-label {
-    position: relative;
-    z-index: 2;
-
-    display: inline-flex;
-    align-items: center;
-    gap: 13px;
-
-    margin-bottom: 20px;
-
-    font-family: Arial, sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2.2px;
-    text-transform: uppercase;
-
-    color: #3d6857;
-}
-
-.popular-articles-section .section-label::before {
-    content: "";
-
-    width: 42px;
-    height: 2px;
-
-    background: #9a5935;
-}
-
-
-.popular-articles-section .section-title {
-    position: relative;
-    z-index: 2;
-
-    max-width: 1050px;
-
-    margin: 0 0 22px;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(45px, 6vw, 76px);
-    line-height: 1.03;
-    font-weight: 400;
-    letter-spacing: -1.8px;
-
-    color: #173b30;
-}
-
-
-/* Brown emphasis */
-
-.popular-articles-section .section-title em {
-    color: #9a5935;
-    font-style: normal;
-}
-
-
-.popular-intro {
-    position: relative;
-    z-index: 2;
-
-    max-width: 760px;
-
-    margin-bottom: 62px;
-
-    font-family: Arial, sans-serif;
-    font-size: 17px;
-    line-height: 1.75;
-
-    color: #667068;
-}
-
-
-/* =========================================================
-   FEATURED ARTICLE
-   ========================================================= */
-
-.popular-feature {
-    position: relative;
-    z-index: 2;
-
-    display: grid;
-    grid-template-columns: 48% 52%;
-
-    min-height: 540px;
-
-    margin-bottom: 76px;
-
-    background: #fffdf8;
-
-    border: 1px solid #ded8cd;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 18px 45px rgba(35, 54, 44, 0.08);
-}
-
-
-/* =========================================================
-   FEATURED ARTICLE — LEFT PANEL
-   ========================================================= */
-
-.popular-feature-visual {
-    position: relative;
-
-    min-height: 540px;
-
-    display: flex;
-    align-items: flex-end;
-
-    padding: 44px;
-
-    background:
-        radial-gradient(
-            circle at 70% 25%,
-            rgba(213, 170, 102, 0.18),
-            transparent 28%
-        ),
-        linear-gradient(
-            145deg,
-            #21483a 0%,
-            #2d5a46 48%,
-            #173a30 100%
-        );
-
-    overflow: hidden;
-}
-
-
-/* Large S silhouette */
-
-.popular-feature-visual::before {
-    content: "S";
-
-    position: absolute;
-
-    left: -20px;
-    bottom: -90px;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 340px;
-    line-height: 1;
-
-    color: rgba(255,255,255,0.035);
-
-    pointer-events: none;
-}
-
-
-/* Decorative circle */
-
-.popular-feature-visual::after {
-    content: "";
-
-    position: absolute;
-
-    width: 300px;
-    height: 300px;
-
-    right: -120px;
-    top: -120px;
-
-    border: 1px solid rgba(239,221,187,0.14);
-
-    border-radius: 50%;
-}
-
-
-/* Editorial text on left */
-
-.popular-feature-mark {
-    position: relative;
-    z-index: 2;
-}
-
-
-.popular-feature-mark .publication {
-    margin-bottom: 32px;
-
-    font-family: Arial, sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-
-    color: #e3d8c5;
-}
-
-
-.popular-feature-mark .tree-word {
-    max-width: 430px;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(58px, 6vw, 86px);
-    line-height: 0.92;
-    font-weight: 400;
-    font-style: italic;
-    letter-spacing: -2px;
-
-    color: #fffaf0;
-}
-
-
-.popular-feature-mark .issue {
-    margin-top: 34px;
-
-    font-family: Arial, sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-
-    color: #d8cdb9;
-}
-
-
-/* =========================================================
-   FEATURED ARTICLE — RIGHT PANEL
-   ========================================================= */
-
-.popular-feature-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    padding: 60px 65px;
-}
-
-
-.popular-feature-label {
-    margin-bottom: 20px;
-
-    font-family: Arial, sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-
-    color: #9a5935;
-}
-
-
-.popular-feature-content h3 {
-    margin: 0 0 23px;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(38px, 4vw, 56px);
-    line-height: 1.05;
-    font-weight: 400;
-    letter-spacing: -1px;
-
-    color: #173b30;
-}
-
-
-.popular-feature-content h3::after {
-    content: "";
-
-    display: block;
-
-    width: 46px;
-    height: 2px;
-
-    margin-top: 22px;
-
-    background: #9a5935;
-}
-
-
-.article-date {
-    margin-bottom: 24px;
-
-    font-family: Arial, sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-
-    color: #7b847e;
-}
-
-
-.article-description {
-    max-width: 600px;
-
-    margin: 0 0 25px;
-
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.8;
-
-    color: #56625d;
-}
-
-
-.popular-authors {
-    margin-bottom: 30px;
-
-    font-family: Arial, sans-serif;
-    font-size: 11px;
-    line-height: 1.6;
-
-    color: #77817b;
-}
-
-
-/* =========================================================
-   FEATURED ARTICLE — BUTTON
-   ========================================================= */
-
-.popular-read-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    align-self: flex-start;
-
-    padding: 14px 22px;
-
-    background: #1d5744;
-
-    border: 1px solid #1d5744;
-
-    color: #ffffff;
-
-    font-family: Arial, sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-
-    text-decoration: none;
-
-    transition:
-        background 0.25s ease,
-        transform 0.25s ease;
-}
-
-
-.popular-read-link:hover {
-    background: #9a5935;
-    border-color: #9a5935;
-
-    transform: translateY(-2px);
-}
-
-
-/* =========================================================
-   SELECTED ARTICLES
-   ========================================================= */
-
-.popular-subheading {
-    position: relative;
-    z-index: 2;
-
-    margin: 0 0 30px;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 32px;
-    line-height: 1.2;
-    font-weight: 400;
-
-    color: #173b30;
-}
-
-
-.popular-subheading::after {
-    content: "";
-
-    display: block;
-
-    width: 44px;
-    height: 2px;
-
-    margin-top: 13px;
-
-    background: #9a5935;
-}
-
-
-/* =========================================================
-   ARTICLE GRID
-   ========================================================= */
-
-.popular-article-grid {
-    position: relative;
-    z-index: 2;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    border-top: 1px solid #d9d4ca;
-    border-left: 1px solid #d9d4ca;
-}
-
-
-.popular-article-card {
-    min-height: 205px;
-
-    display: flex;
-    flex-direction: column;
-
-    padding: 31px 32px 28px;
-
-    background: rgba(255,253,248,0.75);
-
-    border-right: 1px solid #d9d4ca;
-    border-bottom: 1px solid #d9d4ca;
-
-    transition:
-        background 0.25s ease,
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-
-.popular-article-card:hover {
-    background: #fffdf8;
-
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 12px 28px rgba(38,57,48,0.07);
-}
-
-
-.popular-card-meta {
-    display: flex;
-    justify-content: space-between;
-
-    gap: 15px;
-
-    margin-bottom: 24px;
-
-    font-family: Arial, sans-serif;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-
-    color: #78837c;
-}
-
-
-.popular-article-card h4 {
-    max-width: 570px;
-
-    margin: 0 0 24px;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 21px;
-    line-height: 1.32;
-    font-weight: 400;
-
-    color: #203f34;
-}
-
-
-.popular-article-card a {
-    margin-top: auto;
-
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-
-    align-self: flex-start;
-
-    font-family: Arial, sans-serif;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 1.4px;
-    text-transform: uppercase;
-
-    color: #28705a;
-
-    text-decoration: none;
-
-    transition:
-        color 0.2s ease,
-        gap 0.2s ease;
-}
-
-
-.popular-article-card a:hover {
-    color: #9a5935;
-    gap: 12px;
-}
-
-
-/* =========================================================
-   MEDIA FEATURES
-   ========================================================= */
-
-.popular-media {
-    position: relative;
-    z-index: 2;
-
-    margin-top: 82px;
-
-    padding-top: 58px;
-
-    border-top: 1px solid #d5d0c6;
-}
-
-
-.popular-media-intro {
-    max-width: 700px;
-
-    margin-bottom: 30px;
-
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-    line-height: 1.75;
-
-    color: #68736d;
-}
-
-
-.popular-media-placeholder {
-    min-height: 170px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 35px;
-
-    text-align: center;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(29,87,68,0.04),
-            rgba(154,89,53,0.04)
-        );
-
-    border: 1px dashed #bfc6bf;
-}
-
-
-.popular-media-placeholder strong {
-    display: block;
-
-    margin-bottom: 8px;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 23px;
-    font-weight: 400;
-
-    color: #315646;
-}
-
-
-.popular-media-placeholder span {
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-
-    color: #7b847e;
-}
-
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
-@media (max-width: 850px) {
-
-    .popular-feature {
-        grid-template-columns: 1fr;
-    }
-
-    .popular-feature-visual {
-        min-height: 330px;
-    }
-
-    .popular-feature-content {
-        padding: 48px 35px;
-    }
-
-    .popular-article-grid {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    .popular-articles-section {
-        padding: 80px 0;
-    }
-
-    .popular-articles-section .section-title {
-        font-size: 43px;
-        letter-spacing: -1px;
-    }
-
-    .popular-intro {
-        font-size: 16px;
-        margin-bottom: 45px;
-    }
-
-    .popular-feature-visual {
-        min-height: 280px;
-        padding: 35px;
-    }
-
-    .popular-feature-mark .tree-word {
-        font-size: 58px;
-    }
-
-    .popular-feature-content {
-        padding: 40px 25px;
-    }
-
-    .popular-feature-content h3 {
-        font-size: 38px;
-    }
-
-    .popular-article-card {
-        padding: 28px;
-    }
-
-}
-
- /* =========================================
-   SANDALWOOD FEATURE PHOTOGRAPH
-   ========================================= */
-
-.popular-feature-visual {
-    position: relative;
-    min-height: 540px;
-    overflow: hidden;
-    background: #173b30;
-}
-
-.popular-feature-visual img {
-    width: 100%;
-    height: 100%;
-    min-height: 540px;
-    display: block;
-    object-fit: cover;
-    object-position: center;
-}
-
-.popular-photo-caption {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 18px 22px 17px;
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.78),
-        rgba(0, 0, 0, 0.38),
-        rgba(0, 0, 0, 0)
-    );
-    color: #ffffff;
-    font-size: 12px;
-    line-height: 1.45;
-    letter-spacing: 0.15px;
-}
-
-.popular-photo-caption span {
-    display: block;
-    margin-top: 5px;
-    font-size: 11px;
-    opacity: 0.88;
-    letter-spacing: 0.3px;
-}
-
-@media (max-width: 768px) {
-
-    .popular-feature-visual {
-        min-height: 360px;
-    }
-
-    .popular-feature-visual img {
-        min-height: 360px;
-    }
-
-    .popular-photo-caption {
-        padding: 15px 17px 14px;
-        font-size: 11px;
-    }
-
-    .popular-photo-caption span {
-        font-size: 10px;
-    }
-}  
-  /* =========================================
-   FIX FEATURED ARTICLE TEXT VISIBILITY
-   ========================================= */
-
-.popular-feature-content {
-    background: #fffdf8 !important;
-    color: #29443a !important;
-}
-
-.popular-feature-content .popular-feature-label {
-    color: #9a5935 !important;
-}
-
-.popular-feature-content h3 {
-    color: #173b30 !important;
-    opacity: 1 !important;
-}
-
-.popular-feature-content .article-date {
-    color: #6b756f !important;
-    opacity: 1 !important;
-}
-
-.popular-feature-content .article-description {
-    color: #40544c !important;
-    opacity: 1 !important;
-}
-
-.popular-feature-content .popular-authors {
-    color: #68736d !important;
-    opacity: 1 !important;
-}
-
-.popular-feature-content .popular-read-link {
-    color: #ffffff !important;
-    background: #176247 !important;
-    opacity: 1 !important;
-}  
-    /* =========================================
-   FINAL FIX — FEATURE ARTICLE CONTENT
-   ========================================= */
-
-.popular-feature-content {
-    position: relative !important;
-    z-index: 10 !important;
-    background: #fffdf8 !important;
-    color: #29443a !important;
-}
-
-.popular-feature-content .popular-feature-label {
-    color: #9a5935 !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
-.popular-feature-content h3 {
-    color: #173b30 !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    -webkit-text-fill-color: #173b30 !important;
-    text-shadow: none !important;
-}
-
-.popular-feature-content .article-date {
-    color: #66736c !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
-.popular-feature-content .article-description {
-    color: #40544c !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
-.popular-feature-content .popular-authors {
-    color: #59665f !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
-.popular-feature-content .popular-read-link {
-    color: #ffffff !important;
-    background: #176247 !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-    /* =========================================
-   RESTORE FEATURE ARTICLE CONTENT
-   ========================================= */
-
-.popular-feature {
-    opacity: 1 !important;
-    filter: none !important;
-}
-
-.popular-feature-content {
-    position: relative !important;
-    z-index: 50 !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    filter: none !important;
-    mix-blend-mode: normal !important;
-    background: #fffdf8 !important;
-}
-
-.popular-feature-content * {
-    opacity: 1 !important;
-    visibility: visible !important;
-    filter: none !important;
-    mix-blend-mode: normal !important;
-}
-
-.popular-feature-content .popular-feature-label {
-    color: #9a5935 !important;
-}
-
-.popular-feature-content h3 {
-    color: #173b30 !important;
-    -webkit-text-fill-color: #173b30 !important;
-    font-weight: 400 !important;
-}
-
-.popular-feature-content .article-date {
-    color: #66736c !important;
-}
-
-.popular-feature-content .article-description {
-    color: #40544c !important;
-}
-
-.popular-feature-content .popular-authors {
-    color: #59665f !important;
-}
-
-.popular-feature-content .popular-read-link {
-    display: inline-block !important;
-    color: #ffffff !important;
-    background: #176247 !important;
-}
-</style>
 
 
 <section class="popular-articles-section" id="popular-articles">
@@ -5617,24 +5422,7 @@ processes can be designed into productive, resilient and sustainable landscapes.
         <span>Photograph: Sangram B. Chavan</span>
     </div>
 </div>
-
-                <div class="popular-feature-mark">
-
-                    <div class="publication">
-                        Down To Earth
-                    </div>
-
-                    <div class="tree-word">
-                        Sandalwood,<br>reborn
-                    </div>
-
-                    <div class="issue">
-                        01 September 2026
-                    </div>
-
-                </div>
-
-            </div>
+</div>
 
 
             <div class="popular-feature-content">
@@ -6760,6 +6548,7 @@ document.addEventListener('keydown', function(event) {
 
 });
 </script>
+
 </body>
 
 </html>
