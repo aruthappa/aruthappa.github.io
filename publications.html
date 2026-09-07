@@ -1,1700 +1,648 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Publications | Dr. A. R. Uthappa</title>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publications | A. R. Uthappa</title>
+<meta name="description" content="Complete publication record of A. R. Uthappa, Senior Scientist (Agroforestry), ICAR–CCARI, Goa. Search publications by year and research theme.">
+<meta name="author" content="A. R. Uthappa">
+<link rel="canonical" href="https://aruthappa.github.io/publications.html">
+<meta property="og:title" content="Publications | A. R. Uthappa">
+<meta property="og:description" content="Research publications in agroforestry, carbon and climate, soil and restoration, biodiversity, coastal systems, geospatial science and related areas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aruthappa.github.io/publications.html">
 <style>
-
-:root{
-    --deep:#073b4c;
-    --green:#0b8f78;
-    --accent:#2aa889;
-    --light:#f4f7f5;
-    --soft:#eaf2ee;
-    --line:#d8e2dd;
-    --text:#173b46;
-    --muted:#64777b;
-    --white:#ffffff;
-}
-
-*{
-    box-sizing:border-box;
-}
-
-body{
-    margin:0;
-    background:var(--light);
-    color:var(--text);
-    font-family:Arial, Helvetica, sans-serif;
-    line-height:1.6;
-}
-
-.container{
-    width:min(1180px,92%);
-    margin:auto;
-}
-
-/* HEADER */
-
-.publication-header{
-    padding:75px 0 35px;
-}
-
-.eyebrow{
-    color:var(--green);
-    font-size:12px;
-    font-weight:700;
-    letter-spacing:4px;
-    text-transform:uppercase;
-    margin-bottom:14px;
-}
-
-h1{
-    margin:0;
-    font-family:Georgia,serif;
-    font-size:clamp(42px,5vw,64px);
-    line-height:1.05;
-    color:var(--deep);
-}
-
-.intro{
-    max-width:760px;
-    margin-top:22px;
-    color:#49656c;
-    font-size:16px;
-}
-
-/* METRICS */
-
-.metrics{
-    margin:35px 0 42px;
-    background:var(--deep);
-    border-radius:4px;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    overflow:hidden;
-}
-
-.metric{
-    padding:27px 25px;
-    border-right:1px solid rgba(255,255,255,.16);
-}
-
-.metric:last-child{
-    border-right:none;
-}
-
-.metric-number{
-    color:#27b38f;
-    font-family:Georgia,serif;
-    font-size:36px;
-    font-weight:bold;
-    line-height:1;
-}
-
-.metric-label{
-    margin-top:8px;
-    color:#dce9e7;
-    font-size:11px;
-    font-weight:bold;
-    letter-spacing:1px;
-    text-transform:uppercase;
-}
-
-/* FILTERS */
-
-.filters{
-    display:flex;
-    flex-wrap:wrap;
-    gap:9px;
-    margin:35px 0 55px;
-}
-
-.filter{
-    border:1px solid #cbdad5;
-    background:white;
-    color:#31555c;
-    border-radius:30px;
-    padding:8px 16px;
-    font-size:11px;
-    font-weight:700;
-    letter-spacing:.6px;
-    cursor:pointer;
-    transition:.2s ease;
-}
-
-.filter:hover,
-.filter.active{
-    background:var(--green);
-    color:white;
-    border-color:var(--green);
-}
-
-/* YEAR */
-
-.year-section{
-    margin-bottom:48px;
-}
-
-.year-heading{
-    display:flex;
-    align-items:center;
-    gap:20px;
-    margin-bottom:18px;
-}
-
-.year-heading h2{
-    margin:0;
-    font-family:Georgia,serif;
-    font-size:30px;
-    color:var(--deep);
-    font-weight:normal;
-}
-
-.year-line{
-    height:1px;
-    background:#cddbd6;
-    flex:1;
-}
-
-/* PUBLICATION CARD */
-
-.publication{
-    background:white;
-    border:1px solid var(--line);
-    margin-bottom:12px;
-    padding:25px 28px;
-    display:grid;
-    grid-template-columns:75px 1fr;
-    gap:20px;
-    transition:.25s ease;
-}
-
-.publication:hover{
-    transform:translateY(-2px);
-    border-color:#9fc8b8;
-    box-shadow:0 10px 25px rgba(10,60,55,.07);
-}
-
-.pub-number{
-    color:var(--green);
-    font-family:Georgia,serif;
-    font-size:18px;
-    font-weight:bold;
-}
-
-.pub-type{
-    display:block;
-    margin-top:4px;
-    color:#94a3a4;
-    font-size:9px;
-    letter-spacing:2px;
-    font-weight:bold;
-}
-
-.pub-title{
-    margin:0;
-    color:#123b48;
-    font-family:Georgia,serif;
-    font-size:20px;
-    line-height:1.35;
-}
-
-.pub-meta{
-    margin-top:9px;
-    color:#60767b;
-    font-size:13px;
-}
-
-.pub-meta strong{
-    color:#294e57;
-}
-
-.pub-tags{
-    display:flex;
-    flex-wrap:wrap;
-    gap:6px;
-    margin-top:12px;
-}
-
-.pub-tag{
-    background:#edf5f1;
-    color:#166856;
-    padding:4px 9px;
-    font-size:9px;
-    letter-spacing:.7px;
-    text-transform:uppercase;
-}
-
-/* CATEGORY LABEL */
-
-.category{
-    display:inline-block;
-    margin-left:10px;
-    padding:4px 8px;
-    border-radius:12px;
-    background:#e9f3ef;
-    color:var(--green);
-    font-size:9px;
-    font-weight:bold;
-    letter-spacing:.7px;
-}
-
-/* BOOKS */
-
-.books-section{
-    margin:75px 0;
-}
-
-.section-title{
-    font-family:Georgia,serif;
-    font-size:38px;
-    color:var(--deep);
-    margin:0 0 25px;
-}
-
-.book-card{
-    background:white;
-    border-left:4px solid var(--green);
-    padding:22px 25px;
-    margin-bottom:12px;
-    border-top:1px solid var(--line);
-    border-right:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-}
-
-.book-title{
-    font-family:Georgia,serif;
-    font-size:19px;
-    font-weight:bold;
-}
-
-.book-meta{
-    color:#65787c;
-    font-size:13px;
-    margin-top:7px;
-}
-
-/* FOOTER */
-
-.publication-footer{
-    margin-top:90px;
-    padding:45px 0;
-    background:var(--deep);
-    color:white;
-}
-
-.footer-title{
-    font-family:Georgia,serif;
-    font-size:25px;
-}
-
-.footer-text{
-    color:#cbdad9;
-    font-size:13px;
-}
-
-/* RESPONSIVE */
-
+:root{--forest:#174f3b;--forest-dark:#103b2d;--teal:#145b61;--brown:#9a6744;--ivory:#f7f3eb;--ink:#1d2925;--muted:#64736d;--line:#d9ded8;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;background:#fff}
+a{color:inherit}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:1rem;top:1rem;background:#fff;padding:.7rem 1rem;z-index:99}
+header{background:var(--forest-dark);color:#fff}
+.nav{max-width:1180px;margin:auto;padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center}
+.brand{font-family:Georgia,serif;font-size:1.15rem;letter-spacing:.04em}
+.nav-links a{text-decoration:none;margin-left:1.2rem;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase}
+.nav-links a:hover,.nav-links a:focus{text-decoration:underline}
+.hero{background:var(--forest-dark);color:#fff;padding:5.5rem 1.5rem 4.5rem}
+.hero-inner{max-width:1180px;margin:auto}
+.kicker,.section-kicker{text-transform:uppercase;letter-spacing:.18em;font-size:.76rem}
+.kicker{opacity:.75}
+h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;line-height:1.15}
+h1{font-size:clamp(2.8rem,6vw,5rem);margin:.5rem 0 1rem}
+.hero p{max-width:760px;color:#dce8e2;font-size:1.12rem}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);max-width:850px;margin-top:2.5rem;border-top:1px solid rgba(255,255,255,.2);border-bottom:1px solid rgba(255,255,255,.2)}
+.metric{padding:1.2rem 1rem;border-right:1px solid rgba(255,255,255,.15)}
+.metric:last-child{border-right:0}
+.metric strong{display:block;font-family:Georgia,serif;font-size:2rem}
+.metric span{font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;opacity:.72}
+.snapshot{font-size:.72rem!important;margin-top:1.2rem!important;color:#b9c9c1!important}
+main section{padding:4.5rem 1.5rem}
+.section-inner{max-width:1180px;margin:auto}
+.section-kicker{color:var(--brown);font-weight:700}
+h2{font-size:clamp(2rem,4vw,3.4rem);margin:.55rem 0 1rem}
+.lead{max-width:800px;color:var(--muted);font-size:1.05rem}
+.filters{background:var(--ivory);padding:2rem;margin-top:2.5rem;border:1px solid var(--line)}
+.filter-row{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;margin-bottom:1rem}
+.filter-row:last-child{margin-bottom:0}
+.filter-label{min-width:120px;font-size:.75rem;letter-spacing:.13em;text-transform:uppercase;font-weight:700;color:var(--forest)}
+button{font:inherit;cursor:pointer;border:1px solid var(--line);background:#fff;padding:.55rem .8rem;border-radius:999px;color:var(--ink)}
+button:hover,button:focus,button.active{background:var(--forest);color:#fff;border-color:var(--forest)}
+.search{width:100%;padding:.85rem 1rem;border:1px solid var(--line);font:inherit;background:#fff}
+.results-bar{display:flex;justify-content:space-between;gap:1rem;margin:2rem 0 .8rem;align-items:center}
+.results-count{font-family:Georgia,serif;font-size:1.2rem}
+.clear{color:var(--brown);font-size:.82rem;text-decoration:underline;cursor:pointer}
+.pub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.pub-card{border:1px solid var(--line);padding:1.45rem;background:#fff;display:flex;flex-direction:column;min-height:245px}
+.pub-card:hover{box-shadow:0 8px 25px rgba(20,45,35,.07);border-color:#c5d0c8}
+.pub-meta{display:flex;justify-content:space-between;gap:1rem;color:var(--brown);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:1rem}
+.pub-citation{font-family:Georgia,"Times New Roman",serif;font-size:1rem;line-height:1.5}
+.pub-bottom{margin-top:auto;padding-top:1.2rem;display:flex;justify-content:space-between;gap:.8rem;align-items:end}
+.tags{display:flex;flex-wrap:wrap;gap:.35rem}
+.tags span{font-size:.66rem;padding:.25rem .45rem;background:var(--ivory);color:var(--forest);border-radius:999px}
+.doi{font-size:.75rem;color:var(--teal);font-weight:700;text-decoration:none;white-space:nowrap}
+.note{background:var(--teal);color:#fff}
+.note p{max-width:800px;color:#dcebea}
+footer{background:#0b2a20;color:#cdd9d3;padding:2rem 1.5rem;font-size:.85rem}
+.footer-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:1rem}
 @media(max-width:800px){
-
-    .metrics{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .metric:nth-child(2){
-        border-right:none;
-    }
-
-    .publication{
-        grid-template-columns:1fr;
-        gap:5px;
-    }
-
-    .pub-number{
-        margin-bottom:5px;
-    }
-
-}
-
-@media(max-width:520px){
-
-    .publication-header{
-        padding-top:45px;
-    }
-
-    .metrics{
-        grid-template-columns:1fr;
-    }
-
-    .metric{
-        border-right:none;
-        border-bottom:1px solid rgba(255,255,255,.15);
-    }
-
-    .publication{
-        padding:20px;
-    }
-
-    .pub-title{
-        font-size:18px;
-    }
-
-}
-.view-paper {
-    display: inline-block;
-    margin-top: 12px;
-    padding: 8px 14px;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    background: transparent;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-.view-paper:hover {
-    background: var(--accent);
-    color: white;
+ .nav-links{display:none}
+ .hero{padding:4.5rem 1.25rem 3.5rem}
+ main section{padding:3.5rem 1.25rem}
+ .metrics{grid-template-columns:repeat(2,1fr)}
+ .metric:nth-child(2){border-right:0}
+ .metric:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.15)}
+ .pub-grid{grid-template-columns:1fr}
+ .filter-label{width:100%}
+ .footer-inner{flex-direction:column;align-items:flex-start}
 }
 </style>
-    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "A. R. Uthappa",
+  "jobTitle": "Senior Scientist (Agroforestry)",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "ICAR–Central Coastal Agricultural Research Institute"
+  },
+  "url": "https://aruthappa.github.io/",
+  "sameAs": [
+    "https://scholar.google.com/citations?user=pe6rdhMAAAAJ&hl=en",
+    "https://www.researchgate.net/profile/Uthappa-A-R",
+    "https://orcid.org/0000-0001-9954-6940",
+    "https://www.scopus.com/authid/detail.uri?authorId=57191505567"
+  ]
+}
+</script>
 </head>
-
 <body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+<nav class="nav" aria-label="Primary navigation">
+<div class="brand">A. R. Uthappa</div>
+<div class="nav-links">
+<a href="index.html#about">About</a>
+<a href="research.html">Research</a>
+<a href="index.html#projects">Projects</a>
+<a href="publications.html" aria-current="page">Publications</a>
+<a href="index.html#impact">Impact</a>
+<a href="index.html#tree-speaks">Blog</a>
+<a href="index.html#contact">Contact</a>
+</div>
+</nav>
+</header>
 
-<main>
-
-<section class="publication-header">
-<div class="container">
-
-<div class="eyebrow">Publications & Research Output</div>
-
-<h1>Complete publication record</h1>
-
-<p class="intro">
-A record of peer-reviewed research spanning agroforestry, soil health,
-climate resilience, carbon sequestration, biodiversity, restoration
-and geospatial science.
-</p>
-
+<main id="main">
+<section class="hero">
+<div class="hero-inner">
+<div class="kicker">Complete publication record · ICAR–CCARI · Goa</div>
+<h1>Research contributions.</h1>
+<p>A complete record of journal publications documented in the current CV, spanning agroforestry, carbon and climate, soil and land restoration, biodiversity, coastal systems, tree biology and emerging geospatial and AI applications.</p>
 <div class="metrics">
-
-<div class="metric">
-<div class="metric-number">49</div>
-<div class="metric-label">Journal Articles</div>
+<div class="metric"><strong>49</strong><span>Journal articles</span></div>
+<div class="metric"><strong>1,850+</strong><span>Google Scholar citations</span></div>
+<div class="metric"><strong>19</strong><span>H-index</span></div>
+<div class="metric"><strong>39</strong><span>i10-index</span></div>
 </div>
- <div class="metric">
-        <div class="metric-number">1,850</div>
-        <div class="metric-label">Google Scholar Citations</div>
-    </div>
-
-    <div class="metric">
-        <div class="metric-number">19</div>
-        <div class="metric-label">H-index</div>
-    </div>
-
-    <div class="metric">
-        <div class="metric-number">39</div>
-        <div class="metric-label">i10-index</div>
-    </div>
-
+<p class="snapshot">Google Scholar metrics shown as a September 2026 snapshot. Citation metrics change periodically; use the linked Google Scholar profile for current values.</p>
 </div>
- 
+</section>
 
-<div class="filters">
+<section>
+<div class="section-inner">
+<div class="section-kicker">01 · Complete record</div>
+<h2>49 journal articles, searchable.</h2>
+<p class="lead">The publication records below are transcribed from the current CV and presented as one unified scholarly record. Use the year, research-theme and keyword filters to navigate the record.</p>
 
-<button class="filter active">ALL</button>
-<button class="filter">2026</button>
-<button class="filter">2025</button>
-<button class="filter">2024</button>
-<button class="filter">2023</button>
-<button class="filter">2022</button>
-<button class="filter">2021</button>
-<button class="filter">2018</button>
-<button class="filter">2017</button>
-<button class="filter">2016</button>
-<button class="filter">2015</button>
-
+<div class="filters" aria-label="Publication filters">
+<div class="filter-row">
+<div class="filter-label">Year</div>
+<button class="year-btn active" data-year="all">All</button>
+<button class="year-btn" data-year="2026">2026</button><button class="year-btn" data-year="2025">2025</button><button class="year-btn" data-year="2024">2024</button><button class="year-btn" data-year="2023">2023</button><button class="year-btn" data-year="2022">2022</button><button class="year-btn" data-year="2021">2021</button><button class="year-btn" data-year="2018">2018</button><button class="year-btn" data-year="2017">2017</button><button class="year-btn" data-year="2016">2016</button><button class="year-btn" data-year="2015">2015</button>
+</div>
+<div class="filter-row">
+<div class="filter-label">Research theme</div>
+<button class="theme-btn active" data-theme="all">All</button>
+<button class="theme-btn" data-theme="Agroforestry">Agroforestry</button><button class="theme-btn" data-theme="Biodiversity &amp; Ecosystem Services">Biodiversity &amp; Ecosystem Services</button><button class="theme-btn" data-theme="Carbon &amp; Climate">Carbon &amp; Climate</button><button class="theme-btn" data-theme="Coastal &amp; Saline">Coastal &amp; Saline</button><button class="theme-btn" data-theme="Geospatial &amp; AI">Geospatial &amp; AI</button><button class="theme-btn" data-theme="Soil &amp; Restoration">Soil &amp; Restoration</button><button class="theme-btn" data-theme="Tree Biology &amp; Germplasm">Tree Biology &amp; Germplasm</button><button class="theme-btn" data-theme="Tree Health &amp; Entomology">Tree Health &amp; Entomology</button><button class="theme-btn" data-theme="Wood &amp; Biomaterials">Wood &amp; Biomaterials</button>
+</div>
+<div class="filter-row">
+<div class="filter-label">Search</div>
+<input id="search" class="search" type="search" placeholder="Search title, author, journal or keyword…" aria-label="Search publications">
+</div>
 </div>
 
+<div class="results-bar">
+<div id="count" class="results-count">49 publications</div>
+<div id="clear" class="clear">Clear filters</div>
+</div>
+<div id="pub-grid" class="pub-grid">
+
+<article class="pub-card" data-year="2025" data-theme="Agroforestry Geospatial &amp; AI" data-search="Uthappa, A.R., Das, B., Chavan, S.B. Raizada, A., Desai, S., Paramesha, V., Kumar, P., Jha, P.K. and Prasad, P.V., 2025. Comparison of machine learning models for mapping Arecanut based agroforestry system in Goa by enhancing precision and efficiency. Scientific Reports, 15, 44280. https://doi.org/10.1038/s41598-025-27845-6">
+  <div class="pub-meta"><span>Journal article</span><span>2025</span></div>
+  <div class="pub-citation">Uthappa, A.R., Das, B., Chavan, S.B. Raizada, A., Desai, S., Paramesha, V., Kumar, P., Jha, P.K. and Prasad, P.V., 2025. Comparison of machine learning models for mapping Arecanut based agroforestry system in Goa by enhancing precision and efficiency. Scientific Reports, 15, 44280. https://doi.org/10.1038/s41598-025-27845-6</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span><span>Geospatial &amp; AI</span></div>
+    <a class="doi" href="https://doi.org/10.1038/s41598-025-27845-6" target="_blank" rel="noopener noreferrer">DOI →</a>
+  </div>
+</article>
+<article class="pub-card" data-year="2025" data-theme="Geospatial &amp; AI" data-search="Uthappa, A. R., Das, B., Raizada, A., Kumar, P., Jha, P., &amp; Prasad, P. V. V. 2025. Forest fire susceptibility mapping using multi-criteria decision making and machine learning models in the Western Ghats of India. Journal of Environmental Management, 379, 124777. https://doi.org/10.1016/j.jenvman.2025.124777">
+  <div class="pub-meta"><span>Journal article</span><span>2025</span></div>
+  <div class="pub-citation">Uthappa, A. R., Das, B., Raizada, A., Kumar, P., Jha, P., &amp; Prasad, P. V. V. 2025. Forest fire susceptibility mapping using multi-criteria decision making and machine learning models in the Western Ghats of India. Journal of Environmental Management, 379, 124777. https://doi.org/10.1016/j.jenvman.2025.124777</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Geospatial &amp; AI</span></div>
+    <a class="doi" href="https://doi.org/10.1016/j.jenvman.2025.124777" target="_blank" rel="noopener noreferrer">DOI →</a>
+  </div>
+</article>
+<article class="pub-card" data-year="2024" data-theme="Soil &amp; Restoration" data-search="Uthappa, A.R., Devakumar, A.S., Das, B., Mahajan, G.R., Chavan, S.B., Jinger, D., Jha, P.K., Kumar, P., Kokila, A., Krishnamurthy, R. and Mounesh, N.V. et al. 2024. Comparative analysis of soil quality indexing techniques for various tree based land use systems in semi-arid India. Frontiers in Forests and Global Change, 6, p.1322660">
+  <div class="pub-meta"><span>Journal article</span><span>2024</span></div>
+  <div class="pub-citation">Uthappa, A.R., Devakumar, A.S., Das, B., Mahajan, G.R., Chavan, S.B., Jinger, D., Jha, P.K., Kumar, P., Kokila, A., Krishnamurthy, R. and Mounesh, N.V. et al. 2024. Comparative analysis of soil quality indexing techniques for various tree based land use systems in semi-arid India. Frontiers in Forests and Global Change, 6, p.1322660</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Soil &amp; Restoration</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2025" data-theme="Agroforestry" data-search="Chavan, S. B., Rawale, G. B., Pradhan, A., Uthappa, A. R.*, Kakade, V. D., Morade, A. S., Paul, N., Das, B., Chichaghare, A. R., Changan, S., Khapte, P. S., Basavaraj, P. S., Babar, R., Salunkhe, V. S., Jinger, D., Nangare, D. D., &amp; Reddy, K. S. 2025. Optimizing tree shade gradients in Emblica officinalis-based agroforestry systems: impacts on soybean physio-biochemical traits and yield under degraded soils. Agroforestry Systems, 99(1), 21. https://doi.org/10.1007/s10457-024-01123-2">
+  <div class="pub-meta"><span>Journal article</span><span>2025</span></div>
+  <div class="pub-citation">Chavan, S. B., Rawale, G. B., Pradhan, A., Uthappa, A. R.*, Kakade, V. D., Morade, A. S., Paul, N., Das, B., Chichaghare, A. R., Changan, S., Khapte, P. S., Basavaraj, P. S., Babar, R., Salunkhe, V. S., Jinger, D., Nangare, D. D., &amp; Reddy, K. S. 2025. Optimizing tree shade gradients in Emblica officinalis-based agroforestry systems: impacts on soybean physio-biochemical traits and yield under degraded soils. Agroforestry Systems, 99(1), 21. https://doi.org/10.1007/s10457-024-01123-2</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span></div>
+    <a class="doi" href="https://doi.org/10.1007/s10457-024-01123-2" target="_blank" rel="noopener noreferrer">DOI →</a>
+  </div>
+</article>
+<article class="pub-card" data-year="2025" data-theme="Agroforestry" data-search="Chavan, S.B., Rawale, G.B., Uthappa, A.R.*, Harisha, C.B., Kakade, V.D., Morade, A.S., Changan, S.S., Chichaghare, A.R., Das, B., Jinger, D. and Basavaraj, P.S., 2025. Do different plant host species influence the response of Santalum album under moisture deficit stress?. Agroforestry Systems, 99(7), p.185.">
+  <div class="pub-meta"><span>Journal article</span><span>2025</span></div>
+  <div class="pub-citation">Chavan, S.B., Rawale, G.B., Uthappa, A.R.*, Harisha, C.B., Kakade, V.D., Morade, A.S., Changan, S.S., Chichaghare, A.R., Das, B., Jinger, D. and Basavaraj, P.S., 2025. Do different plant host species influence the response of Santalum album under moisture deficit stress?. Agroforestry Systems, 99(7), p.185.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2025" data-theme="Wood &amp; Biomaterials" data-search="Ranjan, M., Murali, G., Mamatha, B. S., Prakash, V., Ramkumar, V. R., Uthappa, A. R., &amp; Dixit, S. 2025. Sustainable alternatives in particleboard production: The role of leveraging recycled and renewable materials. Results in Engineering, 27, 106020. https://doi.org/10.1016/j.rineng.2025.106020">
+  <div class="pub-meta"><span>Journal article</span><span>2025</span></div>
+  <div class="pub-citation">Ranjan, M., Murali, G., Mamatha, B. S., Prakash, V., Ramkumar, V. R., Uthappa, A. R., &amp; Dixit, S. 2025. Sustainable alternatives in particleboard production: The role of leveraging recycled and renewable materials. Results in Engineering, 27, 106020. https://doi.org/10.1016/j.rineng.2025.106020</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Wood &amp; Biomaterials</span></div>
+    <a class="doi" href="https://doi.org/10.1016/j.rineng.2025.106020" target="_blank" rel="noopener noreferrer">DOI →</a>
+  </div>
+</article>
+<article class="pub-card" data-year="2026" data-theme="Agroforestry" data-search="Chichaghare, A.R., Chavan, S.B, Rawale, G.B., Uthappa, A.R.*, Kakade, V.D., Morade, A.S., Changan, S.S., Paul, N., Gawade, V.B., Khapte, P.S. and Basavraj, P.S., 2026. Tree shade mitigates stress and enhances chickpea productivity: Insights from an Emblica officinalis-based agroforestry system in semi-arid shallow Basaltic Deccan Plateau, India. Trees, Forests and People, p.101164.">
+  <div class="pub-meta"><span>Journal article</span><span>2026</span></div>
+  <div class="pub-citation">Chichaghare, A.R., Chavan, S.B, Rawale, G.B., Uthappa, A.R.*, Kakade, V.D., Morade, A.S., Changan, S.S., Paul, N., Gawade, V.B., Khapte, P.S. and Basavraj, P.S., 2026. Tree shade mitigates stress and enhances chickpea productivity: Insights from an Emblica officinalis-based agroforestry system in semi-arid shallow Basaltic Deccan Plateau, India. Trees, Forests and People, p.101164.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2025" data-theme="Agroforestry" data-search="Pathan, S.J., Chavan, S.B., Meshram, N.A., Keerthika, A., Uthappa, A.R., Yadav, D.K., Kumar, K.R., Kakade, V.D. and Morade, A.S., 2025. Structural and functional assessment of traditional Betel Vine-based agroforestry practices in Maharashtra, India. Agroforestry Systems, 99(7), p.191.">
+  <div class="pub-meta"><span>Journal article</span><span>2025</span></div>
+  <div class="pub-citation">Pathan, S.J., Chavan, S.B., Meshram, N.A., Keerthika, A., Uthappa, A.R., Yadav, D.K., Kumar, K.R., Kakade, V.D. and Morade, A.S., 2025. Structural and functional assessment of traditional Betel Vine-based agroforestry practices in Maharashtra, India. Agroforestry Systems, 99(7), p.191.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2024" data-theme="Biodiversity &amp; Ecosystem Services" data-search="Shishira, D., Uthappa, A.R.*, Chavan, S.B., Kuberappa, G.C., Jinger, D. and Sringeswara, A.N., 2024. Pollen diversity in urban honey: implications for bee foraging behaviour and urban green space planning. Urban Ecosystems, 27(6), pp.2487-2500.">
+  <div class="pub-meta"><span>Journal article</span><span>2024</span></div>
+  <div class="pub-citation">Shishira, D., Uthappa, A.R.*, Chavan, S.B., Kuberappa, G.C., Jinger, D. and Sringeswara, A.N., 2024. Pollen diversity in urban honey: implications for bee foraging behaviour and urban green space planning. Urban Ecosystems, 27(6), pp.2487-2500.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Biodiversity &amp; Ecosystem Services</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2024" data-theme="Agroforestry Carbon &amp; Climate" data-search="Chavan, S. B., Dhillon, R. S., Sirohi, C., Saleh, I. A., Uthappa, A. R.*, Keerthika, A., Jinger, D., Halli, H. M., Pradhan, A., Kakade, V., Morade, A., Chichaghare, A. R., Rawale, G. B., Okla, M. K., Alaraidh, I. A., AbdElgawad, H., Fahad, S., Nandgude, S., &amp; Singh, R. 2024. Optimizing planting geometries in eucalyptus-based food production systems for enhanced yield and carbon sequestration. Frontiers in Sustainable Food Systems, 8. https://doi.org/10.3389/fsufs.2024.1386035">
+  <div class="pub-meta"><span>Journal article</span><span>2024</span></div>
+  <div class="pub-citation">Chavan, S. B., Dhillon, R. S., Sirohi, C., Saleh, I. A., Uthappa, A. R.*, Keerthika, A., Jinger, D., Halli, H. M., Pradhan, A., Kakade, V., Morade, A., Chichaghare, A. R., Rawale, G. B., Okla, M. K., Alaraidh, I. A., AbdElgawad, H., Fahad, S., Nandgude, S., &amp; Singh, R. 2024. Optimizing planting geometries in eucalyptus-based food production systems for enhanced yield and carbon sequestration. Frontiers in Sustainable Food Systems, 8. https://doi.org/10.3389/fsufs.2024.1386035</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span><span>Carbon &amp; Climate</span></div>
+    <a class="doi" href="https://doi.org/10.3389/fsufs.2024.1386035" target="_blank" rel="noopener noreferrer">DOI →</a>
+  </div>
+</article>
+<article class="pub-card" data-year="2025" data-theme="Agroforestry Biodiversity &amp; Ecosystem Services" data-search="Keerthika, A., Parthiban, K.T., Chavan, S.B., Uthappa, A.R., Gupta, D.K., Verma, A., Shukla, A.K. and Mehta, R.S., 2025. Integrating ecosystem services through sustainable land use approach in multifucntional agroforestry: The case of Tamil Nadu, Southern India. Environmental and Sustainability Indicators, 28, p.100998.">
+  <div class="pub-meta"><span>Journal article</span><span>2025</span></div>
+  <div class="pub-citation">Keerthika, A., Parthiban, K.T., Chavan, S.B., Uthappa, A.R., Gupta, D.K., Verma, A., Shukla, A.K. and Mehta, R.S., 2025. Integrating ecosystem services through sustainable land use approach in multifucntional agroforestry: The case of Tamil Nadu, Southern India. Environmental and Sustainability Indicators, 28, p.100998.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span><span>Biodiversity &amp; Ecosystem Services</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2018" data-theme="Agroforestry Carbon &amp; Climate Geospatial &amp; AI" data-search="Alam, B., Singh, R., Uthappa, A.R., Chaturvedi, M., Singh, A.K., Newaj, R., Handa, A.K. and Chaturvedi, O.P., 2018. Different genotypes of Dalbergia sissoo trees modified microclimate dynamics differently on understory crop cowpea (Vigna unguiculata) as assessed through ecophysiological and spectral traits in agroforestry system. Agricultural and Forest Meteorology, 249, pp.138-148.">
+  <div class="pub-meta"><span>Journal article</span><span>2018</span></div>
+  <div class="pub-citation">Alam, B., Singh, R., Uthappa, A.R., Chaturvedi, M., Singh, A.K., Newaj, R., Handa, A.K. and Chaturvedi, O.P., 2018. Different genotypes of Dalbergia sissoo trees modified microclimate dynamics differently on understory crop cowpea (Vigna unguiculata) as assessed through ecophysiological and spectral traits in agroforestry system. Agricultural and Forest Meteorology, 249, pp.138-148.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span><span>Carbon &amp; Climate</span><span>Geospatial &amp; AI</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2025" data-theme="Carbon &amp; Climate Soil &amp; Restoration" data-search="Jinger, D., Kakade, V. D., Kaushal, R., Bhatnagar, P. R., Ghosh, A., Mahawer, S. K., Dinesh, D., Singh, G., Akula, C., Paramesh, V., Meena, V. S., Roy, T., Islam, S., Kumar, D., Uthappa, A. R., Chavan, S. B., Pradhan, A., Kumar, R., Kaledhonkar, M. J., &amp; Madhu, M. 2025. Nature-based solutions for enhancing CO2 sequestration and rehabilitating degraded lands through silvo-aromatic system and soil moisture conservation techniques. Journal of Environmental Management, 380, 124904. https://doi.org/10.1016/j.jenvman.2025.124904">
+  <div class="pub-meta"><span>Journal article</span><span>2025</span></div>
+  <div class="pub-citation">Jinger, D., Kakade, V. D., Kaushal, R., Bhatnagar, P. R., Ghosh, A., Mahawer, S. K., Dinesh, D., Singh, G., Akula, C., Paramesh, V., Meena, V. S., Roy, T., Islam, S., Kumar, D., Uthappa, A. R., Chavan, S. B., Pradhan, A., Kumar, R., Kaledhonkar, M. J., &amp; Madhu, M. 2025. Nature-based solutions for enhancing CO2 sequestration and rehabilitating degraded lands through silvo-aromatic system and soil moisture conservation techniques. Journal of Environmental Management, 380, 124904. https://doi.org/10.1016/j.jenvman.2025.124904</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Carbon &amp; Climate</span><span>Soil &amp; Restoration</span></div>
+    <a class="doi" href="https://doi.org/10.1016/j.jenvman.2025.124904" target="_blank" rel="noopener noreferrer">DOI →</a>
+  </div>
+</article>
+<article class="pub-card" data-year="2026" data-theme="Carbon &amp; Climate" data-search="Siddesh, R., Pathak, H., Chavan, S.B., Kakade, V.D., Salunkhe, S.S., Uthappa, A.R., Paul, N., Halli, H.M. and Reddy, K.S., 2026. Estimating carbon sequestration in orchards of semi-arid tropics: A modeling approach. Biomass and Bioenergy, 206, p.108610.">
+  <div class="pub-meta"><span>Journal article</span><span>2026</span></div>
+  <div class="pub-citation">Siddesh, R., Pathak, H., Chavan, S.B., Kakade, V.D., Salunkhe, S.S., Uthappa, A.R., Paul, N., Halli, H.M. and Reddy, K.S., 2026. Estimating carbon sequestration in orchards of semi-arid tropics: A modeling approach. Biomass and Bioenergy, 206, p.108610.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Carbon &amp; Climate</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2025" data-theme="Carbon &amp; Climate Geospatial &amp; AI" data-search="Paul, N.C., Chavan, S.B., Gurav, S., Ponnaganti, N., Morade, A., Kakade, V.D., Jorvekar, N., Kumar, K.R., Salunkhe, V.N., Uthappa, A.R. and Reddy, K.S., 2025. Biomass Estimation of Mahogany (Swietenia macrophylla): An Optimized Weighted Ensemble-based Machine Learning Approach. Smart Agricultural Technology, p.101616.">
+  <div class="pub-meta"><span>Journal article</span><span>2025</span></div>
+  <div class="pub-citation">Paul, N.C., Chavan, S.B., Gurav, S., Ponnaganti, N., Morade, A., Kakade, V.D., Jorvekar, N., Kumar, K.R., Salunkhe, V.N., Uthappa, A.R. and Reddy, K.S., 2025. Biomass Estimation of Mahogany (Swietenia macrophylla): An Optimized Weighted Ensemble-based Machine Learning Approach. Smart Agricultural Technology, p.101616.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Carbon &amp; Climate</span><span>Geospatial &amp; AI</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2025" data-theme="Coastal &amp; Saline Carbon &amp; Climate" data-search="Das, B., Sah, S., Reddy, K. V., Balaji, S. J., Desai, S., Mahajan, G., Singh, P., Saha, S., Uthappa, A. R., Kumar, P., Sehgal, V. K., Singh, R. N., &amp; Shetkar, D. A. 2025. Assessment of climate change vulnerability of agriculture in coastal districts of India using principal component analysis and entropy-based methods. Theoretical and Applied Climatology, 156(7), 409. https://doi.org/10.1007/s00704-025-05623-8">
+  <div class="pub-meta"><span>Journal article</span><span>2025</span></div>
+  <div class="pub-citation">Das, B., Sah, S., Reddy, K. V., Balaji, S. J., Desai, S., Mahajan, G., Singh, P., Saha, S., Uthappa, A. R., Kumar, P., Sehgal, V. K., Singh, R. N., &amp; Shetkar, D. A. 2025. Assessment of climate change vulnerability of agriculture in coastal districts of India using principal component analysis and entropy-based methods. Theoretical and Applied Climatology, 156(7), 409. https://doi.org/10.1007/s00704-025-05623-8</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Coastal &amp; Saline</span><span>Carbon &amp; Climate</span></div>
+    <a class="doi" href="https://doi.org/10.1007/s00704-025-05623-8" target="_blank" rel="noopener noreferrer">DOI →</a>
+  </div>
+</article>
+<article class="pub-card" data-year="2025" data-theme="Agroforestry Carbon &amp; Climate" data-search="Gautam, K., Kumar, N., Ram, A., Dev, I., Choudhury, B.U., Singh, N.R., Handa, A.K., Yadav, A., Anuragi, H., Uthappa, A.R. and Kumar, D., 2025. Root architecture and carbon sequestration potential of fast-growing agroforestry tree species in semi-arid Central India. Frontiers in Agronomy, 7, p.1597122.">
+  <div class="pub-meta"><span>Journal article</span><span>2025</span></div>
+  <div class="pub-citation">Gautam, K., Kumar, N., Ram, A., Dev, I., Choudhury, B.U., Singh, N.R., Handa, A.K., Yadav, A., Anuragi, H., Uthappa, A.R. and Kumar, D., 2025. Root architecture and carbon sequestration potential of fast-growing agroforestry tree species in semi-arid Central India. Frontiers in Agronomy, 7, p.1597122.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span><span>Carbon &amp; Climate</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2017" data-theme="Tree Biology &amp; Germplasm" data-search="Kumar, V., Uthappa, A.R., Srivastava, M., Vijay, D., Kumaranag, K.M., Manjunatha, N., Rana, M., Newaj, R., Handa, A.K. and Chaturvedi, O.P., 2017. Floral biology of Grewia flavescens Juss.: an underutilized crop. Genetic Resources and Crop Evolution, 64, pp.1789-1795.">
+  <div class="pub-meta"><span>Journal article</span><span>2017</span></div>
+  <div class="pub-citation">Kumar, V., Uthappa, A.R., Srivastava, M., Vijay, D., Kumaranag, K.M., Manjunatha, N., Rana, M., Newaj, R., Handa, A.K. and Chaturvedi, O.P., 2017. Floral biology of Grewia flavescens Juss.: an underutilized crop. Genetic Resources and Crop Evolution, 64, pp.1789-1795.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Tree Biology &amp; Germplasm</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2026" data-theme="Agroforestry Tree Biology &amp; Germplasm" data-search="Sridhar, K.B., Ramesha, M.N., Lavanya, P., Chavan, S.B., Handa, A.K., Uthappa, A.R., Amey, S.K., Inder, D., Dwivedi, R.P., Venkatesh, G., Narsimlu, B., Arunachalam, A. and Prasad, J.V.N.S. 2026. Sandalwood based agroforestry systems in Bundelkhand region of central India&#x27;, Plant Science Today, 13(1), pp. 1–6. Available at: https://doi.org/10.14719/pst.9637">
+  <div class="pub-meta"><span>Journal article</span><span>2026</span></div>
+  <div class="pub-citation">Sridhar, K.B., Ramesha, M.N., Lavanya, P., Chavan, S.B., Handa, A.K., Uthappa, A.R., Amey, S.K., Inder, D., Dwivedi, R.P., Venkatesh, G., Narsimlu, B., Arunachalam, A. and Prasad, J.V.N.S. 2026. Sandalwood based agroforestry systems in Bundelkhand region of central India&#x27;, Plant Science Today, 13(1), pp. 1–6. Available at: https://doi.org/10.14719/pst.9637</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span><span>Tree Biology &amp; Germplasm</span></div>
+    <a class="doi" href="https://doi.org/10.14719/pst.9637" target="_blank" rel="noopener noreferrer">DOI →</a>
+  </div>
+</article>
+<article class="pub-card" data-year="2021" data-theme="Biodiversity &amp; Ecosystem Services" data-search="Veereshkumar, Kumaranag, K.M., Uthappa, A.R., Deb, D., Srivastava, M., Sridhar, K.B. and Handa, A.K., 2021. Wild bee pollination in Grewia flavescens Juss. International Journal of Tropical Insect Science, 41, pp.1087-1093.">
+  <div class="pub-meta"><span>Journal article</span><span>2021</span></div>
+  <div class="pub-citation">Veereshkumar, Kumaranag, K.M., Uthappa, A.R., Deb, D., Srivastava, M., Sridhar, K.B. and Handa, A.K., 2021. Wild bee pollination in Grewia flavescens Juss. International Journal of Tropical Insect Science, 41, pp.1087-1093.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Biodiversity &amp; Ecosystem Services</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2022" data-theme="Tree Biology &amp; Germplasm" data-search="Rajarajan, K., Uthappa, A.R., Handa, A.K., Chavan, S.B., Vishnu, R., Shrivastava, A., Handa, A., Rana, M., Sahu, S., Kumar, N. and Singh, A.K., 2022. Genetic diversity and population structure of Leucaena leucocephala (Lam.) de Wit genotypes using molecular and morphological attributes. Genetic Resources and Crop Evolution, 69(1), pp.71-83.">
+  <div class="pub-meta"><span>Journal article</span><span>2022</span></div>
+  <div class="pub-citation">Rajarajan, K., Uthappa, A.R., Handa, A.K., Chavan, S.B., Vishnu, R., Shrivastava, A., Handa, A., Rana, M., Sahu, S., Kumar, N. and Singh, A.K., 2022. Genetic diversity and population structure of Leucaena leucocephala (Lam.) de Wit genotypes using molecular and morphological attributes. Genetic Resources and Crop Evolution, 69(1), pp.71-83.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Tree Biology &amp; Germplasm</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2021" data-theme="Biodiversity &amp; Ecosystem Services" data-search="Veereshkumar, Kaushik, S.K., Rajarajan, K., Kumaranag, K.M., Uthappa, A.R., Sridhar, K.B., Alam, B. and Handa, A.K., 2021. Pollination biology of Pongamia pinnata (L.) Pierre: a potential biodiesel plant. Genetic Resources and Crop Evolution, 68(1), pp.59-67.">
+  <div class="pub-meta"><span>Journal article</span><span>2021</span></div>
+  <div class="pub-citation">Veereshkumar, Kaushik, S.K., Rajarajan, K., Kumaranag, K.M., Uthappa, A.R., Sridhar, K.B., Alam, B. and Handa, A.K., 2021. Pollination biology of Pongamia pinnata (L.) Pierre: a potential biodiesel plant. Genetic Resources and Crop Evolution, 68(1), pp.59-67.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Biodiversity &amp; Ecosystem Services</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2024" data-theme="Agroforestry Carbon &amp; Climate Soil &amp; Restoration" data-search="Kaushal, R., Kumar, A., Mandal, D., Tomar, J.M.S., Jinger, D., Islam, S., Panwar, P., Jayaprakash, J., Uthappa, A.R., Singhal, V. and Barh, A., 2024. Mulberry based agroforestry system and canopy management practices to combat soil erosion and enhancing carbon sequestration in degraded lands of Himalayan foothills. Environmental and Sustainability Indicators, 24, p.100467.">
+  <div class="pub-meta"><span>Journal article</span><span>2024</span></div>
+  <div class="pub-citation">Kaushal, R., Kumar, A., Mandal, D., Tomar, J.M.S., Jinger, D., Islam, S., Panwar, P., Jayaprakash, J., Uthappa, A.R., Singhal, V. and Barh, A., 2024. Mulberry based agroforestry system and canopy management practices to combat soil erosion and enhancing carbon sequestration in degraded lands of Himalayan foothills. Environmental and Sustainability Indicators, 24, p.100467.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span><span>Carbon &amp; Climate</span><span>Soil &amp; Restoration</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2024" data-theme="Agroforestry Tree Biology &amp; Germplasm" data-search="Chavan, S.B., Uthappa, A.R., Chichaghare, A.R., Ramanan, S.S., Kumar, R., Keerthika, A., Arunachalam, A., Hegde, R., Jinger, D., Meena, V.S. and Kumar, M., 2024. Past, present and future of Indian sandalwood (Santalum album) cultivation and commercial prospects. Discover Applied Sciences, 6(12), p.627.">
+  <div class="pub-meta"><span>Journal article</span><span>2024</span></div>
+  <div class="pub-citation">Chavan, S.B., Uthappa, A.R., Chichaghare, A.R., Ramanan, S.S., Kumar, R., Keerthika, A., Arunachalam, A., Hegde, R., Jinger, D., Meena, V.S. and Kumar, M., 2024. Past, present and future of Indian sandalwood (Santalum album) cultivation and commercial prospects. Discover Applied Sciences, 6(12), p.627.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span><span>Tree Biology &amp; Germplasm</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2022" data-theme="Agroforestry" data-search="Chavan, S.B., Uthappa, A.R., Sridhar, K.B. and Kakade, V., 2022. Scientific techniques for Melia dubia-based agroforestry systems: an emerging indigenous tree species for wood-based industries in India. Current Science, 122(12), p.1451.">
+  <div class="pub-meta"><span>Journal article</span><span>2022</span></div>
+  <div class="pub-citation">Chavan, S.B., Uthappa, A.R., Sridhar, K.B. and Kakade, V., 2022. Scientific techniques for Melia dubia-based agroforestry systems: an emerging indigenous tree species for wood-based industries in India. Current Science, 122(12), p.1451.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2016" data-theme="Agroforestry" data-search="Chavan, S.B., Uthappa, A.R., Sridhar, K.B., Keerthika, A., Handa, A.K., Newaj, R., Kumar, N., Kumar, D. and Chaturvedi, O.P., 2016. Trees for life: Creating sustainable livelihood in Bundelkhand region of central India. Current science, pp.994-1002.">
+  <div class="pub-meta"><span>Journal article</span><span>2016</span></div>
+  <div class="pub-citation">Chavan, S.B., Uthappa, A.R., Sridhar, K.B., Keerthika, A., Handa, A.K., Newaj, R., Kumar, N., Kumar, D. and Chaturvedi, O.P., 2016. Trees for life: Creating sustainable livelihood in Bundelkhand region of central India. Current science, pp.994-1002.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2026" data-theme="Soil &amp; Restoration" data-search="Tomar, J.M.S., Barh, A., Dabral, A., Jinger, D., Rawat, D., Kaushal, R., Nandha Kumar, N., Meena, V.S., Uthappa, A.R., Thakur, S. and Madhu, M., 2026. Degraded Land Restoration Through Aromatic Plants in India: A Nature‐Based Solution. Land Degradation &amp; Development, 37(7), pp.2319-2348.">
+  <div class="pub-meta"><span>Journal article</span><span>2026</span></div>
+  <div class="pub-citation">Tomar, J.M.S., Barh, A., Dabral, A., Jinger, D., Rawat, D., Kaushal, R., Nandha Kumar, N., Meena, V.S., Uthappa, A.R., Thakur, S. and Madhu, M., 2026. Degraded Land Restoration Through Aromatic Plants in India: A Nature‐Based Solution. Land Degradation &amp; Development, 37(7), pp.2319-2348.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Soil &amp; Restoration</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2023" data-theme="Agroforestry Carbon &amp; Climate" data-search="Chavan, S.B., Dhillon, R.S., Sirohi, C., Uthappa, A.R., Jinger, D., Jatav, H.S., Chichaghare, A.R., Kakade, V., Paramesh, V., Kumari, S. and Yadav, D.K., 2023. Carbon Sequestration Potential of Commercial Agroforestry Systems in Indo-Gangetic Plains of India: Poplar and Eucalyptus-Based Agroforestry Systems. Forests, 14(3), p.559.">
+  <div class="pub-meta"><span>Journal article</span><span>2023</span></div>
+  <div class="pub-citation">Chavan, S.B., Dhillon, R.S., Sirohi, C., Uthappa, A.R., Jinger, D., Jatav, H.S., Chichaghare, A.R., Kakade, V., Paramesh, V., Kumari, S. and Yadav, D.K., 2023. Carbon Sequestration Potential of Commercial Agroforestry Systems in Indo-Gangetic Plains of India: Poplar and Eucalyptus-Based Agroforestry Systems. Forests, 14(3), p.559.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span><span>Carbon &amp; Climate</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2022" data-theme="Agroforestry Soil &amp; Restoration" data-search="Fahad, S., Chavan, S.B., Chichaghare, A.R., Uthappa, A.R., Kumar, M., Kakade, V., Pradhan, A., Jinger, D., Rawale, G., Yadav, D.K. and Kumar, V., 2022. Agroforestry systems for soil health improvement and maintenance. Sustainability, 14(22), p.14877.">
+  <div class="pub-meta"><span>Journal article</span><span>2022</span></div>
+  <div class="pub-citation">Fahad, S., Chavan, S.B., Chichaghare, A.R., Uthappa, A.R., Kumar, M., Kakade, V., Pradhan, A., Jinger, D., Rawale, G., Yadav, D.K. and Kumar, V., 2022. Agroforestry systems for soil health improvement and maintenance. Sustainability, 14(22), p.14877.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span><span>Soil &amp; Restoration</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2023" data-theme="Agroforestry Soil &amp; Restoration" data-search="Jinger, D., Kaushal, R., Kumar, R., Paramesh, V., Verma, A., Shukla, M., Chavan, S.B., Kakade, V., Dobhal, S., Uthappa, A.R. and Roy, T., 2023. Degraded land rehabilitation through agroforestry in India: Achievements, current understanding, and future prospectives. Frontiers in Ecology and Evolution, 11, p.1088796.">
+  <div class="pub-meta"><span>Journal article</span><span>2023</span></div>
+  <div class="pub-citation">Jinger, D., Kaushal, R., Kumar, R., Paramesh, V., Verma, A., Shukla, M., Chavan, S.B., Kakade, V., Dobhal, S., Uthappa, A.R. and Roy, T., 2023. Degraded land rehabilitation through agroforestry in India: Achievements, current understanding, and future prospectives. Frontiers in Ecology and Evolution, 11, p.1088796.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span><span>Soil &amp; Restoration</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2024" data-theme="Agroforestry Carbon &amp; Climate" data-search="Dobhal, S., Kumar, R., Bhardwaj, A.K., Chavan, S.B., Uthappa, A.R., Kumar, M., Singh, A., Jinger, D., Rawat, P., Handa, A.K. and Ramawat, N., 2024. Global assessment of production benefits and risk reduction in agroforestry during extreme weather events under climate change scenarios. Frontiers in Forests and Global Change, 7, p.1379741.">
+  <div class="pub-meta"><span>Journal article</span><span>2024</span></div>
+  <div class="pub-citation">Dobhal, S., Kumar, R., Bhardwaj, A.K., Chavan, S.B., Uthappa, A.R., Kumar, M., Singh, A., Jinger, D., Rawat, P., Handa, A.K. and Ramawat, N., 2024. Global assessment of production benefits and risk reduction in agroforestry during extreme weather events under climate change scenarios. Frontiers in Forests and Global Change, 7, p.1379741.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span><span>Carbon &amp; Climate</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2026" data-theme="Agroforestry" data-search="Yadav, D.K., Chavan, S.B., Singh, L. Rawale, G.B., Babar, R., Changan, S.S., Ekatpure, S.C., Chaukhande, P., Rahimi, M., Kakade, V.D., Morade, A.S., Keerthika, A., Uthappa, A.R. and Deshmukh, N.A., 2026. Host-dependent variation in free amino acid profiles and physiological responses enhancing drought tolerance in Santalum album. Sci Rep. https://doi.org/10.1038/s41598-026-56713-0">
+  <div class="pub-meta"><span>Journal article</span><span>2026</span></div>
+  <div class="pub-citation">Yadav, D.K., Chavan, S.B., Singh, L. Rawale, G.B., Babar, R., Changan, S.S., Ekatpure, S.C., Chaukhande, P., Rahimi, M., Kakade, V.D., Morade, A.S., Keerthika, A., Uthappa, A.R. and Deshmukh, N.A., 2026. Host-dependent variation in free amino acid profiles and physiological responses enhancing drought tolerance in Santalum album. Sci Rep. https://doi.org/10.1038/s41598-026-56713-0</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span></div>
+    <a class="doi" href="https://doi.org/10.1038/s41598-026-56713-0" target="_blank" rel="noopener noreferrer">DOI →</a>
+  </div>
+</article>
+<article class="pub-card" data-year="2015" data-theme="Agroforestry" data-search="Uthappa, A.R., Bana, O.P.S., Kumar, M. and Kanwal, M., 2015. Soil physico-bio-chemical properties as influenced by varying tree densities in poplar (Populus deltoides Bartr. ex Marsh.) based agroforestry system. Indian Journal of Agroforestry, 17(1), pp.81-90.">
+  <div class="pub-meta"><span>Journal article</span><span>2015</span></div>
+  <div class="pub-citation">Uthappa, A.R., Bana, O.P.S., Kumar, M. and Kanwal, M., 2015. Soil physico-bio-chemical properties as influenced by varying tree densities in poplar (Populus deltoides Bartr. ex Marsh.) based agroforestry system. Indian Journal of Agroforestry, 17(1), pp.81-90.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2016" data-theme="Agroforestry Soil &amp; Restoration" data-search="Uthappa, A.R., Chavan, S.B., Singh, M., Sridhar, K.B., Dev, I., Ram, A., Sathish, B.N., Kumar, M., Dwivedi, R.P., Singh, R. and Singh, R.K., 2016. Tree diversity in ravines and their rehabilitation through agroforestry interventions in Bundelkhand Region of India. Indian Journal of Agroforestry, 18(1), pp.77-83.">
+  <div class="pub-meta"><span>Journal article</span><span>2016</span></div>
+  <div class="pub-citation">Uthappa, A.R., Chavan, S.B., Singh, M., Sridhar, K.B., Dev, I., Ram, A., Sathish, B.N., Kumar, M., Dwivedi, R.P., Singh, R. and Singh, R.K., 2016. Tree diversity in ravines and their rehabilitation through agroforestry interventions in Bundelkhand Region of India. Indian Journal of Agroforestry, 18(1), pp.77-83.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span><span>Soil &amp; Restoration</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2024" data-theme="Agroforestry" data-search="Uthappa, A.R., Shishira, D., Chavan, S., &amp; Kumar, P. 2024. Litter Dynamics in Fruit Orchards and Natural Forests in the West Coast Region of India – A Comparative Analysis. Indian Forester, 150(8), 785-792. doi:10.36808/if/2024/v150i8/170192">
+  <div class="pub-meta"><span>Journal article</span><span>2024</span></div>
+  <div class="pub-citation">Uthappa, A.R., Shishira, D., Chavan, S., &amp; Kumar, P. 2024. Litter Dynamics in Fruit Orchards and Natural Forests in the West Coast Region of India – A Comparative Analysis. Indian Forester, 150(8), 785-792. doi:10.36808/if/2024/v150i8/170192</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2022" data-theme="Agroforestry" data-search="Chavan, S.B., Uthappa, A.R., Kumar, M., Handa, A.K., Sirohi, C., Rawale, G.B., Sawant, A.V. and Dhoke, S., 2022. Stalwarts who globally shaped the concept and science called agroforestry. Indian Journal of Agroforestry. Special issue:1-12.">
+  <div class="pub-meta"><span>Journal article</span><span>2022</span></div>
+  <div class="pub-citation">Chavan, S.B., Uthappa, A.R., Kumar, M., Handa, A.K., Sirohi, C., Rawale, G.B., Sawant, A.V. and Dhoke, S., 2022. Stalwarts who globally shaped the concept and science called agroforestry. Indian Journal of Agroforestry. Special issue:1-12.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2024" data-theme="Biodiversity &amp; Ecosystem Services" data-search="Chavhan, K.Y., Jagadish, K.S., Shishira, D., Eswarappa, G. and Uthappa, A.R., 2024. Impact of Pollination on Pomegranate. Indian Journal of Entomology, pp.1-5.">
+  <div class="pub-meta"><span>Journal article</span><span>2024</span></div>
+  <div class="pub-citation">Chavhan, K.Y., Jagadish, K.S., Shishira, D., Eswarappa, G. and Uthappa, A.R., 2024. Impact of Pollination on Pomegranate. Indian Journal of Entomology, pp.1-5.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Biodiversity &amp; Ecosystem Services</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2017" data-theme="Tree Health &amp; Entomology" data-search="Kumar, V., Uthappa, A.R., Srivastava, M., Alam, B., Handa, A.K. and Chaturvedi, O.P., 2017. Incidence pattern of wood borer (Sinoxylon anale Lesne) on Dalbergia sissoo Roxb. Range Management and Agroforestry, 38(2), pp.285-288.">
+  <div class="pub-meta"><span>Journal article</span><span>2017</span></div>
+  <div class="pub-citation">Kumar, V., Uthappa, A.R., Srivastava, M., Alam, B., Handa, A.K. and Chaturvedi, O.P., 2017. Incidence pattern of wood borer (Sinoxylon anale Lesne) on Dalbergia sissoo Roxb. Range Management and Agroforestry, 38(2), pp.285-288.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Tree Health &amp; Entomology</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2018" data-theme="Agroforestry Carbon &amp; Climate" data-search="Kumar, M., Kumar, S., Uthappa, A.R. and Kalappurakkal, S., 2018. Influence of Prosopis cineraria L. on microclimate conditions under agroforestry system in arid region of India. Indian Journal of Agroforestry 20 (1): 35-39.">
+  <div class="pub-meta"><span>Journal article</span><span>2018</span></div>
+  <div class="pub-citation">Kumar, M., Kumar, S., Uthappa, A.R. and Kalappurakkal, S., 2018. Influence of Prosopis cineraria L. on microclimate conditions under agroforestry system in arid region of India. Indian Journal of Agroforestry 20 (1): 35-39.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span><span>Carbon &amp; Climate</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2023" data-theme="Coastal &amp; Saline" data-search="Kumar, P., Sarangi, S.K., Mahajan, G.R, Das, B., Uthappa, A.R., Desai, S. And Paramesh, V.2023, Paradigm shift in coastal agricultural research: from production to risk management. Indian Journal of Agronomy 68 (XXII Biennial National Symposium Special issue): S198-S211.">
+  <div class="pub-meta"><span>Journal article</span><span>2023</span></div>
+  <div class="pub-citation">Kumar, P., Sarangi, S.K., Mahajan, G.R, Das, B., Uthappa, A.R., Desai, S. And Paramesh, V.2023, Paradigm shift in coastal agricultural research: from production to risk management. Indian Journal of Agronomy 68 (XXII Biennial National Symposium Special issue): S198-S211.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Coastal &amp; Saline</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2018" data-theme="Tree Biology &amp; Germplasm" data-search="Kala, S., Kumaran, K., Uthappa, A.R., Reeja, S., Prabhavathi, M., Rashmi, I. and Singh, R.K., 2018. Clonal propagation through improved stem cutting technique in Pongamia pinnata (L.) Pierre. Indian Journal of Agroforestry, 20(2), pp.53-57.">
+  <div class="pub-meta"><span>Journal article</span><span>2018</span></div>
+  <div class="pub-citation">Kala, S., Kumaran, K., Uthappa, A.R., Reeja, S., Prabhavathi, M., Rashmi, I. and Singh, R.K., 2018. Clonal propagation through improved stem cutting technique in Pongamia pinnata (L.) Pierre. Indian Journal of Agroforestry, 20(2), pp.53-57.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Tree Biology &amp; Germplasm</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2017" data-theme="Biodiversity &amp; Ecosystem Services Agroforestry" data-search="Nagar, B., Rawat, S. and Uthappa, A.R., 2017. Consensus of traditional knowledge on provisioning services of trees at farm in western Himalaya, India. Indian Journal of Agroforestry, 19(1), pp.90-94.">
+  <div class="pub-meta"><span>Journal article</span><span>2017</span></div>
+  <div class="pub-citation">Nagar, B., Rawat, S. and Uthappa, A.R., 2017. Consensus of traditional knowledge on provisioning services of trees at farm in western Himalaya, India. Indian Journal of Agroforestry, 19(1), pp.90-94.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Biodiversity &amp; Ecosystem Services</span><span>Agroforestry</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2017" data-theme="Biodiversity &amp; Ecosystem Services Agroforestry" data-search="Chavan, S.B., Keerthika, A., Uthappa, A.R., Sridhar, K.B., Newaj, R., Handa, A.K. and Saroj, N., 2017. Traditional Knowledge of Broom Making from Date Palm (Phoenix sylvestris Roxb.) for Sustainable Livelihood in Madhya Pradesh, India. Indian Forester 143(12):1321-1324.">
+  <div class="pub-meta"><span>Journal article</span><span>2017</span></div>
+  <div class="pub-citation">Chavan, S.B., Keerthika, A., Uthappa, A.R., Sridhar, K.B., Newaj, R., Handa, A.K. and Saroj, N., 2017. Traditional Knowledge of Broom Making from Date Palm (Phoenix sylvestris Roxb.) for Sustainable Livelihood in Madhya Pradesh, India. Indian Forester 143(12):1321-1324.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Biodiversity &amp; Ecosystem Services</span><span>Agroforestry</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2016" data-theme="Wood &amp; Biomaterials" data-search="Chavan, S.B., Chauhan, D.S., Keerthika, A., Uthappa, A.R., Jha, A. and Newaj, R., 2016. Fuelwood characteristics of selected tree species from Bundelkhand region of Central India. Eco Environ Cons, 22(April Suppl), pp.S95-S103.">
+  <div class="pub-meta"><span>Journal article</span><span>2016</span></div>
+  <div class="pub-citation">Chavan, S.B., Chauhan, D.S., Keerthika, A., Uthappa, A.R., Jha, A. and Newaj, R., 2016. Fuelwood characteristics of selected tree species from Bundelkhand region of Central India. Eco Environ Cons, 22(April Suppl), pp.S95-S103.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Wood &amp; Biomaterials</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2016" data-theme="Agroforestry Soil &amp; Restoration" data-search="Ram, A., Dev, I., Kumar, D., Uthappa, A.R., Tewari, R.K., Singh, R., Sridhar, K.B., Singh, M., Srivastava, M., Kumar, V. and Chaturvedi, O.P., 2016. Effect of tillage and residue management practices on blackgram and greengram under bael (Aegle marmelos L.) based agroforestry system. Indian Journal of Agroforestry, 18(1), pp.90-95.">
+  <div class="pub-meta"><span>Journal article</span><span>2016</span></div>
+  <div class="pub-citation">Ram, A., Dev, I., Kumar, D., Uthappa, A.R., Tewari, R.K., Singh, R., Sridhar, K.B., Singh, M., Srivastava, M., Kumar, V. and Chaturvedi, O.P., 2016. Effect of tillage and residue management practices on blackgram and greengram under bael (Aegle marmelos L.) based agroforestry system. Indian Journal of Agroforestry, 18(1), pp.90-95.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span><span>Soil &amp; Restoration</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2016" data-theme="Agroforestry Carbon &amp; Climate" data-search="Chaturvedi, O.P., Handa, A.K., Kaushal, R., Uthappa, A.R., Sarvade, S. and Panwar, P., 2016. Biomass production and carbon sequestration through agroforestry. Range Management and Agroforestry, 37(2), pp.116-127.">
+  <div class="pub-meta"><span>Journal article</span><span>2016</span></div>
+  <div class="pub-citation">Chaturvedi, O.P., Handa, A.K., Kaushal, R., Uthappa, A.R., Sarvade, S. and Panwar, P., 2016. Biomass production and carbon sequestration through agroforestry. Range Management and Agroforestry, 37(2), pp.116-127.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span><span>Carbon &amp; Climate</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2017" data-theme="Agroforestry" data-search="Singh, M., Sridhar, K.B., Kumar, D., Uthappa, A.R., Dwivedi, R.P., Dev, I., Rizvi, R.H., Tewari, R.K. and Chaturvedi, O.P., 2017. Doubling farmers’ income through agroforestry in north-western India: A policy perspective. Indian Journal of Agroforestry, 19(2), pp.90-95.">
+  <div class="pub-meta"><span>Journal article</span><span>2017</span></div>
+  <div class="pub-citation">Singh, M., Sridhar, K.B., Kumar, D., Uthappa, A.R., Dwivedi, R.P., Dev, I., Rizvi, R.H., Tewari, R.K. and Chaturvedi, O.P., 2017. Doubling farmers’ income through agroforestry in north-western India: A policy perspective. Indian Journal of Agroforestry, 19(2), pp.90-95.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Agroforestry</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2018" data-theme="Tree Health &amp; Entomology" data-search="Veeresh Kumar, PR Shashank, Salam Rita Devi, Madhulika Srivastava, Uthappa, A.R., OP Chaturvedi.2018. Incidence of Gall Weevil, Pachyonyx quadridens Chev.(Coleoptera: Curculionidae) on Butea monosperma in Bundelkhand Region of India. Indian Forester 144(11):1116-1119.">
+  <div class="pub-meta"><span>Journal article</span><span>2018</span></div>
+  <div class="pub-citation">Veeresh Kumar, PR Shashank, Salam Rita Devi, Madhulika Srivastava, Uthappa, A.R., OP Chaturvedi.2018. Incidence of Gall Weevil, Pachyonyx quadridens Chev.(Coleoptera: Curculionidae) on Butea monosperma in Bundelkhand Region of India. Indian Forester 144(11):1116-1119.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Tree Health &amp; Entomology</span></div>
+    
+  </div>
+</article>
+<article class="pub-card" data-year="2015" data-theme="Tree Biology &amp; Germplasm" data-search="Rajarajan, K., Devi, S.V., Handa, A.K., Gurunathan, N., Dhyani, S.K. and Uthappa, A.R., 2015. A simple and effective method for high quality PCR usable DNA extraction from Azadirachta indica A. Juss. Indian Journal of Agroforestry, 17(1), pp.24-28.">
+  <div class="pub-meta"><span>Journal article</span><span>2015</span></div>
+  <div class="pub-citation">Rajarajan, K., Devi, S.V., Handa, A.K., Gurunathan, N., Dhyani, S.K. and Uthappa, A.R., 2015. A simple and effective method for high quality PCR usable DNA extraction from Azadirachta indica A. Juss. Indian Journal of Agroforestry, 17(1), pp.24-28.</div>
+  <div class="pub-bottom">
+    <div class="tags"><span>Tree Biology &amp; Germplasm</span></div>
+    
+  </div>
+</article>
+</div>
 </div>
 </section>
 
 
-<!-- =========================
-     2026
-========================= -->
-
-<section class="year-section">
-<div class="container">
-
-<div class="year-heading">
-<h2>2026</h2>
-<div class="year-line"></div>
+<section style="background:var(--ivory)">
+<div class="section-inner">
+<div class="section-kicker">02 · Books & scholarly contributions</div>
+<h2>Books and other scholarly works.</h2>
+<p class="lead">Selected books and scholarly publications documented in the current CV.</p>
+<div class="pub-grid">
+  <article class="pub-card" style="min-height:auto">
+    <div class="pub-meta"><span>Book</span><span>2025</span></div>
+    <div class="pub-citation">Paramesha, V., Rajkumar, R.S., Mahajan, G.R., Uthappa, A.R., Ubarhande, V.A. &amp; Kumar, P. (2025). <em>Building climate resilience and sustainability through agro-ecotourism.</em> Today and Tomorrow’s Printers and Publishers, New Delhi. ISBN: 9789348596154.</div>
+  </article>
+  <article class="pub-card" style="min-height:auto">
+    <div class="pub-meta"><span>Book</span><span>2024</span></div>
+    <div class="pub-citation">Kumar, P., Arunachalam, V., Paramesha, V. &amp; Uthappa, A.R. (2024). <em>Ecosystem Service Analysis in Multistorey Cropping Systems.</em> Today and Tomorrow’s Printers and Publishers, New Delhi. pp. 1–132.</div>
+  </article>
+  <article class="pub-card" style="min-height:auto">
+    <div class="pub-meta"><span>Book</span><span>2019</span></div>
+    <div class="pub-citation">Inder Dev, Ram, A., Kumar, N., Singh, R., Kumar, D., Uthappa, A.R., Handa, A.K. &amp; Chaturvedi, O.P. (2019). <em>Agroforestry for Climate Resilience and Rural Livelihood.</em> Scientific Publishers. ISBN: 9789387307063.</div>
+  </article>
+  <article class="pub-card" style="min-height:auto">
+    <div class="pub-meta"><span>Book</span><span>2018</span></div>
+    <div class="pub-citation">Sangram, C.B. &amp; Uthappa, A.R. (2018). <em>Competitive Forestry</em>, 2nd ed. New Vishal Publications, New Delhi. pp. 467. ISBN-13: 978-8193817315.</div>
+  </article>
+  <article class="pub-card" style="min-height:auto">
+    <div class="pub-meta"><span>Book</span><span>2017</span></div>
+    <div class="pub-citation">Chaturvedi, O.P., Handa, A.K., Uthappa, A.R., Sridhar, K.B., Kumar, N., Chavan, S.B. &amp; others (2017). <em>Promising Agroforestry Tree Species in India.</em> ICAR–Central Agroforestry Research Institute / World Agroforestry Centre South Asia Regional Program. p. 195.</div>
+  </article>
+  <article class="pub-card" style="min-height:auto">
+    <div class="pub-meta"><span>Book</span><span>2015</span></div>
+    <div class="pub-citation">Uthappa, A.R. &amp; Sangram, C.B. (2015). <em>Competitive Forestry.</em> New Vishal Publications, New Delhi. pp. 360. ISBN: 9788183990011.</div>
+  </article>
 </div>
-
-<div class="publication">
-<div>
-<div class="pub-number">01</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Tree shade mitigates stress and enhances chickpea productivity:
-Insights from an Emblica officinalis-based agroforestry system
-in semi-arid shallow Basaltic Deccan Plateau, India
-</h3>
-<div class="pub-meta">
-Chichaghare, A.R. et al. <strong>Trees, Forests and People</strong> · 2026
-</div>
-
-<a href="https://doi.org/10.1016/j.tfp.2026.101164"
-   class="view-paper"
-   target="_blank"
-   rel="noopener">
-   VIEW PAPER ↗
-</a>
-
-<div class="pub-tags">
-<span class="pub-tag">Agroforestry</span>
-<span class="pub-tag">Climate resilience</span>
-<span class="pub-tag">Productivity</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">02</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Estimating carbon sequestration in orchards of semi-arid tropics:
-A modeling approach
-</h3>
-<div class="pub-meta">
-Siddesh, R. et al. <strong>Biomass and Bioenergy</strong> · 2026
-</div>
-
-<a href="https://doi.org/10.1016/j.biombioe.2025.108610"
-   class="view-paper"
-   target="_blank"
-   rel="noopener">
-   VIEW PAPER ↗
-</a>
-
-<div class="pub-tags">
-<span class="pub-tag">Carbon</span>
-<span class="pub-tag">Modelling</span>
-<span class="pub-tag">Agroforestry</span>
-</div>
-</div>
-</div>
-
-<div class="publication">
-    <div>
-        <div class="pub-number">03</div>
-        <span class="pub-type">JOURNAL</span>
-    </div>
-
-    <div>
-        <h3 class="pub-title">
-            Sandalwood based agroforestry systems in Bundelkhand region of central India
-        </h3>
-
-        <div class="pub-meta">
-            Sridhar, K.B. et al. 
-            <strong>Plant Science Today</strong> · 2026
-        </div>
-
-        <a href="https://doi.org/10.14719/pst.9637"
-           class="view-paper"
-           target="_blank"
-           rel="noopener">
-            VIEW PAPER ↗
-        </a>
-
-        <div class="pub-tags">
-            <span class="pub-tag">Sandalwood</span>
-            <span class="pub-tag">Agroforestry</span>
-            <span class="pub-tag">Bundelkhand</span>
-        </div>
-    </div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">04</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Degraded Land Restoration Through Aromatic Plants in India:
-A Nature-Based Solution
-</h3>
-<div class="pub-meta">
-Tomar, J.M.S. et al. · <strong>Land Degradation & Development</strong> · 2026
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Land restoration</span>
-<span class="pub-tag">Nature-based solutions</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">05</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Host-dependent variation in free amino acid profiles and physiological
-responses enhancing drought tolerance in Santalum album
-</h3>
-<div class="pub-meta">
-Yadav, D.K. et al. · <strong>Scientific Reports</strong> · 2026
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Sandalwood</span>
-<span class="pub-tag">Drought tolerance</span>
-<span class="pub-tag">Physiology</span>
-</div>
-</div>
-</div>
-
 </div>
 </section>
 
-
-<!-- =========================
-     2025
-========================= -->
-
-<section class="year-section">
-<div class="container">
-
-<div class="year-heading">
-<h2>2025</h2>
-<div class="year-line"></div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">01</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Comparison of machine learning models for mapping Arecanut based
-agroforestry system in Goa by enhancing precision and efficiency
-</h3>
-<div class="pub-meta">
-Uthappa, A.R. et al. · <strong>Scientific Reports</strong> · 2025
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Machine learning</span>
-<span class="pub-tag">Remote sensing</span>
-<span class="pub-tag">Agroforestry</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">02</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Forest fire susceptibility mapping using multi-criteria decision making
-and machine learning models in the Western Ghats of India
-</h3>
-<div class="pub-meta">
-Uthappa, A.R. et al. · <strong>Journal of Environmental Management</strong> · 2025
-</div>
-<div class="pub-tags">
-<span class="pub-tag">AI</span>
-<span class="pub-tag">Forest fire</span>
-<span class="pub-tag">Western Ghats</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">03</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Optimizing tree shade gradients in Emblica officinalis-based agroforestry
-systems: impacts on soybean physio-biochemical traits and yield under degraded soils
-</h3>
-<div class="pub-meta">
-Chavan, S.B. et al. · <strong>Agroforestry Systems</strong> · 2025
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Agroforestry</span>
-<span class="pub-tag">Soil health</span>
-<span class="pub-tag">Productivity</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">04</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Do different plant host species influence the response of Santalum album
-under moisture deficit stress?
-</h3>
-<div class="pub-meta">
-Chavan, S.B. et al. · <strong>Agroforestry Systems</strong> · 2025
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Sandalwood</span>
-<span class="pub-tag">Stress physiology</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">05</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Sustainable alternatives in particleboard production:
-The role of leveraging recycled and renewable materials
-</h3>
-<div class="pub-meta">
-Ranjan, M. et al. · <strong>Results in Engineering</strong> · 2025
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Renewable materials</span>
-<span class="pub-tag">Wood products</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">06</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Structural and functional assessment of traditional Betel Vine-based
-agroforestry practices in Maharashtra, India
-</h3>
-<div class="pub-meta">
-Pathan, S.J. et al. · <strong>Agroforestry Systems</strong> · 2025
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Agroforestry</span>
-<span class="pub-tag">Traditional systems</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">07</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Integrating ecosystem services through sustainable land use approach
-in multifunctional agroforestry: The case of Tamil Nadu, Southern India
-</h3>
-<div class="pub-meta">
-Keerthika, A. et al. · <strong>Environmental and Sustainability Indicators</strong> · 2025
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Ecosystem services</span>
-<span class="pub-tag">Agroforestry</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">08</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Nature-based solutions for enhancing CO₂ sequestration and rehabilitating
-degraded lands through silvo-aromatic system and soil moisture conservation techniques
-</h3>
-<div class="pub-meta">
-Jinger, D. et al. · <strong>Journal of Environmental Management</strong> · 2025
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Carbon</span>
-<span class="pub-tag">Nature-based solutions</span>
-<span class="pub-tag">Land restoration</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">09</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Biomass Estimation of Mahogany (Swietenia macrophylla):
-An Optimized Weighted Ensemble-based Machine Learning Approach
-</h3>
-<div class="pub-meta">
-Paul, N.C. et al. · <strong>Smart Agricultural Technology</strong> · 2025
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Machine learning</span>
-<span class="pub-tag">Biomass</span>
-<span class="pub-tag">Carbon</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">10</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Assessment of climate change vulnerability of agriculture in coastal districts
-of India using principal component analysis and entropy-based methods
-</h3>
-<div class="pub-meta">
-Das, B. et al. · <strong>Theoretical and Applied Climatology</strong> · 2025
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Climate change</span>
-<span class="pub-tag">Coastal agriculture</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">11</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Root architecture and carbon sequestration potential of fast-growing
-agroforestry tree species in semi-arid Central India
-</h3>
-<div class="pub-meta">
-Gautam, K. et al. · <strong>Frontiers in Agronomy</strong> · 2025
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Root architecture</span>
-<span class="pub-tag">Carbon</span>
-<span class="pub-tag">Agroforestry</span>
-</div>
-</div>
-</div>
-
+<section class="note">
+<div class="section-inner">
+<div class="section-kicker" style="color:#d8b394">03 · Academic record</div>
+<h2>Follow the research beyond this page.</h2>
+<p>For the latest citation counts and indexed author information, visit the linked academic profiles. DOI links are provided where they are present in the current CV.</p>
 </div>
 </section>
-
-
-<!-- =========================
-     2024
-========================= -->
-
-<section class="year-section">
-<div class="container">
-
-<div class="year-heading">
-<h2>2024</h2>
-<div class="year-line"></div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">01</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Comparative analysis of soil quality indexing techniques for various
-tree based land use systems in semi-arid India
-</h3>
-<div class="pub-meta">
-Uthappa, A.R. et al. · <strong>Frontiers in Forests and Global Change</strong> · 2024
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Soil health</span>
-<span class="pub-tag">Agroforestry</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">02</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Pollen diversity in urban honey: implications for bee foraging behaviour
-and urban green space planning
-</h3>
-<div class="pub-meta">
-Shishira, D. et al. · <strong>Urban Ecosystems</strong> · 2024
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Pollination</span>
-<span class="pub-tag">Biodiversity</span>
-<span class="pub-tag">Urban ecology</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">03</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Optimizing planting geometries in eucalyptus-based food production
-systems for enhanced yield and carbon sequestration
-</h3>
-<div class="pub-meta">
-Chavan, S.B. et al. · <strong>Frontiers in Sustainable Food Systems</strong> · 2024
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Carbon</span>
-<span class="pub-tag">Productivity</span>
-<span class="pub-tag">Agroforestry</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">04</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Mulberry based agroforestry system and canopy management practices
-to combat soil erosion and enhancing carbon sequestration in degraded lands
-of Himalayan foothills
-</h3>
-<div class="pub-meta">
-Kaushal, R. et al. · <strong>Environmental and Sustainability Indicators</strong> · 2024
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Land restoration</span>
-<span class="pub-tag">Soil erosion</span>
-<span class="pub-tag">Carbon</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">05</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Past, present and future of Indian sandalwood
-(Santalum album) cultivation and commercial prospects
-</h3>
-<div class="pub-meta">
-Chavan, S.B. et al. · <strong>Discover Applied Sciences</strong> · 2024
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Sandalwood</span>
-<span class="pub-tag">Agroforestry</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">06</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Global assessment of production benefits and risk reduction in agroforestry
-during extreme weather events under climate change scenarios
-</h3>
-<div class="pub-meta">
-Dobhal, S. et al. · <strong>Frontiers in Forests and Global Change</strong> · 2024
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Climate resilience</span>
-<span class="pub-tag">Risk reduction</span>
-</div>
-</div>
-</div>
-
-</div>
-</section>
-
-
-<!-- =========================
-     2023
-========================= -->
-
-<section class="year-section">
-<div class="container">
-
-<div class="year-heading">
-<h2>2023</h2>
-<div class="year-line"></div>
-</div>
-
-<div class="publication">
-<div>
-<div class="pub-number">01</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Carbon Sequestration Potential of Commercial Agroforestry Systems
-in Indo-Gangetic Plains of India: Poplar and Eucalyptus-Based Agroforestry Systems
-</h3>
-<div class="pub-meta">
-Chavan, S.B. et al. · <strong>Forests</strong> · 2023
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Carbon sequestration</span>
-<span class="pub-tag">Agroforestry</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">02</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Agroforestry systems for soil health improvement and maintenance
-</h3>
-<div class="pub-meta">
-Fahad, S. et al. · <strong>Sustainability</strong> · 2022/2023
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Soil health</span>
-<span class="pub-tag">Agroforestry</span>
-</div>
-</div>
-</div>
-
-</div>
-</section>
-
-
-<!-- =========================
-     2022
-========================= -->
-
-<section class="year-section">
-<div class="container">
-
-<div class="year-heading">
-<h2>2022</h2>
-<div class="year-line"></div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">01</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Genetic diversity and population structure of Leucaena leucocephala
-(Lam.) de Wit genotypes using molecular and morphological attributes
-</h3>
-<div class="pub-meta">
-Rajarajan, K. et al. · <strong>Genetic Resources and Crop Evolution</strong> · 2022
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Genetic diversity</span>
-<span class="pub-tag">Leucaena</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">02</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Pollination biology of Pongamia pinnata (L.) Pierre:
-a potential biodiesel plant
-</h3>
-<div class="pub-meta">
-Veereshkumar et al. · <strong>Genetic Resources and Crop Evolution</strong> · 2021/2022
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Pollination</span>
-<span class="pub-tag">Biodiversity</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">03</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Scientific techniques for Melia dubia-based agroforestry systems:
-an emerging indigenous tree species for wood-based industries in India
-</h3>
-<div class="pub-meta">
-Chavan, S.B. et al. · <strong>Current Science</strong> · 2022
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Melia dubia</span>
-<span class="pub-tag">Agroforestry</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">04</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Agroforestry systems for soil health improvement and maintenance
-</h3>
-<div class="pub-meta">
-Fahad, S. et al. · <strong>Sustainability</strong> · 2022
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Soil health</span>
-<span class="pub-tag">Agroforestry</span>
-</div>
-</div>
-</div>
-
-</div>
-</section>
-
-
-<!-- =========================
-     2021
-========================= -->
-
-<section class="year-section">
-<div class="container">
-
-<div class="year-heading">
-<h2>2021</h2>
-<div class="year-line"></div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">01</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Wild bee pollination in Grewia flavescens Juss.
-</h3>
-<div class="pub-meta">
-Veereshkumar et al. · <strong>International Journal of Tropical Insect Science</strong> · 2021
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Pollination</span>
-<span class="pub-tag">Bees</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">02</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Pollination biology of Pongamia pinnata (L.) Pierre:
-a potential biodiesel plant
-</h3>
-<div class="pub-meta">
-Veereshkumar et al. · <strong>Genetic Resources and Crop Evolution</strong> · 2021
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Pollination</span>
-<span class="pub-tag">Biodiversity</span>
-</div>
-</div>
-</div>
-
-</div>
-</section>
-
-
-<!-- =========================
-     2018
-========================= -->
-
-<section class="year-section">
-<div class="container">
-
-<div class="year-heading">
-<h2>2018</h2>
-<div class="year-line"></div>
-</div>
-
-<div class="publication">
-<div>
-<div class="pub-number">01</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Different genotypes of Dalbergia sissoo trees modified microclimate
-dynamics differently on understory crop cowpea as assessed through
-ecophysiological and spectral traits in agroforestry system
-</h3>
-<div class="pub-meta">
-Alam, B. et al. · <strong>Agricultural and Forest Meteorology</strong> · 2018
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Microclimate</span>
-<span class="pub-tag">Agroforestry</span>
-</div>
-</div>
-</div>
-
-</div>
-</section>
-
-
-<!-- =========================
-     2017
-========================= -->
-
-<section class="year-section">
-<div class="container">
-
-<div class="year-heading">
-<h2>2017</h2>
-<div class="year-line"></div>
-</div>
-
-<div class="publication">
-<div>
-<div class="pub-number">01</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Floral biology of Grewia flavescens Juss.: an underutilized crop
-</h3>
-<div class="pub-meta">
-Kumar, V. et al. · <strong>Genetic Resources and Crop Evolution</strong> · 2017
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Floral biology</span>
-<span class="pub-tag">Agroforestry</span>
-</div>
-</div>
-</div>
-
-
-<div class="publication">
-<div>
-<div class="pub-number">02</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Trees for life: Creating sustainable livelihood in Bundelkhand region
-of central India
-</h3>
-<div class="pub-meta">
-Chavan, S.B. et al. · <strong>Current Science</strong> · 2016/2017
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Livelihoods</span>
-<span class="pub-tag">Agroforestry</span>
-</div>
-</div>
-</div>
-
-</div>
-</section>
-
-
-<!-- =========================
-     2016
-========================= -->
-
-<section class="year-section">
-<div class="container">
-
-<div class="year-heading">
-<h2>2016</h2>
-<div class="year-line"></div>
-</div>
-
-<div class="publication">
-<div>
-<div class="pub-number">01</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Trees for life: Creating sustainable livelihood in Bundelkhand region
-of central India
-</h3>
-<div class="pub-meta">
-Chavan, S.B. et al. · <strong>Current Science</strong> · 2016
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Livelihoods</span>
-<span class="pub-tag">Agroforestry</span>
-</div>
-</div>
-</div>
-
-</div>
-</section>
-
-
-<!-- =========================
-     2015
-========================= -->
-
-<section class="year-section">
-<div class="container">
-
-<div class="year-heading">
-<h2>2015</h2>
-<div class="year-line"></div>
-</div>
-
-<div class="publication">
-<div>
-<div class="pub-number">01</div>
-<span class="pub-type">JOURNAL</span>
-</div>
-<div>
-<h3 class="pub-title">
-Soil physico-biochemical properties as influenced by varying tree densities
-in poplar based agroforestry system
-</h3>
-<div class="pub-meta">
-Uthappa, A.R. et al. · <strong>Indian Journal of Agroforestry</strong> · 2015
-</div>
-<div class="pub-tags">
-<span class="pub-tag">Soil health</span>
-<span class="pub-tag">Poplar</span>
-<span class="pub-tag">Agroforestry</span>
-</div>
-</div>
-</div>
-
-</div>
-</section>
-
-
-<!-- BOOKS -->
-
-<section class="books-section">
-<div class="container">
-
-<div class="eyebrow">Additional Research Output</div>
-
-<h2 class="section-title">Books, reports & research contributions</h2>
-
-
-<div class="book-card">
-<div class="book-title">
-Ecosystem Service Analysis in Multistorey Cropping Systems
-</div>
-<div class="book-meta">
-Kumar, P., Arunachalam, V., Paramesha, V. & Uthappa, A.R. · 2024
-</div>
-</div>
-
-
-<div class="book-card">
-<div class="book-title">
-Promising Agroforestry Tree Species in India
-</div>
-<div class="book-meta">
-Chaturvedi, O.P., Handa, A.K., Uthappa, A.R. et al. · 2017
-</div>
-</div>
-
-
-<div class="book-card">
-<div class="book-title">
-Agroforestry for Climate Resilience and Rural Livelihood
-</div>
-<div class="book-meta">
-Inder Dev, Ram, A., Kumar, N. et al. · 2019
-</div>
-</div>
-
-
-<div class="book-card">
-<div class="book-title">
-Building Climate Resilience and Sustainability through Agro-ecotourism
-</div>
-<div class="book-meta">
-Paramesha, V. et al. · 2025
-</div>
-</div>
-
-
-<div class="book-card">
-<div class="book-title">
-Competitive Forestry
-</div>
-<div class="book-meta">
-Uthappa, A.R. & Sangram, C.B. · 2015
-</div>
-</div>
-
-
-<div class="book-card">
-<div class="book-title">
-Competitive Forestry — 2nd Edition
-</div>
-<div class="book-meta">
-Sangram, C.B. & Uthappa, A.R. · 2018
-</div>
-</div>
-
-</div>
-</section>
-
-
 </main>
 
-
-<footer class="publication-footer">
-
-<div class="container">
-
-<div class="footer-title">
-Dr. A. R. Uthappa
+<footer>
+<div class="footer-inner">
+<div>A. R. Uthappa · Senior Scientist · Agroforestry · ICAR–CCARI, Goa</div>
+<div><a href="index.html">Back to main website</a></div>
 </div>
-
-<div class="footer-text">
-Senior Scientist – Agroforestry · ICAR–Central Coastal Agricultural Research Institute, Goa
-</div>
-
-</div>
-
 </footer>
+
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-
-    /*
-     * PUBLICATION LINKS
-     * -----------------
-     * DOI links are used where verified.
-     * ResearchGate search is used where a DOI/full-text publisher
-     * link is not available.
-     */
-
-    const publicationLinks = {
-
-        /* =========================
-           INTERNATIONAL JOURNALS
-           ========================= */
-
-        "comparison of machine learning models for mapping arecanut":
-            "https://doi.org/10.1038/s41598-025-27845-6",
-
-        "forest fire susceptibility mapping using multi-criteria decision making":
-            "https://doi.org/10.1016/j.jenvman.2025.124777",
-
-        "comparative analysis of soil quality indexing techniques":
-            "https://doi.org/10.3389/ffgc.2023.1322660",
-
-        "optimizing tree shade gradients in emblica officinalis":
-            "https://doi.org/10.1007/s10457-024-01123-2",
-
-        "do different plant host species influence the response of santalum album":
-            "https://doi.org/10.1007/s10457-025-01279-5",
-
-        "sustainable alternatives in particleboard production":
-            "https://doi.org/10.1016/j.rineng.2025.106020",
-
-        "tree shade mitigates stress and enhances chickpea productivity":
-            "https://www.sciencedirect.com/search?qs=Tree%20shade%20mitigates%20stress%20and%20enhances%20chickpea%20productivity",
-
-        "structural and functional assessment of traditional betel vine":
-            "https://doi.org/10.1007/s10457-025-01289-3",
-
-        "integrating ecosystem services through sustainable land use":
-            "https://doi.org/10.1016/j.indic.2025.100998",
-
-        "different genotypes of dalbergia sissoo":
-            "https://doi.org/10.1016/j.agrformet.2017.11.031",
-
-        "nature-based solutions for enhancing co2 sequestration":
-            "https://doi.org/10.1016/j.jenvman.2025.124904",
-
-        "estimating carbon sequestration in orchards of semi-arid tropics":
-            "https://www.sciencedirect.com/search?qs=Estimating%20carbon%20sequestration%20in%20orchards%20of%20semi-arid%20tropics",
-
-        "biomass estimation of mahogany":
-            "https://doi.org/10.1016/j.atech.2025.101616",
-
-        "pollen diversity in urban honey":
-            "https://doi.org/10.1007/s11252-024-01607-0",
-
-        "optimizing planting geometries in eucalyptus-based food production":
-            "https://doi.org/10.3389/fsufs.2024.1386035",
-
-        "assessment of climate change vulnerability of agriculture":
-            "https://doi.org/10.1007/s00704-025-05623-8",
-
-        "root architecture and carbon sequestration potential":
-            "https://doi.org/10.3389/fagro.2025.1597122",
-
-        "floral biology of grewia flavescens":
-            "https://link.springer.com/article/10.1007/s10722-016-0486-7",
-
-        "sandalwood based agroforestry systems in bundelkhand":
-            "https://doi.org/10.14719/pst.9637",
-
-        "wild bee pollination in grewia flavescens":
-            "https://link.springer.com/article/10.1007/s11829-020-09778-5",
-
-        "genetic diversity and population structure of leucaena leucocephala":
-            "https://link.springer.com/article/10.1007/s10722-021-01203-7",
-
-        "pollination biology of pongamia pinnata":
-            "https://link.springer.com/article/10.1007/s10722-020-01010-6",
-
-        "mulberry based agroforestry system":
-            "https://doi.org/10.1016/j.indic.2024.100467",
-
-        "past, present and future of indian sandalwood":
-            "https://doi.org/10.1007/s42452-024-06337-8",
-
-        "scientific techniques for melia dubia-based agroforestry":
-            "https://doi.org/10.18520/cs/v122/i12/1451-1454",
-
-        "trees for life: creating sustainable livelihood":
-            "https://doi.org/10.18520/cs/v111/i6/994-1002",
-
-        "degraded land restoration through aromatic plants":
-            "https://doi.org/10.1002/ldr.70261",
-
-        "carbon sequestration potential of commercial agroforestry systems":
-            "https://doi.org/10.3390/f14030559",
-
-        "agroforestry systems for soil health improvement":
-            "https://doi.org/10.3390/su142214877",
-
-        "degraded land rehabilitation through agroforestry":
-            "https://doi.org/10.3389/fevo.2023.1088796",
-
-        "global assessment of production benefits and risk reduction":
-            "https://doi.org/10.3389/ffgc.2024.1379741",
-
-        "host-dependent variation in free amino acid profiles":
-            "https://doi.org/10.1038/s41598-026-56713-0",
-
-
-        /* =========================
-           NATIONAL JOURNALS
-           ========================= */
-
-        "soil physico-biochemical properties as influenced by varying tree densities":
-            "https://www.researchgate.net/search/publication?q=Soil%20physico-biochemical%20properties%20as%20influenced%20by%20varying%20tree%20densities",
-
-        "tree diversity in ravines and their rehabilitation":
-            "https://www.researchgate.net/search/publication?q=Tree%20diversity%20in%20ravines%20and%20their%20rehabilitation%20through%20agroforestry",
-
-        "litter dynamics in fruit orchards and natural forests":
-            "https://doi.org/10.36808/if/2024/v150i8/170192",
-
-        "stalwarts who globally shaped the concept":
-            "https://www.researchgate.net/search/publication?q=Stalwarts%20who%20globally%20shaped%20the%20concept%20and%20science%20called%20agroforestry",
-
-        "impact of pollination on pomegranate":
-            "https://www.researchgate.net/search/publication?q=Impact%20of%20Pollination%20on%20Pomegranate",
-
-        "incidence pattern of wood borer":
-            "https://www.researchgate.net/search/publication?q=Incidence%20pattern%20of%20wood%20borer%20Sinoxylon%20anale",
-
-        "influence of prosopis cineraria":
-            "https://www.researchgate.net/search/publication?q=Influence%20of%20Prosopis%20cineraria%20on%20microclimate%20conditions",
-
-        "paradigm shift in coastal agricultural research":
-            "https://www.researchgate.net/search/publication?q=Paradigm%20shift%20in%20coastal%20agricultural%20research",
-
-        "clonal propagation through improved stem cutting":
-            "https://www.researchgate.net/search/publication?q=Clonal%20propagation%20through%20improved%20stem%20cutting%20technique%20in%20Pongamia%20pinnata",
-
-        "consensus of traditional knowledge on provisioning services":
-            "https://www.researchgate.net/search/publication?q=Consensus%20of%20traditional%20knowledge%20on%20provisioning%20services%20of%20trees",
-
-        "traditional knowledge of broom making":
-            "https://www.researchgate.net/search/publication?q=Traditional%20Knowledge%20of%20Broom%20Making%20from%20Date%20Palm",
-
-        "fuelwood characteristics of selected tree species":
-            "https://www.researchgate.net/search/publication?q=Fuelwood%20characteristics%20of%20selected%20tree%20species%20from%20Bundelkhand",
-
-        "effect of tillage and residue management practices":
-            "https://www.researchgate.net/search/publication?q=Effect%20of%20tillage%20and%20residue%20management%20practices%20on%20blackgram%20and%20greengram",
-
-        "biomass production and carbon sequestration through agroforestry":
-            "https://www.researchgate.net/search/publication?q=Biomass%20production%20and%20carbon%20sequestration%20through%20agroforestry",
-
-        "doubling farmers income through agroforestry":
-            "https://www.researchgate.net/search/publication?q=Doubling%20farmers%20income%20through%20agroforestry%20in%20north-western%20India",
-
-        "incidence of gall weevil":
-            "https://www.researchgate.net/search/publication?q=Incidence%20of%20Gall%20Weevil%20Pachyonyx%20quadridens%20on%20Butea%20monosperma",
-
-        "a simple and effective method for high quality pcr":
-            "https://www.researchgate.net/search/publication?q=A%20simple%20and%20effective%20method%20for%20high%20quality%20PCR%20usable%20DNA%20extraction"
-
-
-    };
-
-
-    /* =========================
-       NORMALIZE TITLES
-       ========================= */
-
-    function normalize(text) {
-        return text
-            .toLowerCase()
-            .replace(/<[^>]*>/g, "")
-            .replace(/[^\w\s-]/g, "")
-            .replace(/\s+/g, " ")
-            .trim();
-    }
-
-
-    /* =========================
-       ADD VIEW PAPER BUTTON
-       ========================= */
-
-    document.querySelectorAll(".publication").forEach(function (publication) {
-
-        const titleElement = publication.querySelector(".pub-title");
-
-        if (!titleElement) return;
-
-        const title = normalize(titleElement.textContent);
-
-        let link = null;
-
-        for (const key in publicationLinks) {
-
-            if (title.includes(normalize(key))) {
-                link = publicationLinks[key];
-                break;
-            }
-
-        }
-
-        if (!link) return;
-
-        /*
-         * Prevent duplicate buttons
-         */
-
-        if (publication.querySelector(".view-paper")) return;
-
-
-        /*
-         * Create button
-         */
-
-        const button = document.createElement("a");
-
-        button.href = link;
-        button.target = "_blank";
-        button.rel = "noopener noreferrer";
-        button.className = "view-paper";
-        button.innerHTML = "VIEW PAPER ↗";
-
-
-        /*
-         * Put button after publication metadata
-         */
-
-        const meta = publication.querySelector(".pub-meta");
-
-        if (meta) {
-
-            meta.insertAdjacentElement("afterend", button);
-
-        } else {
-
-            publication.appendChild(button);
-
-        }
-
-    });
-
+const cards=[...document.querySelectorAll('.pub-card')];
+let selectedYear='all', selectedTheme='all', query='';
+const yearBtns=[...document.querySelectorAll('.year-btn')];
+const themeBtns=[...document.querySelectorAll('.theme-btn')];
+const search=document.getElementById('search');
+const count=document.getElementById('count');
+
+function render(){
+ let shown=0;
+ cards.forEach(card=>{
+   const year=card.dataset.year;
+   const themes=card.dataset.theme;
+   const text=card.dataset.search.toLowerCase();
+   const okYear=selectedYear==='all'||year===selectedYear;
+   const okTheme=selectedTheme==='all'||themes.includes(selectedTheme);
+   const okSearch=!query||text.includes(query);
+   const visible=okYear&&okTheme&&okSearch;
+   card.hidden=!visible;
+   if(visible) shown++;
+ });
+ count.textContent=shown + (shown===1?' publication':' publications');
+}
+yearBtns.forEach(btn=>btn.addEventListener('click',()=>{
+ yearBtns.forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+ selectedYear=btn.dataset.year;render();
+}));
+themeBtns.forEach(btn=>btn.addEventListener('click',()=>{
+ themeBtns.forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+ selectedTheme=btn.dataset.theme;render();
+}));
+search.addEventListener('input',()=>{query=search.value.trim().toLowerCase();render();});
+document.getElementById('clear').addEventListener('click',()=>{
+ selectedYear='all';selectedTheme='all';query='';search.value='';
+ yearBtns.forEach(b=>b.classList.toggle('active',b.dataset.year==='all'));
+ themeBtns.forEach(b=>b.classList.toggle('active',b.dataset.theme==='all'));
+ render();
 });
 </script>
 </body>
