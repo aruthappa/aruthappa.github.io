@@ -56,35 +56,71 @@ nav{
     top:0;
     left:0;
     width:100%;
-    z-index:10;
-    padding:28px 5%;
+    z-index:20;
+    padding:22px 5%;
     display:flex;
     justify-content:space-between;
     align-items:center;
     color:white;
+    background:linear-gradient(180deg, rgba(4,35,27,.78) 0%, rgba(4,35,27,.48) 68%, rgba(4,35,27,0) 100%);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
 }
 
 .logo{
     font-size:22px;
     font-weight:700;
     letter-spacing:3px;
+    text-shadow:0 1px 8px rgba(0,0,0,.18);
 }
 
 .nav-links{
     display:flex;
-    gap:32px;
+    align-items:center;
+    gap:30px;
 }
 
 .nav-links a{
-    font-size:13px;
-    font-weight:600;
-    letter-spacing:.5px;
-    transition:.3s;
+    position:relative;
+    padding:7px 0;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.9px;
+    text-shadow:0 1px 7px rgba(0,0,0,.28);
+    transition:color .3s ease, transform .3s ease;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:2px;
+    background:#c47a4d;
+    transform:scaleX(0);
+    transform-origin:center;
+    transition:transform .3s ease;
 }
 
 .nav-links a:hover{
-    color:#c7e7c9;
+    color:#f2d1bd;
+    transform:translateY(-1px);
 }
+
+.nav-links a:hover::after{
+    transform:scaleX(1);
+}
+
+.nav-links a.nav-blog{
+    color:#f1c6aa;
+}
+
+.nav-links a.nav-blog::after{
+    transform:scaleX(1);
+    background:#c47a4d;
+}
+
 
 /* =========================
    HERO
@@ -3287,6 +3323,7 @@ footer{
    ========================================================= */
 
 .popular-articles-section {
+    scroll-margin-top:20px;
     padding: 145px 0 155px;
     background: #f5f1e8;
     border-top: 1px solid #ddd6c9;
@@ -4179,6 +4216,7 @@ UTHAPPA
 <a href="#projects">PROJECTS</a>
 <a href="#publications">PUBLICATIONS</a>
 <a href="#impact">IMPACT</a>
+<a href="#popular-articles" class="nav-blog">BLOG</a>
 <a href="#contact">CONTACT</a>
 
 </div>
