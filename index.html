@@ -4193,6 +4193,223 @@ footer{
     color: #ffffff !important;
     background: #176247 !important;
 }
+
+
+/* =========================================================
+   FINAL VISUAL REFINEMENT — SCIENTIFIC PORTFOLIO SYSTEM
+   Forest Green · Deep Teal · Sandalwood · Warm Ivory · Sage
+========================================================= */
+
+:root{
+    --forest:#17382a;
+    --forest-deep:#102f25;
+    --teal:#0b5663;
+    --teal-bright:#0a9f91;
+    --sandalwood:#a65f3a;
+    --sandalwood-soft:#c47a4d;
+    --ivory:#f5f1e8;
+    --sage:#eef3ee;
+    --paper:#fbfaf6;
+    --ink:#0d3e45;
+    --muted:#536a72;
+    --line:#d7e0db;
+}
+
+/* --- Hero / navigation: preserve the photograph, strengthen the interface --- */
+nav{
+    padding:24px 5%;
+    background:linear-gradient(180deg,rgba(5,31,24,.88) 0%,rgba(5,31,24,.62) 58%,rgba(5,31,24,0) 100%);
+}
+
+.nav-links{gap:30px;}
+.nav-links a{font-size:12px;letter-spacing:1px;}
+.nav-links a.nav-blog{color:#f0c2a4;}
+
+/* --- Signature intersection band --- */
+.intersection{
+    background:#194436;
+}
+
+/* --- About: slightly warmer editorial field --- */
+.introduction{
+    background:#f8f8f4;
+}
+
+/* --- Research: soft sage field with the existing cards retained --- */
+.research{
+    background:#f1f5f1;
+}
+
+/* --- Field research: retain strong photography and give accents more depth --- */
+.research-action{
+    background:#f8faf8;
+}
+
+.research-action .section-label,
+.farmer-success .section-label,
+.fodder-cafeteria .section-label{
+    color:var(--teal);
+}
+
+/* --- Farmer impact: distinct from Research in Action --- */
+.farmer-success{
+    background:#f2f6f2;
+}
+
+.farmer-success .impact-stat,
+.farmer-success .stat-value{
+    color:var(--forest);
+}
+
+/* --- Fodder cafeteria --- */
+.fodder-cafeteria{
+    background:#fbfcf9;
+}
+
+/* --- Tree_Speaks: storytelling identity --- */
+.tree-speaks{
+    background:var(--sage);
+}
+
+.tree-speaks .section-label,
+.tree-speaks .tree-speaks-label{
+    color:var(--sandalwood);
+}
+
+.tree-speaks h2 em,
+.tree-speaks .tree-speaks-footer p{
+    color:var(--sandalwood);
+}
+
+/* --- Popular Articles remains the editorial ivory signature --- */
+.popular-articles-section{
+    background:var(--ivory);
+}
+
+.popular-articles-section .section-title em{
+    color:var(--sandalwood);
+}
+
+/* --- Projects: remove terminology collision --- */
+.projects{
+    background:#f6f8f5;
+}
+
+/* --- Publications: scholarly teal accent --- */
+.publications-section{
+    background:#f5f7f5;
+}
+
+/* --- Scientific Impact: distinguish science/technology from forest sections --- */
+.impact{
+    background:var(--teal);
+}
+
+.impact .section-label{
+    color:#73d1c5;
+}
+
+.impact-card{
+    border-color:rgba(255,255,255,.28);
+    background:rgba(255,255,255,.025);
+}
+
+.impact-card .number{
+    color:#64d1c4;
+}
+
+.impact-card p{
+    color:#d1e2df;
+}
+
+/* --- Awards: give the major recognition appropriate prominence --- */
+.awards{
+    background:var(--paper);
+}
+
+.award{
+    background:#fff;
+    transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+
+.award:hover{
+    transform:translateY(-2px);
+    border-color:#bfd0c7;
+    box-shadow:0 10px 28px rgba(18,56,42,.06);
+}
+
+.award-featured{
+    border-top:3px solid var(--sandalwood);
+    background:linear-gradient(135deg,#fff 0%,#faf5ef 100%);
+}
+
+.award-featured h3{
+    color:var(--forest);
+}
+
+/* --- Research profiles --- */
+.profiles{
+    background:#edf3ef;
+}
+
+.profile-link{
+    transition:transform .25s ease,background .25s ease,border-color .25s ease,color .25s ease;
+}
+
+.profile-link:hover{
+    transform:translateY(-2px);
+    background:var(--forest);
+}
+
+/* --- Contact: clean final invitation --- */
+.contact{
+    background:#fbfaf7;
+}
+
+/* --- Footer --- */
+footer{
+    background:var(--forest-deep);
+}
+
+/* --- Subtle section rhythm --- */
+.about,
+.introduction,
+.research,
+.research-action,
+.farmer-success,
+.fodder-cafeteria,
+.tree-speaks,
+.projects,
+.publications-section,
+.awards,
+.profiles,
+.contact{
+    transition:background-color .2s ease;
+}
+
+/* --- Mobile refinement --- */
+@media(max-width:850px){
+    nav{
+        padding:18px 5%;
+    }
+    .nav-links{
+        gap:16px;
+        flex-wrap:wrap;
+        justify-content:flex-end;
+    }
+    .nav-links a{
+        font-size:10px;
+        letter-spacing:.7px;
+    }
+}
+
+@media(max-width:600px){
+    .nav-links{gap:10px;}
+    .nav-links a{font-size:9px;}
+    .award-grid{grid-template-columns:1fr;}
+    .impact-grid{grid-template-columns:1fr;}
+}
+
 </style>
 
 </head>
@@ -4808,7 +5025,7 @@ processes can be designed into productive, resilient and sustainable landscapes.
         <div class="farmer-success-header">
 
             <div class="section-label">
-                RESEARCH IN ACTION
+                FARMER IMPACT
             </div>
 
             <h2>
@@ -5758,7 +5975,7 @@ Current & Recent Projects
 </div>
 
 <h2 class="section-title">
-Research in action
+Current & Recent Projects
 </h2>
 
 <p class="section-text">
@@ -6205,7 +6422,7 @@ Selected honours
 <div class="award-grid">
 
 
-<div class="award">
+<div class="award award-featured">
 
 <h3>
 National Water Award – First Prize
@@ -6448,7 +6665,7 @@ uthappa.ar@icar.org.in
 <div>
 
 <div class="footer-name">
-Dr. A. R. Uthappa
+A. R. Uthappa
 </div>
 
 <div class="footer-text">
@@ -6467,7 +6684,7 @@ ICAR–Central Coastal Agricultural Research Institute · Goa
 
 <div class="copyright">
 
-© 2026 Dr. A. R. Uthappa · aruthappa.github.io
+© 2026 A. R. Uthappa · aruthappa.github.io
 
 </div>
 
