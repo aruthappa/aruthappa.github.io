@@ -54,6 +54,7 @@ button:hover,button:focus,button.active{background:var(--forest);color:#fff;bord
 .clear{color:var(--brown);font-size:.82rem;text-decoration:underline;cursor:pointer}
 .pub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
 .pub-card{border:1px solid var(--line);padding:1.45rem;background:#fff;display:flex;flex-direction:column;min-height:245px}
+[hidden]{display:none!important}
 .pub-card:hover{box-shadow:0 8px 25px rgba(20,45,35,.07);border-color:#c5d0c8}
 .pub-meta{display:flex;justify-content:space-between;gap:1rem;color:var(--brown);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:1rem}
 .pub-citation{font-family:Georgia,"Times New Roman",serif;font-size:1rem;line-height:1.5}
@@ -141,13 +142,13 @@ footer{background:#0b2a20;color:#cdd9d3;padding:2rem 1.5rem;font-size:.85rem}
 <div class="filters" aria-label="Publication filters">
 <div class="filter-row">
 <div class="filter-label">Year</div>
-<button class="year-btn active" data-year="all">All</button>
-<button class="year-btn" data-year="2026">2026</button><button class="year-btn" data-year="2025">2025</button><button class="year-btn" data-year="2024">2024</button><button class="year-btn" data-year="2023">2023</button><button class="year-btn" data-year="2022">2022</button><button class="year-btn" data-year="2021">2021</button><button class="year-btn" data-year="2018">2018</button><button class="year-btn" data-year="2017">2017</button><button class="year-btn" data-year="2016">2016</button><button class="year-btn" data-year="2015">2015</button>
+<button type="button" class="year-btn active" data-year="all">All</button>
+<button type="button" class="year-btn" data-year="2026">2026</button><button type="button" class="year-btn" data-year="2025">2025</button><button type="button" class="year-btn" data-year="2024">2024</button><button type="button" class="year-btn" data-year="2023">2023</button><button type="button" class="year-btn" data-year="2022">2022</button><button type="button" class="year-btn" data-year="2021">2021</button><button type="button" class="year-btn" data-year="2018">2018</button><button type="button" class="year-btn" data-year="2017">2017</button><button type="button" class="year-btn" data-year="2016">2016</button><button type="button" class="year-btn" data-year="2015">2015</button>
 </div>
 <div class="filter-row">
 <div class="filter-label">Research theme</div>
-<button class="theme-btn active" data-theme="all">All</button>
-<button class="theme-btn" data-theme="Agroforestry">Agroforestry</button><button class="theme-btn" data-theme="Biodiversity &amp; Ecosystem Services">Biodiversity &amp; Ecosystem Services</button><button class="theme-btn" data-theme="Carbon &amp; Climate">Carbon &amp; Climate</button><button class="theme-btn" data-theme="Coastal &amp; Saline">Coastal &amp; Saline</button><button class="theme-btn" data-theme="Geospatial &amp; AI">Geospatial &amp; AI</button><button class="theme-btn" data-theme="Soil &amp; Restoration">Soil &amp; Restoration</button><button class="theme-btn" data-theme="Tree Biology &amp; Germplasm">Tree Biology &amp; Germplasm</button><button class="theme-btn" data-theme="Tree Health &amp; Entomology">Tree Health &amp; Entomology</button><button class="theme-btn" data-theme="Wood &amp; Biomaterials">Wood &amp; Biomaterials</button>
+<button type="button" class="theme-btn active" data-theme="all">All</button>
+<button type="button" class="theme-btn" data-theme="Agroforestry">Agroforestry</button><button type="button" class="theme-btn" data-theme="Biodiversity &amp; Ecosystem Services">Biodiversity &amp; Ecosystem Services</button><button type="button" class="theme-btn" data-theme="Carbon &amp; Climate">Carbon &amp; Climate</button><button type="button" class="theme-btn" data-theme="Coastal &amp; Saline">Coastal &amp; Saline</button><button type="button" class="theme-btn" data-theme="Geospatial &amp; AI">Geospatial &amp; AI</button><button type="button" class="theme-btn" data-theme="Soil &amp; Restoration">Soil &amp; Restoration</button><button type="button" class="theme-btn" data-theme="Tree Biology &amp; Germplasm">Tree Biology &amp; Germplasm</button><button type="button" class="theme-btn" data-theme="Tree Health &amp; Entomology">Tree Health &amp; Entomology</button><button type="button" class="theme-btn" data-theme="Wood &amp; Biomaterials">Wood &amp; Biomaterials</button>
 </div>
 <div class="filter-row">
 <div class="filter-label">Search</div>
@@ -609,42 +610,80 @@ footer{background:#0b2a20;color:#cdd9d3;padding:2rem 1.5rem;font-size:.85rem}
 </footer>
 
 <script>
-const cards=[...document.querySelectorAll('.pub-card')];
-let selectedYear='all', selectedTheme='all', query='';
-const yearBtns=[...document.querySelectorAll('.year-btn')];
-const themeBtns=[...document.querySelectorAll('.theme-btn')];
-const search=document.getElementById('search');
-const count=document.getElementById('count');
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = Array.from(document.querySelectorAll('.pub-card[data-year]'));
+  const yearBtns = Array.from(document.querySelectorAll('.year-btn'));
+  const themeBtns = Array.from(document.querySelectorAll('.theme-btn'));
+  const search = document.getElementById('search');
+  const count = document.getElementById('count');
+  const clear = document.getElementById('clear');
 
-function render(){
- let shown=0;
- cards.forEach(card=>{
-   const year=card.dataset.year;
-   const themes=card.dataset.theme;
-   const text=card.dataset.search.toLowerCase();
-   const okYear=selectedYear==='all'||year===selectedYear;
-   const okTheme=selectedTheme==='all'||themes.includes(selectedTheme);
-   const okSearch=!query||text.includes(query);
-   const visible=okYear&&okTheme&&okSearch;
-   card.hidden=!visible;
-   if(visible) shown++;
- });
- count.textContent=shown + (shown===1?' publication':' publications');
-}
-yearBtns.forEach(btn=>btn.addEventListener('click',()=>{
- yearBtns.forEach(b=>b.classList.remove('active'));btn.classList.add('active');
- selectedYear=btn.dataset.year;render();
-}));
-themeBtns.forEach(btn=>btn.addEventListener('click',()=>{
- themeBtns.forEach(b=>b.classList.remove('active'));btn.classList.add('active');
- selectedTheme=btn.dataset.theme;render();
-}));
-search.addEventListener('input',()=>{query=search.value.trim().toLowerCase();render();});
-document.getElementById('clear').addEventListener('click',()=>{
- selectedYear='all';selectedTheme='all';query='';search.value='';
- yearBtns.forEach(b=>b.classList.toggle('active',b.dataset.year==='all'));
- themeBtns.forEach(b=>b.classList.toggle('active',b.dataset.theme==='all'));
- render();
+  let selectedYear = 'all';
+  let selectedTheme = 'all';
+  let query = '';
+
+  function normalise(value) {
+    return (value || '')
+      .replace(/&amp;/g, '&')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .toLowerCase();
+  }
+
+  function render() {
+    let shown = 0;
+
+    cards.forEach(card => {
+      const yearOK = selectedYear === 'all' || card.dataset.year === selectedYear;
+      const themeText = normalise(card.dataset.theme);
+      const themeOK = selectedTheme === 'all' || themeText.includes(normalise(selectedTheme));
+      const searchText = normalise(card.dataset.search || card.textContent);
+      const searchOK = !query || searchText.includes(normalise(query));
+
+      const visible = yearOK && themeOK && searchOK;
+      card.hidden = !visible;
+      if (visible) shown++;
+    });
+
+    count.textContent = `${shown} ${shown === 1 ? 'publication' : 'publications'}`;
+  }
+
+  yearBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      yearBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedYear = btn.dataset.year;
+      render();
+    });
+  });
+
+  themeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      themeBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedTheme = btn.dataset.theme;
+      render();
+    });
+  });
+
+  search.addEventListener('input', () => {
+    query = search.value;
+    render();
+  });
+
+  clear.addEventListener('click', () => {
+    selectedYear = 'all';
+    selectedTheme = 'all';
+    query = '';
+    search.value = '';
+
+    yearBtns.forEach(b => b.classList.toggle('active', b.dataset.year === 'all'));
+    themeBtns.forEach(b => b.classList.toggle('active', b.dataset.theme === 'all'));
+
+    render();
+  });
+
+  render();
 });
 </script>
 </body>
